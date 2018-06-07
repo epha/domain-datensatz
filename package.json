@@ -20,7 +20,9 @@
     "url": "https://github.com/epha/domain-datensatz/issues"
   },
   "homepage": "https://github.com/epha/domain-datensatz#readme",
-  "dependencies": {},
+  "dependencies": {
+    "markdown-table": "^1.1.2"
+  },
   "devdependencies": {
     "expert-packungen": "github:epha/expert-packungen",
     "expert-wirkstoffe": "github:epha/expert-wirkstoffe",
