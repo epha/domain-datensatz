@@ -1,0 +1,29 @@
+{
+  "name": "domain-datensatz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "source/app.js",
+  "scripts": {
+    "setup": "npm i -g docsify-cli && npm i docsify",
+    "start": "docsify serve -p 9000",
+    "build:data": "node ./source/stammdaten.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/epha/domain-datensatz.git"
+  },
+  "author": "olivier.krull@epha.ch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/epha/domain-datensatz/issues"
+  },
+  "homepage": "https://github.com/epha/domain-datensatz#readme",
+  "dependencies": {},
+  "devdependencies": {
+    "expert-packungen": "github:epha/expert-packungen",
+    "expert-wirkstoffe": "github:epha/expert-wirkstoffe",
+    "docsify": "^4.6.10",
+    "lottie-web": "^5.1.16"
+  }
+}
