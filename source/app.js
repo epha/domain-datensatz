@@ -1,4 +1,4 @@
-const packungen = require('../data/packungen.json')
+const artikel = require('../data/artikel.json')
 const wirkstoffe = require('../data/wirkstoffe.json')
 
-module.exports = {packungen, wirkstoffe}
+module.exports = {artikel, wirkstoffe}

@@ -1,0 +1,12 @@
+.cover-main {
+  color: white !important;
+}
+
+.cover-main * {
+  color: white !important;
+}
+
+.animation {
+  width:100%;
+  height: 200px;
+}

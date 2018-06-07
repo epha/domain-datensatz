@@ -1,4 +1,4 @@
-# domain-datensatz
+# Stammdaten
 
 <a href="data/wirkstoffe.json" download="wirkstoffe.json">wirkstoffe.json herunterladen</a>
 

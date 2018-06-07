@@ -1,5 +1,5 @@
-* [Einleintung](README.md)
+* [Stammdaten](README.md)
 
-* [Wirkstoffe](wirkstoffe.md)
+  * [Wirkstoffe](wirkstoffe.md)
 
-* [Artikel](artikel.md)
+  * [Artikel](artikel.md)

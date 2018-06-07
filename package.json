@@ -7,6 +7,7 @@
     "setup": "npm i -g docsify-cli && npm i docsify",
     "start": "docsify serve -p 9000",
     "build:data": "node ./source/stammdaten.js",
+    "build:stats": "node ./source/artikelstats.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

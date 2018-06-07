@@ -1,5 +1,4 @@
-<div class='animation'>
-</div>
+<div class='animation'></div>
 
 # Epha Datensatz <small>4.0</small>
 
@@ -8,6 +7,6 @@
 
 
 [GitHub](https://github.com/epha/domain-datensatz)
-[Starten](#domain-datensatz)
+[Starten](#Stammdaten)
 
 ![color](#21374b)
