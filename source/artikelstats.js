@@ -1,15 +1,25 @@
 const table = require('markdown-table')
 const fs = require('fs')
-
 const {artikel} = require('./app.js')
-
-//console.log('artikel: ', artikel)
-
 const artikelArray = Object.values(artikel)
 
-const stats = artikelArray.reduce((acc, artikel, idx) => {
+//choose for which props we display a table
+const indicate = (property) => {
 
-  //if(idx == 0) console.log(Object.entries(artikel))
+  return property.name == "ihStat" ||
+         property.name == "slStat" ||
+         property.name == "applw" ||
+         property.name == "form" ||
+         property.name == "brandName" ||
+         property.name == "type2" ||
+         property.name == "type3" ||
+         property.name == "type4" ||
+         property.name == "type5" ||
+         property.name == "gebiet" ||
+         property.name == "inhaber"
+}
+
+const stats = Object.values(artikelArray.reduce((acc, artikel, idx) => {
 
   const entries = Object.entries(artikel)
 
@@ -31,17 +41,18 @@ const stats = artikelArray.reduce((acc, artikel, idx) => {
   	  const value = entry[1]
 
   	  //got value assigned to prop
-  	  if(!!value) {
+  	  if(!!value || value == false) {
 
   	  	//console.log('got value')
   	  	property.amount++
 
-        //add none seen value to props values
-        if(property.name !== 'pubPreis' && property.name !== 'exfPreis') {
-
+        if(indicate(property)) {
+          
+          //add none seen value to props values
           if(!property.values.some((val) => val[0] == value) || !property.values.length) {
             property.values.push([value, 1])
           } else {
+          	//if already knwon increment counter
             const v = property.values.find((val) => val[0] == value)
             v[1]++
           }
@@ -51,26 +62,52 @@ const stats = artikelArray.reduce((acc, artikel, idx) => {
   })
 
   return acc
+}, {}))
 
+const appendFile = (content) => {
+  return new Promise((res, rej) => {
+    fs.appendFile('stats.md', content, (err) => {
+      if (err) throw err;
+      res(content)
+    })
+  })
+}
 
-}, {})
+const writeFile = (idx, stats) => {
 
-//console.log(stats)
+  if(!stats[idx]) return
+  
+  const property = stats[idx]
+  
+  if(indicate(property)) {
 
+  	const propertyHeader = `## ${property.name} ${property.amount}`
 
-Object.values(stats).forEach((property) => {
-  property.values.unshift(['value', 'amount'])
-  //console.log(table(property.values))
+  	appendFile(propertyHeader).then(() => {
+  	  return appendFile('\n\n')
+  	})
+  	.then(() => {
+  	  //sort values
+      property.values.sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0)
 
-  fs.appendFile('stats.md', table(property.values), function (err) {
-    if (err) throw err;
-    console.log('Saved!');
-  });
+      //add table header
+      property.values.unshift(['Wert', 'Anzahl'])
+      
+      //construct table
+  	  const statsTable = table(property.values)
+  	  return appendFile(statsTable)
+  	})
+  	.then(() => {
+  	  return appendFile('\n\n')
+  	})
+  	.then(() => {
+  	  console.log(property.name + ' done')
+  	  writeFile(idx + 1, stats)
+  	})
 
-})
+  } else {
+  	writeFile(idx + 1, stats)
+  }
+}
 
-
-
-//wieviel verschiedene
-
-//wieviel oral, iv
+writeFile(0, stats)
