@@ -60,7 +60,6 @@ const stats = Object.values(artikelArray.reduce((acc, artikel, idx) => {
   	  }
   	}
   })
-
   return acc
 }, {}))
 

@@ -1,5 +1,17 @@
 # Stammdaten
 
-<a href="data/wirkstoffe.json" download="wirkstoffe.json">wirkstoffe.json herunterladen</a>
+## Downloads
 
-<a href="data/artikel.json" download="artikel.json">artikel.json herunterladen</a>
+<a href="data/wirkstoffe.json" download="wirkstoffe.json">wirkstoffe.json</a>
+
+<a href="data/artikel.json" download="artikel.json">artikel.json</a>
+
+## Softeware einbindung
+
+Konsole
+
+`$ npm i epha/domain-datesatz`
+
+beispiel.js
+
+`const {artikel, wirkstoffe} = require('domain-datensatz')`
