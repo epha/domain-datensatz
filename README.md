@@ -2,16 +2,22 @@
 
 ## Downloads
 
-<a href="data/wirkstoffe.json" download="wirkstoffe.json">wirkstoffe.json</a>
+<section class='downloads-wrapper'>
 
-<a href="data/artikel.json" download="artikel.json">artikel.json</a>
+  <a class='download' href="data/wirkstoffe.json" download="wirkstoffe.json">wirkstoffe.json</a>
 
-## Softeware einbindung
+  <a class='download' href="data/artikel.json" download="artikel.json">artikel.json</a>
 
-Konsole
+</section>
 
-`$ npm i epha/domain-datesatz`
+## NPM
 
-beispiel.js
+```
+$ npm i epha/domain-datesatz
+```
 
-`const {artikel, wirkstoffe} = require('domain-datensatz')`
+## Daten einbinden
+
+```javascript
+const { artikel, wirkstoffe } = require('domain-datensatz')
+```

@@ -1,5 +1,3 @@
-
-
 .cover-main  * {
   color: white !important;
 }
@@ -7,4 +5,20 @@
 .animation {
   width:100%;
   height: 200px;
+}
+
+.downloads-wrapper {
+  display: flex;
+}
+
+.download {
+  display: inline-block;
+  border: 2px solid #1b77b5;
+  text-decoration: none;
+  border-radius: 4px;
+  color: #1b77b5;
+  padding: 5px;
+  width: 130px;
+  text-align: center;
+  margin-right: 20px;
 }

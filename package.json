@@ -6,8 +6,10 @@
   "scripts": {
     "setup": "npm i -g docsify-cli && npm i docsify",
     "start": "docsify serve -p 9000",
+    "build": "npm run clear && npm run build:data && npm run build:stats",
     "build:data": "node ./source/stammdaten.js",
     "build:stats": "node ./source/artikelstats.js",
+    "clear": "rimraf stats.md && rimraf data/artikel.json && rimraf data/wirkstoffe.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,13 +22,18 @@
     "url": "https://github.com/epha/domain-datensatz/issues"
   },
   "homepage": "https://github.com/epha/domain-datensatz#readme",
-  "dependencies": {},
+  "dependencies": {
+    "expert-packungen": "github:epha/expert-packungen",
+    "expert-wirkstoffe": "github:epha/expert-wirkstoffe",
+    "markdown-table": "^1.1.2"
+  },
   "devdependencies": {
     "expert-packungen": "github:epha/expert-packungen",
     "expert-wirkstoffe": "github:epha/expert-wirkstoffe",
     "docsify": "^4.6.10",
     "lottie-web": "^5.1.16",
     "markdown-table": "^1.1.2",
-    "prismjs": "^1.14.0"
+    "prismjs": "^1.14.0",
+    "rimraf" : "*"
   }
 }

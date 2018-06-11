@@ -1,18 +1,18 @@
-## ihStat 20506
+## ihStat 20597
 
 | Wert  | Anzahl |
 | ----- | ------ |
-| false | 3136   |
-| true  | 17370  |
+| false | 3237   |
+| true  | 17360  |
 
-## slStat 20506
+## slStat 20597
 
 | Wert  | Anzahl |
 | ----- | ------ |
-| false | 11098  |
-| true  | 9408   |
+| false | 11174  |
+| true  | 9423   |
 
-## applw 20506
+## applw 20597
 
 | Wert              | Anzahl |
 | ----------------- | ------ |
@@ -20,14 +20,14 @@
 | Intrathekal       | 10     |
 | Intravesikal      | 2      |
 | aural             | 11     |
-| buccal            | 730    |
-| cutan             | 1612   |
+| buccal            | 733    |
+| cutan             | 1617   |
 | epidural          | 66     |
-| epiläsional       | 39     |
+| epiläsional       | 41     |
 | i.m.              | 447    |
-| i.v.              | 2491   |
+| i.v.              | 2494   |
 | im Raum zerstäubt | 1      |
-| inhalativ         | 403    |
+| inhalativ         | 416    |
 | intestinal        | 1      |
 | intraartikulär    | 19     |
 | intracutan        | 16     |
@@ -42,12 +42,12 @@
 | intravesikal      | 3      |
 | intravitreal      | 13     |
 | nasal             | 188    |
-| okulär            | 298    |
+| okulär            | 301    |
 | p.o               | 1      |
-| p.o.              | 11761  |
+| p.o.              | 11802  |
 | perineural        | 42     |
 | rektal            | 230    |
-| s.c.              | 1210   |
+| s.c.              | 1231   |
 | sublingual        | 121    |
 | ungual            | 20     |
 | urethral          | 7      |
@@ -55,44 +55,44 @@
 | zum Spülen        | 3      |
 | zur Zubereitung   | 478    |
 
-## form 20506
+## form 20597
 
 | Wert           | Anzahl |
 | -------------- | ------ |
 | Brausetablette | 177    |
-| Creme          | 250    |
+| Creme          | 252    |
 | Emulsion       | 207    |
-| Fertigspritze  | 667    |
-| Gas            | 253    |
+| Fertigspritze  | 683    |
+| Gas            | 266    |
 | Gel            | 320    |
 | Globuli        | 115    |
-| Granulat       | 217    |
+| Granulat       | 218    |
 | Implantat      | 44     |
-| Kapsel         | 1554   |
+| Kapsel         | 1555   |
 | Kautablette    | 206    |
 | Klistier       | 29     |
-| Konzentrat     | 525    |
-| Lutschtablette | 471    |
-| Lösung         | 3980   |
+| Konzentrat     | 526    |
+| Lutschtablette | 473    |
+| Lösung         | 3990   |
 | Paste          | 25     |
 | Patrone        | 39     |
-| Pen            | 76     |
-| Pflaster       | 248    |
-| Pulver         | 1177   |
+| Pen            | 80     |
+| Pflaster       | 251    |
+| Pulver         | 1178   |
 | Retardkapsel   | 293    |
 | Retardtablette | 900    |
 | Salbe          | 285    |
 | Schaum         | 8      |
 | Set            | 25     |
-| Sirup          | 154    |
+| Sirup          | 155    |
 | Spray          | 212    |
 | Suppositorium  | 202    |
-| Suspension     | 455    |
-| Tablette       | 7249   |
+| Suspension     | 460    |
+| Tablette       | 7280   |
 | Tee            | 115    |
 | Utensilien     | 28     |
 
-## brandName 20506
+## brandName 20597
 
 | Wert                                                   | Anzahl |
 | ------------------------------------------------------ | ------ |
@@ -196,7 +196,7 @@
 | Afribin                                                | 7      |
 | Afstyla                                                | 12     |
 | After Bite                                             | 1      |
-| Aggrastat                                              | 2      |
+| Aggrastat                                              | 3      |
 | Agiolax                                                | 3      |
 | Agiolax con Senna                                      | 3      |
 | Agnus castus-Mepha                                     | 2      |
@@ -589,6 +589,7 @@
 | Bekunis Dragees                                        | 1      |
 | Belara                                                 | 3      |
 | Belarina                                               | 3      |
+| Belkyra                                                | 1      |
 | Bellafit                                               | 2      |
 | Beloc                                                  | 9      |
 | Ben-u-ron                                              | 11     |
@@ -606,7 +607,7 @@
 | Bepanthen                                              | 10     |
 | Beriate                                                | 2      |
 | Beriate Lyophilisat                                    | 3      |
-| Berinert                                               | 1      |
+| Berinert                                               | 2      |
 | Berinin                                                | 4      |
 | Beriplast                                              | 3      |
 | Beriplex                                               | 2      |
@@ -666,6 +667,7 @@
 | Biostimol                                              | 1      |
 | Biotin Merz                                            | 2      |
 | Biotin-Biomed                                          | 2      |
+| Biotin-Rausch                                          | 2      |
 | Biovigor                                               | 3      |
 | Biphozyl                                               | 1      |
 | Bisolvon                                               | 5      |
@@ -868,7 +870,7 @@
 | Carsol CR                                              | 4      |
 | Carvedilol Helvepharm                                  | 5      |
 | Carvedilol Sandoz                                      | 7      |
-| Carvedilol Spirig                                      | 12     |
+| Carvedilol Spirig                                      | 13     |
 | Carvedilol-Mepha                                       | 6      |
 | Carvon                                                 | 2      |
 | Casodex                                                | 4      |
@@ -1054,6 +1056,7 @@
 | Clorazepate Zentiva                                    | 9      |
 | Clotrimazol Helvepharm                                 | 2      |
 | Clottafact                                             | 1      |
+| Clozapin-Mepha                                         | 3      |
 | Co-Amoxi Axapharm                                      | 4      |
 | Co-Amoxi-Mepha                                         | 24     |
 | Co-Amoxicillin Actavis                                 | 7      |
@@ -1614,7 +1617,7 @@
 | Empressin                                              | 2      |
 | Emselex                                                | 4      |
 | Emser                                                  | 5      |
-| Emtricitabin-Tenofovir-Mepha                           | 1      |
+| Emtricitabin-Tenofovir-Mepha                           | 2      |
 | Emtriva                                                | 2      |
 | Enalapril Actavis                                      | 5      |
 | Enalapril HCT Actavis                                  | 2      |
@@ -1670,6 +1673,8 @@
 | Eprotan-Mepha plus                                     | 2      |
 | Equasym                                                | 6      |
 | Erbitux                                                | 2      |
+| Erelzi                                                 | 8      |
+| Erelzi SensoReady                                      | 4      |
 | Erivedge                                               | 1      |
 | Erlibelle                                              | 6      |
 | Erythrocin                                             | 3      |
@@ -1929,6 +1934,7 @@
 | Fosavance                                              | 4      |
 | Foscavir                                               | 1      |
 | Fosfolag                                               | 1      |
+| Fosfomycin Sandoz                                      | 1      |
 | Fosfomycin-Mepha                                       | 1      |
 | Fosicomp                                               | 1      |
 | Fosinopril                                             | 2      |
@@ -1957,6 +1963,7 @@
 | Furospir                                               | 2      |
 | Fursol                                                 | 3      |
 | Fusicutan                                              | 4      |
+| Fusicutan plus                                         | 2      |
 | Fusidin-Mepha                                          | 2      |
 | Fuzeon                                                 | 1      |
 | Fuzocim                                                | 3      |
@@ -2017,7 +2024,7 @@
 | Ginkgo-Mepha                                           | 4      |
 | Ginkgobakehl                                           | 4      |
 | Ginkgoforce                                            | 2      |
-| Ginsana                                                | 11     |
+| Ginsana                                                | 13     |
 | Ginsor                                                 | 2      |
 | Ginvapast                                              | 2      |
 | Giotrif                                                | 4      |
@@ -2221,7 +2228,7 @@
 | Ibandronat Helvepharm Osteo                            | 3      |
 | Ibandronat Sandoz                                      | 3      |
 | Ibandronat Spirig                                      | 3      |
-| Ibandronat-Mepha                                       | 3      |
+| Ibandronat-Mepha                                       | 5      |
 | Iberogast                                              | 3      |
 | Ibrance                                                | 3      |
 | Ibu Sandoz                                             | 1      |
@@ -2383,6 +2390,7 @@
 | Jevtana                                                | 1      |
 | Jext                                                   | 2      |
 | Jinarc                                                 | 5      |
+| Jorveza                                                | 2      |
 | Jurnista                                               | 6      |
 | KCL                                                    | 1      |
 | KCL Sintetica                                          | 4      |
@@ -2485,7 +2493,7 @@
 | Lactoferment                                           | 2      |
 | Lactovis                                               | 2      |
 | Ladonna                                                | 3      |
-| Laitea                                                 | 2      |
+| Laitea                                                 | 3      |
 | Lamictal                                               | 6      |
 | Lamisil                                                | 11     |
 | Lamivudin-Teva                                         | 2      |
@@ -2552,7 +2560,7 @@
 | Lercanidipin Sandoz                                    | 4      |
 | Lercanidipin Spirig                                    | 4      |
 | Lercanidipin Zentiva                                   | 4      |
-| Lercanidipin-Mepha                                     | 4      |
+| Lercanidipin-Mepha                                     | 8      |
 | Lescol                                                 | 6      |
 | Letrozol                                               | 2      |
 | Letrozol Actavis                                       | 4      |
@@ -2727,7 +2735,7 @@
 | MR-Lux                                                 | 18     |
 | MST Continus                                           | 10     |
 | Maasol                                                 | 1      |
-| MabThera                                               | 3      |
+| MabThera                                               | 4      |
 | Macrogol Sandoz                                        | 2      |
 | Macrogol-Mepha                                         | 3      |
 | Madinette                                              | 3      |
@@ -2795,7 +2803,7 @@
 | Memantin Actavis                                       | 4      |
 | Memantin Sandoz                                        | 4      |
 | Memantin Spirig                                        | 4      |
-| Memantin Zentiva                                       | 2      |
+| Memantin Zentiva                                       | 3      |
 | Memantin-Mepha                                         | 10     |
 | Memoria                                                | 2      |
 | Menamig                                                | 3      |
@@ -2815,7 +2823,7 @@
 | Mepivacain Sintetica                                   | 3      |
 | Mercilon                                               | 3      |
 | Merfen                                                 | 12     |
-| Meridol perio Chlorhexidin                             | 1      |
+| Meridol perio Chlorhexidin                             | 2      |
 | Merional                                               | 12     |
 | Meronem                                                | 2      |
 | Meropenem Fresenius                                    | 2      |
@@ -2879,7 +2887,7 @@
 | Mezavant                                               | 1      |
 | Mg 5                                                   | 11     |
 | Mg 5-Longoral                                          | 3      |
-| Miacalcic                                              | 6      |
+| Miacalcic                                              | 7      |
 | Mianserin-Mepha                                        | 4      |
 | Micardis                                               | 4      |
 | Micardis Amlo                                          | 6      |
@@ -2945,7 +2953,7 @@
 | Mometason Pollen Sandoz                                | 1      |
 | Mometason-Mepha                                        | 2      |
 | Mometasonfuroat Sandoz                                 | 2      |
-| Monoprost                                              | 2      |
+| Monoprost                                              | 4      |
 | Monovo                                                 | 14     |
 | Montelukast Actavis                                    | 2      |
 | Montelukast Helvepharm                                 | 6      |
@@ -3220,11 +3228,13 @@
 | Numeta                                                 | 1      |
 | Numeta Ped                                             | 2      |
 | Nurofen                                                | 5      |
+| Nurofen Junior                                         | 4      |
 | Nutraplus                                              | 2      |
 | Nutriflex                                              | 8      |
 | Nutriflex Lipid                                        | 27     |
 | Nutriflex basal                                        | 4      |
 | Nutrineal Aminosäuren                                  | 6      |
+| Nutryelt                                               | 1      |
 | NuvaRing                                               | 4      |
 | Nuwiq                                                  | 4      |
 | Nyolol                                                 | 2      |
@@ -3253,6 +3263,7 @@
 | Oculoheel                                              | 1      |
 | Oculosan                                               | 1      |
 | Oculotect Gel                                          | 2      |
+| Odefsey                                                | 1      |
 | Odomzo                                                 | 2      |
 | Oedemex                                                | 2      |
 | Oeil Serocytol                                         | 2      |
@@ -3391,6 +3402,7 @@
 | Oxycontin                                              | 10     |
 | Oxydermin                                              | 1      |
 | Oxygenium MedicAir                                     | 41     |
+| Oxygène médical SOS                                    | 11     |
 | Oxynorm                                                | 17     |
 | Oxyplastin                                             | 2      |
 | Oxytocin Labatec                                       | 1      |
@@ -3474,7 +3486,7 @@
 | Paronex                                                | 4      |
 | Paroxetin Actavis                                      | 4      |
 | Paroxetin Helvepharm                                   | 3      |
-| Paroxetin Spirig                                       | 3      |
+| Paroxetin Spirig                                       | 6      |
 | Paroxetin-Mepha                                        | 5      |
 | Parsabiv                                               | 3      |
 | Parsenn-Herpes                                         | 1      |
@@ -3788,7 +3800,7 @@
 | Rebetol                                                | 3      |
 | Rebif                                                  | 10     |
 | Recivit                                                | 6      |
-| Recormon PS                                            | 7      |
+| Recormon PS                                            | 13     |
 | Rectogesic                                             | 1      |
 | Rectoseptal Neo bismuthe                               | 2      |
 | Rectoseptal-Neo simple                                 | 1      |
@@ -3850,7 +3862,7 @@
 | Revestive                                              | 1      |
 | Revitalose C                                           | 4      |
 | Revlimid                                               | 2      |
-| Revolade                                               | 6      |
+| Revolade                                               | 7      |
 | Reyataz                                                | 3      |
 | Rezirkane                                              | 6      |
 | Rezolsta                                               | 1      |
@@ -3919,7 +3931,7 @@
 | Risperidon-Mepha                                       | 19     |
 | Ritalin                                                | 11     |
 | Rivastigmin Patch Sandoz                               | 5      |
-| Rivastigmin Zentiva Patch                              | 3      |
+| Rivastigmin Zentiva Patch                              | 6      |
 | Rivastigmin-Acino                                      | 5      |
 | Rivastigmin-Mepha                                      | 5      |
 | Rivocor                                                | 4      |
@@ -4105,6 +4117,7 @@
 | Sildenafil Actavis                                     | 6      |
 | Sildenafil Axapharm                                    | 7      |
 | Sildenafil Helvepharm                                  | 6      |
+| Sildenafil PAH Spirig                                  | 1      |
 | Sildenafil PAH-Mepha                                   | 1      |
 | Sildenafil Pfizer                                      | 8      |
 | Sildenafil Sandoz                                      | 8      |
@@ -4119,7 +4132,7 @@
 | Simcora                                                | 8      |
 | Simdax                                                 | 6      |
 | Simepar-Acino                                          | 2      |
-| Similasan                                              | 107    |
+| Similasan                                              | 109    |
 | Similasan Akne Spray                                   | 1      |
 | Similasan Hautausschläge                               | 2      |
 | Similasan Wundheilspray                                | 1      |
@@ -4167,6 +4180,7 @@
 | Soledum                                                | 5      |
 | Solevita                                               | 2      |
 | Solian                                                 | 7      |
+| Solifenacin Sandoz                                     | 4      |
 | Solifenacin Spirig                                     | 4      |
 | Solifenacin-Mepha                                      | 6      |
 | Soliris                                                | 1      |
@@ -4326,7 +4340,7 @@
 | Systen Conti                                           | 2      |
 | Systen Sequi                                           | 1      |
 | Sédatif PC                                             | 1      |
-| TISSEEL                                                | 6      |
+| TISSEEL                                                | 8      |
 | TOBI                                                   | 1      |
 | TOBI PODHALER                                          | 1      |
 | TachoSil                                               | 5      |
@@ -4393,6 +4407,7 @@
 | TechneScan MAG3                                        | 1      |
 | TechneScan PYP                                         | 1      |
 | TechneScan Sestamibi                                   | 1      |
+| Teglutik                                               | 1      |
 | Tegretol                                               | 9      |
 | Teicoplanin Labatec                                    | 1      |
 | Tekcis                                                 | 1      |
@@ -4699,6 +4714,7 @@
 | Varuby                                                 | 1      |
 | Vascord                                                | 6      |
 | Vascord HCT                                            | 10     |
+| VasoKINOX                                              | 2      |
 | Vectibix                                               | 3      |
 | Velbe                                                  | 1      |
 | Velcade                                                | 2      |
@@ -4709,6 +4725,7 @@
 | Vemlidy                                                | 1      |
 | Venadoron                                              | 1      |
 | Venavit                                                | 1      |
+| Venclyxto                                              | 7      |
 | Venlafaxin Actavis                                     | 16     |
 | Venlafaxin Helvepharm                                  | 7      |
 | Venlafaxin Pfizer ER                                   | 8      |
@@ -5037,31 +5054,31 @@
 | octaplasLG                                             | 8      |
 | swidro Halsschmerz-Lutschtabletten                     | 2      |
 
-## type2 20506
+## type2 20597
 
 | Wert | Anzahl |
 | ---- | ------ |
-| Amp  | 1379   |
+| Amp  | 1384   |
 | Blt  | 2      |
-| Btl  | 377    |
+| Btl  | 378    |
 | Dos  | 5      |
 | Hub  | 2      |
 | MBq  | 13     |
-| Set  | 35     |
-| Stk  | 12525  |
+| Set  | 36     |
+| Stk  | 12593  |
 | U.I. | 107    |
-| g    | 1116   |
-| l    | 253    |
+| g    | 1118   |
+| l    | 266    |
 | mcg  | 81     |
 | mg   | 1057   |
-| ml   | 3502   |
+| ml   | 3503   |
 | mmol | 52     |
 
-## type3 20506
+## type3 20597
 
 | Wert  | Anzahl |
 | ----- | ------ |
-|       | 5052   |
+|       | 5074   |
 | Amp   | 532    |
 | Btl   | 3      |
 | Btl.  | 1      |
@@ -5073,18 +5090,18 @@
 | Mbq   | 2      |
 | Stk   | 997    |
 | U.I. | 1      |
-| U.I.  | 280    |
+| U.I.  | 288    |
 | g     | 120    |
-| mcg   | 367    |
-| mg    | 11205  |
-| ml    | 1840   |
+| mcg   | 375    |
+| mg    | 11243  |
+| ml    | 1855   |
 | mmol  | 71     |
 
-## type4 20506
+## type4 20597
 
 | Wert | Anzahl |
 | ---- | ------ |
-|      | 17362  |
+|      | 17424  |
 | 3660 | 1      |
 | 5550 | 1      |
 | 7.5  | 10     |
@@ -5101,17 +5118,17 @@
 | g    | 17     |
 | kBq  | 1      |
 | mcg  | 48     |
-| mg   | 562    |
-| ml   | 647    |
+| mg   | 570    |
+| ml   | 668    |
 | mmol | 30     |
 
-## type5 20506
+## type5 20597
 
 | Wert   | Anzahl |
 | ------ | ------ |
-|        | 19063  |
+|        | 19153  |
 | Btl    | 1      |
-| Dos    | 634    |
+| Dos    | 635    |
 | Gtt    | 674    |
 | Hub    | 79     |
 | Mbq    | 1      |
@@ -5124,7 +5141,7 @@
 | mg     | 3      |
 | mmol   | 13     |
 
-## gebiet 20506
+## gebiet 20597
 
 | Wert                                                                                                      | Anzahl |
 | --------------------------------------------------------------------------------------------------------- | ------ |
@@ -5146,7 +5163,7 @@
 | Bei Husten und Heiserkeit                                                                                 | 5      |
 | Bestimmung des Blut- oder Plasmavolumens                                                                  | 1      |
 | CT-Kontrastmittel                                                                                         | 4      |
-| Chemotherapie                                                                                             | 535    |
+| Chemotherapie                                                                                             | 542    |
 | Computertomographie                                                                                       | 1      |
 | Diagnostikum                                                                                              | 2      |
 | Diagnostikum zur Fluoreszenz-Zystoskopie                                                                  | 2      |
@@ -5169,7 +5186,7 @@
 | Gegenmittel bei Vergiftungen mit Nervenkampfstoffen                                                       | 1      |
 | Gegenmittel bei Vergiftungen mit Organophosphaten                                                         | 1      |
 | Gegenmittel zu Folsäure-Antagonisten                                                                      | 32     |
-| Homöopathie                                                                                               | 702    |
+| Homöopathie                                                                                               | 704    |
 | Hormonfunktionstest                                                                                       | 1      |
 | Hämofiltrationslösung                                                                                     | 19     |
 | Impfung gegen Cholera und ETEC-Durchfall                                                                  | 2      |
@@ -5206,7 +5223,7 @@
 | Inhalationsgas                                                                                            | 26     |
 | Knochenmarkszintigraphie und Lymphoszintigraphie                                                          | 1      |
 | Kontrastmittel für Ultraschalluntersuchungen                                                              | 1      |
-| Künstliche Beatmung bei Neugeborenen                                                                      | 14     |
+| Künstliche Beatmung bei Neugeborenen                                                                      | 16     |
 | Lungenperfusionsszintigraphie                                                                             | 2      |
 | Lymphographie                                                                                             | 1      |
 | MRT-Kontrastmittel                                                                                        | 123    |
@@ -5268,7 +5285,7 @@
 | Pflanzliches Mittel zur Inhalation bei Erkältung                                                          | 2      |
 | Pflanzliches Mittel zur Verdauungsförderung                                                               | 8      |
 | Pflanzliches Mittel zur Vorbeugung von Erkältungen                                                        | 3      |
-| Pflanzliches Stärkungsmittel                                                                              | 10     |
+| Pflanzliches Stärkungsmittel                                                                              | 12     |
 | Prophylaxe bei Reaktorstörfällen                                                                          | 1      |
 | Radiodiagnostikum bei parkinsonoiden Symptomen                                                            | 1      |
 | Radioiodtherapie bei Schilddrüsenkrankheiten                                                              | 1      |
@@ -5277,7 +5294,7 @@
 | Reproduktionsmedizin                                                                                      | 66     |
 | Retardkapseln                                                                                             | 6      |
 | Röntgenkontrastmittel                                                                                     | 209    |
-| Sauerstofftherapie                                                                                        | 189    |
+| Sauerstofftherapie                                                                                        | 200    |
 | Schilddrüsenszintigraphie                                                                                 | 2      |
 | Skelettszintigraphie                                                                                      | 2      |
 | Skelettszintigraphie, Myokardszintigraphie, Blutpoolszintigraphie                                         | 1      |
@@ -5383,7 +5400,7 @@
 | behandelt akute Migräneanfälle                                                                            | 115    |
 | behandelt allergischen Schock, Asthmaanfälle, Herz-Kreislauf-Stillstand                                   | 18     |
 | behandelt allergisches Asthma und chronische spontane Urtikaria (CSU)                                     | 2      |
-| behandelt amyotrophe Lateralsklerose (ALS)                                                                | 1      |
+| behandelt amyotrophe Lateralsklerose (ALS)                                                                | 2      |
 | behandelt atopische Dermatitis                                                                            | 8      |
 | behandelt bakterielle Darmentzündungen                                                                    | 2      |
 | behandelt bakterielle Hautinfektionen                                                                     | 1      |
@@ -5396,16 +5413,17 @@
 | behandelt das Multiple Myelom                                                                             | 4      |
 | behandelt das Restless Legs-Syndrom                                                                       | 5      |
 | behandelt den Morbus Fabry                                                                                | 1      |
-| behandelt die Alzheimer-Demenz                                                                            | 145    |
+| behandelt die Alzheimer-Demenz                                                                            | 149    |
 | behandelt die Castleman-Krankheit                                                                         | 2      |
 | behandelt die Endometriose                                                                                | 4      |
-| behandelt die HIV-Infektion                                                                               | 95     |
+| behandelt die HIV-Infektion                                                                               | 97     |
 | behandelt die HIV-Infektion und chronische Hepatitis B                                                    | 4      |
 | behandelt die Makuladegeneration                                                                          | 6      |
 | behandelt die akute hepatische Porphyrie                                                                  | 1      |
-| behandelt die hyperaktive Blase                                                                           | 39     |
+| behandelt die hyperaktive Blase                                                                           | 43     |
 | behandelt die stabile Angina pectoris                                                                     | 9      |
 | behandelt die Übersäuerung des Blutes                                                                     | 1      |
+| behandelt eosinophile Oesophagitis                                                                        | 2      |
 | behandelt gutartige Gebärmutterhalsveränderungen                                                          | 1      |
 | behandelt hormonelle Menstruationsstörungen                                                               | 1      |
 | behandelt lokal Brustbeschwerden bei Progesteronmangel                                                    | 1      |
@@ -5413,7 +5431,7 @@
 | behandelt maligne Hyperthermie                                                                            | 2      |
 | behandelt multiple Sklerose                                                                               | 2      |
 | behandelt notfallmässig Allergien und allergischen Schock                                                 | 4      |
-| behandelt psychische Erkrankungen                                                                         | 1047   |
+| behandelt psychische Erkrankungen                                                                         | 1053   |
 | behandelt rheumatoide Polyarthritis                                                                       | 4      |
 | behandelt und beugt Abstossungen nach Transplantationen vor                                               | 3      |
 | behandelt und beugt Virusinfektionen vor (CMV)                                                            | 5      |
@@ -5422,6 +5440,7 @@
 | behandelt vitreomakuläre Traktionen bei Erwachsenen                                                       | 2      |
 | behandelt Übelkeit und Erbrechen nach Operationen                                                         | 1      |
 | bei stumpfen Verletzungen                                                                                 | 1      |
+| bei überschüssigem Fett unter dem Kinn                                                                    | 1      |
 | bekämpft Kopfläuse                                                                                        | 1      |
 | bekämpft Läuse                                                                                            | 2      |
 | bekämpft Milben und lindert Juckreiz                                                                      | 3      |
@@ -5443,7 +5462,7 @@
 | beugt Wundliegen (Dekubitus) vor                                                                          | 2      |
 | beugt einer Abstossung nach Nierentransplantation vor                                                     | 2      |
 | beugt einer Rhesusimmunisierung vor                                                                       | 1      |
-| bewirkt einen Wundverschluss                                                                              | 8      |
+| bewirkt einen Wundverschluss                                                                              | 10     |
 | bindet überschüssiges Eisen                                                                               | 14     |
 | bremst Schwellungen (Angioödem)                                                                           | 1      |
 | bremst die Bildung von Blutplättchen                                                                      | 8      |
@@ -5453,7 +5472,7 @@
 | desinfiziert Haut und Schleimhäute                                                                        | 5      |
 | desinfiziert Haut und Wunden                                                                              | 16     |
 | desinfiziert Haut, Schleimhaut und Wunden                                                                 | 21     |
-| desinfiziert Mund- und Rachenraum                                                                         | 30     |
+| desinfiziert Mund- und Rachenraum                                                                         | 31     |
 | desinfiziert Wunden                                                                                       | 25     |
 | desinfiziert Wunden und Instrumente                                                                       | 3      |
 | desinfiziert Wunden und fördert Wundheilung                                                               | 3      |
@@ -5543,7 +5562,7 @@
 | fördert die Vernarbung                                                                                    | 1      |
 | fördert die Wundheilung                                                                                   | 57     |
 | fördert die Wundheilung und Durchblutung                                                                  | 2      |
-| führt Biotin zu                                                                                           | 10     |
+| führt Biotin zu                                                                                           | 12     |
 | führt Calcium zu                                                                                          | 11     |
 | führt Carnitin zu                                                                                         | 4      |
 | führt Eisen und Folsäure zu                                                                               | 11     |
@@ -5555,7 +5574,7 @@
 | führt Nährstoffe zu                                                                                       | 109    |
 | führt Phosphat zu                                                                                         | 2      |
 | führt Selen zu                                                                                            | 5      |
-| führt Spurenelemente zu                                                                                   | 3      |
+| führt Spurenelemente zu                                                                                   | 4      |
 | führt Vitamin A zu                                                                                        | 4      |
 | führt Vitamin B1 zu                                                                                       | 6      |
 | führt Vitamin B2 zu                                                                                       | 3      |
@@ -5585,13 +5604,13 @@
 | hemmt Entzündungen                                                                                        | 134    |
 | hemmt Entzündungen am Auge                                                                                | 27     |
 | hemmt Entzündungen auf der Kopfhaut                                                                       | 1      |
-| hemmt Entzündungen der Haut                                                                               | 136    |
+| hemmt Entzündungen der Haut                                                                               | 138    |
 | hemmt Entzündungen der Kopfhaut                                                                           | 7      |
 | hemmt Entzündungen der Mundschleimhaut                                                                    | 1      |
 | hemmt Entzündungen im Darm                                                                                | 47     |
 | hemmt Entzündungen und Schmerzen im Rachen                                                                | 3      |
 | hemmt Entzündungen und lindert Juckreiz im Analbereich                                                    | 3      |
-| hemmt Entzündungsreaktionen                                                                               | 34     |
+| hemmt Entzündungsreaktionen                                                                               | 46     |
 | hemmt Entzündungsreaktionen bei Psoriasis und Psoriasis-Arthritis                                         | 2      |
 | hemmt Entzündungsreaktionen im Darm                                                                       | 1      |
 | hemmt Hautinfektionen durch Bakterien                                                                     | 2      |
@@ -5605,7 +5624,7 @@
 | hemmt bakterielle Zahnbeläge                                                                              | 2      |
 | hemmt das Immunsystem                                                                                     | 164    |
 | hemmt das Zellwachstum bei tuberöser Sklerose                                                             | 5      |
-| hemmt den Knochenabbau                                                                                    | 107    |
+| hemmt den Knochenabbau                                                                                    | 110    |
 | hemmt die Aktivität der Schilddrüse                                                                       | 3      |
 | hemmt die Aufnahme von Nahrungsfetten                                                                     | 15     |
 | hemmt die Ausschüttung von Geschlechtshormonen                                                            | 24     |
@@ -5613,7 +5632,7 @@
 | hemmt die Bildung von Nebennierenrindenhormonen                                                           | 1      |
 | hemmt die Bildung von Wachstumshormonen                                                                   | 9      |
 | hemmt die Blutgerinnung                                                                                   | 133    |
-| hemmt die Blutplättchenaggregation                                                                        | 86     |
+| hemmt die Blutplättchenaggregation                                                                        | 87     |
 | hemmt die Freisetzung von Hormonen                                                                        | 17     |
 | hemmt die Harnausscheidung                                                                                | 23     |
 | hemmt die Hormonausschüttung (Prolaktin)                                                                  | 11     |
@@ -5655,7 +5674,7 @@
 | lindert Schmerzen an den Füssen                                                                           | 1      |
 | lindert Schmerzen bei chronischen Analfissuren                                                            | 1      |
 | lindert Schmerzen und Angst                                                                               | 8      |
-| lindert Schmerzen und Entzündungen und senkt Fieber                                                       | 445    |
+| lindert Schmerzen und Entzündungen und senkt Fieber                                                       | 449    |
 | lindert Schmerzen und beugt Verstopfungen vor                                                             | 61     |
 | lindert Schmerzen und erweitert die Gefässe                                                               | 8      |
 | lindert Schmerzen und schützt den Magen                                                                   | 8      |
@@ -5705,7 +5724,7 @@
 | pflanzliches Mittel bei Venenbeschwerden                                                                  | 15     |
 | pflanzliches Mittel bei lokalen Schmerzen                                                                 | 1      |
 | pflanzliches Mittel bei nevösen Herzbeschwerden                                                           | 23     |
-| pflanzliches Mittel bei Ängstlichkeit und Unruhe                                                          | 4      |
+| pflanzliches Mittel bei Ängstlichkeit und Unruhe                                                          | 5      |
 | pflanzliches Mittel zur Linderung von starkem Schwitzen                                                   | 1      |
 | pflanzliches Mittel zur Wunheilung                                                                        | 1      |
 | pflanzliches Stärkungsmittel                                                                              | 4      |
@@ -5731,9 +5750,9 @@
 | schützt vor und behandelt Malaria                                                                         | 10     |
 | senkt Phenylalanin im Blut                                                                                | 2      |
 | senkt das Parathormon                                                                                     | 11     |
-| senkt den Augeninnendruck                                                                                 | 140    |
+| senkt den Augeninnendruck                                                                                 | 142    |
 | senkt den Augeninnendruck und entwässert                                                                  | 2      |
-| senkt den Blutdruck                                                                                       | 1065   |
+| senkt den Blutdruck                                                                                       | 1070   |
 | senkt den Blutdruck und behandelt Herzrhythmusstörungen                                                   | 37     |
 | senkt den Blutdruck und die Herzfrequenz                                                                  | 239    |
 | senkt den Blutdruck und erleichtert die Herzarbeit                                                        | 38     |
@@ -5743,7 +5762,7 @@
 | senkt den Calciumspiegel im Blut                                                                          | 12     |
 | senkt den Harnsäurespiegel im Blut                                                                        | 29     |
 | senkt den Kaliumspiegel im Blut                                                                           | 4      |
-| senkt den Lungenhochdruck                                                                                 | 47     |
+| senkt den Lungenhochdruck                                                                                 | 48     |
 | senkt den Phosphatspiegel im Blut                                                                         | 26     |
 | senkt die Cholesterinspiegel im Blut                                                                      | 412    |
 | senkt die Choletserinspiegel im Blut                                                                      | 6      |
@@ -5756,19 +5775,19 @@
 | steigert den Blutdruck                                                                                    | 2      |
 | steigert den Urin-pH                                                                                      | 1      |
 | steigert die Anzahl von Granulozyten im Blut                                                              | 15     |
-| steigert die Bildung von Blutplättchen                                                                    | 8      |
+| steigert die Bildung von Blutplättchen                                                                    | 9      |
 | stillt Blutungen                                                                                          | 10     |
 | stimuliert das Immunsystem                                                                                | 18     |
 | stimuliert das Immunsystem der Harnwege                                                                   | 2      |
 | stimuliert die Bildung von Knochengewebe an der Implantatstelle                                           | 2      |
-| stimuliert die Bildung von roten Blutzellen                                                               | 140    |
+| stimuliert die Bildung von roten Blutzellen                                                               | 146    |
 | stimuliert die Kontraktion der Gebärmutter                                                                | 1      |
 | stärkt die Darmflora                                                                                      | 3      |
 | stärkt die Gefässwände bei Venenkrankheiten                                                               | 4      |
 | substituiert Opioide bei Abhängigkeit                                                                     | 19     |
 | substituiert Opioide und lindert Schmerzen                                                                | 54     |
 | säuert den Urin an                                                                                        | 2      |
-| unterdrückt Immunzellen                                                                                   | 3      |
+| unterdrückt Immunzellen                                                                                   | 4      |
 | unterstützende Behandlung bei Fehlfunktionen des Körpers                                                  | 51     |
 | unterstützt bei Gelenkerkrankungen                                                                        | 12     |
 | unterstützt den Eisprung                                                                                  | 7      |
@@ -5794,7 +5813,7 @@
 | verengt die Blutgefässe und mindert Gesichtsrötung                                                        | 1      |
 | verengt die Pupille                                                                                       | 2      |
 | verflüssigt zähen Schleim                                                                                 | 153    |
-| verhindert und bremst Schwellungen (Angioödem)                                                            | 3      |
+| verhindert und bremst Schwellungen (Angioödem)                                                            | 4      |
 | verhindert zu frühen Eisprung                                                                             | 3      |
 | verklebt Gewebe in der Verbrennungschirurgie                                                              | 2      |
 | verlangsamt den Fortschritt der Zystenentwicklung und Nierenfunktionsstörung                              | 5      |
@@ -5855,7 +5874,7 @@
 | wirkt gegen Fusspilz                                                                                      | 8      |
 | wirkt gegen Grippeviren                                                                                   | 5      |
 | wirkt gegen Hautpilz                                                                                      | 35     |
-| wirkt gegen Infektionen durch Bakterien                                                                   | 788    |
+| wirkt gegen Infektionen durch Bakterien                                                                   | 789    |
 | wirkt gegen Infektionen durch Bakterien und Parasiten                                                     | 4      |
 | wirkt gegen Infektionen durch Bakterien wie Tuberkulose                                                   | 21     |
 | wirkt gegen Infektionen im Ohr                                                                            | 1      |
@@ -5894,7 +5913,7 @@
 | zur Spülung von Urethral-Kathetern                                                                        | 1      |
 | öffnet den Ductus arteriosus bei Neugeborenen mit Herzfehlern                                             | 1      |
 
-## inhaber 20506
+## inhaber 20597
 
 | Wert                                                                | Anzahl |
 | ------------------------------------------------------------------- | ------ |
@@ -5902,7 +5921,7 @@
 | A. Menarini                                                         | 109    |
 | ALK-Abelló                                                          | 63     |
 | APS Arzneimittel                                                    | 15     |
-| AbbVie                                                              | 41     |
+| AbbVie                                                              | 48     |
 | Accord Healthcare AG                                                | 10     |
 | Acino Pharma                                                        | 188    |
 | Actavis Switzerland                                                 | 407    |
@@ -5916,7 +5935,7 @@
 | Alcon Switzerland                                                   | 21     |
 | Alexion Pharma                                                      | 12     |
 | Alfasigma Schweiz AG                                                | 21     |
-| Allergan                                                            | 45     |
+| Allergan                                                            | 46     |
 | Allergopharma                                                       | 229    |
 | Alliance Pharmaceuticals GmbH, Düsseldorf, Zweigniederlassung Uster | 3      |
 | Almirall                                                            | 48     |
@@ -5932,16 +5951,16 @@
 | Ars Vitae                                                           | 7      |
 | Aspen Pharma Schweiz                                                | 92     |
 | Astellas Pharma                                                     | 41     |
-| AstraZeneca                                                         | 245    |
+| AstraZeneca                                                         | 237    |
 | Axapharm                                                            | 277    |
 | B. Braun Medical                                                    | 276    |
 | BD Switzerland Sàrl, Business Park Terre-Bonne, Bâtiment A4         | 14     |
-| BGP Products                                                        | 127    |
+| BGP Products                                                        | 129    |
 | Bailleul (Suisse) SA                                                | 25     |
 | Basilea Pharmaceutica International                                 | 3      |
 | Bausch & Lomb Swiss                                                 | 31     |
 | Baxalta Schweiz                                                     | 4      |
-| Baxter                                                              | 120    |
+| Baxter                                                              | 123    |
 | Bayer                                                               | 350    |
 | Bayer (Schweiz)                                                     | 6      |
 | Beiersdorf                                                          | 5      |
@@ -5962,8 +5981,8 @@
 | Bären-Apotheke                                                      | 1      |
 | CP Pharma (Schweiz)                                                 | 6      |
 | CPS Cito Pharma Services                                            | 56     |
-| CSL Behring                                                         | 88     |
-| Carbagas                                                            | 56     |
+| CSL Behring                                                         | 89     |
+| Carbagas                                                            | 58     |
 | Cederberg                                                           | 4      |
 | Celgene                                                             | 16     |
 | Ceres Heilmittel                                                    | 7      |
@@ -5976,7 +5995,7 @@
 | Cyntos                                                              | 1      |
 | Daiichi Sankyo                                                      | 78     |
 | Debiopharm Research & Manufacturing                                 | 4      |
-| Dermapharm                                                          | 150    |
+| Dermapharm                                                          | 152    |
 | Desitin Pharma                                                      | 62     |
 | Desma Healthcare                                                    | 11     |
 | DiaMo Narcotics                                                     | 3      |
@@ -5994,7 +6013,7 @@
 | Drossapharm                                                         | 246    |
 | E. Kern                                                             | 8      |
 | Ecolab (Schweiz)                                                    | 5      |
-| Effik                                                               | 38     |
+| Effik                                                               | 39     |
 | Eisai Pharma                                                        | 44     |
 | Eli Lilly                                                           | 76     |
 | Elixan Aromatica                                                    | 2      |
@@ -6009,9 +6028,9 @@
 | Fresenius Kabi                                                      | 226    |
 | Fresenius Kabi (Schweiz)                                            | 7      |
 | Fresenius Medical Care                                              | 52     |
-| Future Health Pharma                                                | 46     |
+| Future Health Pharma                                                | 47     |
 | G-Pharma AG                                                         | 9      |
-| GABA Schweiz                                                        | 8      |
+| GABA Schweiz                                                        | 9      |
 | GE Healthcare                                                       | 76     |
 | GSK Consumer Healthcare Schweiz AG                                  | 196    |
 | Galderma                                                            | 70     |
@@ -6020,18 +6039,18 @@
 | Gebro Pharma                                                        | 229    |
 | Gedeon Richter                                                      | 34     |
 | Geistlich Pharma                                                    | 13     |
-| Gilead Sciences Switzerland                                         | 22     |
-| Ginsana                                                             | 23     |
+| Gilead Sciences Switzerland                                         | 23     |
+| Ginsana                                                             | 25     |
 | Gisand                                                              | 8      |
 | GlaxoSmithKline                                                     | 265    |
 | Grosse Apotheke Dr. G. Bichsel                                      | 386    |
-| Grünenthal Pharma                                                   | 77     |
+| Grünenthal Pharma                                                   | 85     |
 | Guerbet                                                             | 76     |
 | Gynial AG                                                           | 13     |
 | HRA-Pharma Switzerland Sàrl                                         | 4      |
 | Heidak AG                                                           | 6      |
 | Heider                                                              | 21     |
-| Helvepharm                                                          | 585    |
+| Helvepharm                                                          | 589    |
 | Hepart                                                              | 1      |
 | Herbamed                                                            | 9      |
 | Homöopharm                                                          | 3      |
@@ -6085,7 +6104,7 @@
 | Medius                                                              | 27     |
 | Medtronic BioPharma                                                 | 2      |
 | Melisana                                                            | 69     |
-| Mepha Pharma                                                        | 1798   |
+| Mepha Pharma                                                        | 1808   |
 | Merck                                                               | 99     |
 | Merck (Schweiz)                                                     | 2      |
 | Merz Pharma                                                         | 44     |
@@ -6101,7 +6120,7 @@
 | Nordic Pharma                                                       | 42     |
 | Norgine                                                             | 27     |
 | Novartis Consumer Health Schweiz                                    | 16     |
-| Novartis Pharma Schweiz                                             | 457    |
+| Novartis Pharma Schweiz                                             | 456    |
 | Novasearch AG                                                       | 1      |
 | Novo Nordisk Pharma                                                 | 56     |
 | Nutrimed                                                            | 6      |
@@ -6112,7 +6131,7 @@
 | OmniVision                                                          | 24     |
 | Ophtapharm                                                          | 4      |
 | Opopharma                                                           | 19     |
-| OrPha Swiss                                                         | 30     |
+| OrPha Swiss                                                         | 31     |
 | Oraltek                                                             | 1      |
 | Organogenesis Switzerland                                           | 1      |
 | Orion Pharma                                                        | 53     |
@@ -6148,8 +6167,8 @@
 | Produits dentaires                                                  | 2      |
 | R.D. Pharma                                                         | 3      |
 | RECORDATI AG                                                        | 82     |
-| Rausch                                                              | 1      |
-| Reckitt Benckiser                                                   | 27     |
+| Rausch                                                              | 3      |
+| Reckitt Benckiser                                                   | 31     |
 | Reckitt Benckiser (Switzerland)                                     | 2      |
 | Recordati                                                           | 16     |
 | Regen Lab                                                           | 14     |
@@ -6157,12 +6176,13 @@
 | Resinag                                                             | 8      |
 | Ricola                                                              | 19     |
 | Rivopharm                                                           | 29     |
-| Roche Pharma                                                        | 146    |
+| Roche Pharma                                                        | 153    |
 | Roche Pharma (Schweiz)                                              | 1      |
 | SFL Pharma GmbH                                                     | 1      |
+| SOS Oxygène SA                                                      | 11     |
 | SWAN Isotopen Inselspital                                           | 3      |
 | Salmon Pharma                                                       | 49     |
-| Sandoz Pharmaceuticals                                              | 1437   |
+| Sandoz Pharmaceuticals                                              | 1454   |
 | Sanochemia Diagnostics International                                | 40     |
 | Sanofi                                                              | 6      |
 | Sanofi Pasteur MSD                                                  | 2      |
@@ -6170,14 +6190,14 @@
 | Sanofi-Aventis (Suisse)                                             | 5      |
 | Santen Switzerland                                                  | 18     |
 | Schellenberg                                                        | 4      |
-| Schwabe Pharma                                                      | 64     |
+| Schwabe Pharma                                                      | 65     |
 | Schülke & Mayr                                                      | 14     |
 | Servier                                                             | 86     |
 | Shire Switzerland                                                   | 1      |
 | Shire Switzerland GmbH                                              | 84     |
 | Sidroga                                                             | 77     |
 | Sigma-Tau Pharma                                                    | 6      |
-| Similasan                                                           | 111    |
+| Similasan                                                           | 113    |
 | Sintetica                                                           | 206    |
 | Siphar                                                              | 13     |
 | Smith & Nephew Schweiz AG                                           | 3      |
@@ -6185,7 +6205,7 @@
 | Solumedics AG                                                       | 19     |
 | Spagyros                                                            | 20     |
 | SparMed                                                             | 5      |
-| Spirig HealthCare                                                   | 876    |
+| Spirig HealthCare                                                   | 881    |
 | Spirig Pharma                                                       | 1      |
 | Stallergenes                                                        | 145    |
 | Steinberg Pharma                                                    | 18     |
@@ -6196,7 +6216,7 @@
 | Synmedic                                                            | 2      |
 | Sérolab                                                             | 53     |
 | TESARO Bio GmbH                                                     | 1      |
-| THEA Pharma                                                         | 32     |
+| THEA Pharma                                                         | 34     |
 | Takeda Pharma                                                       | 266    |
 | Tanner                                                              | 1      |
 | Target BioScience                                                   | 40     |
@@ -6212,7 +6232,7 @@
 | Venus Pharma Suisse                                                 | 4      |
 | Vertex Pharmaceuticals                                              | 1      |
 | Vertex Pharmaceuticals (CH) GmbH                                    | 4      |
-| Vifor                                                               | 185    |
+| Vifor                                                               | 187    |
 | Vifor Consumer Health                                               | 154    |
 | Vifor Fresenius Medical Care Renal Pharma                           | 4      |
 | ViiV Healthcare                                                     | 18     |
