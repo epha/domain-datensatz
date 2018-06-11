@@ -6,7 +6,7 @@ Als Grundlage dienen die offiziellen Tabellen zu den zugelassenen Packungen bzw.
 
 Die Stammdaten werden jeden Monat auf den aktuellsten Stand gebracht und von Ärzten und Apothekern manuell aufbereitet und ergänzt. 
 
-### Beispiel
+### Beispiel der Datenstruktur
 
 ```JSON
 "7680553510015": {
@@ -43,3 +43,27 @@ Die Stammdaten werden jeden Monat auf den aktuellsten Stand gebracht und von Är
   "pubPreis": "6.70"
 }
 ```
+|**Abkürzung**| **Bedeutung Abkürzung**| **Erläuterung**|
+|--------|---------------|--------------|
+|**ihStat**|im Handel: Status|**true:** der Artikel befindet sich im Handel; **false:** der Artikel ist ausser Handel
+|**ihLast** |       |         |
+|**ihFrom** |       |         |
+|**ihEnds** |      |         |
+|**slStat** |Spezialitätenliste: Status |**true:** der Artikel befindet sich auf der Spezialitätenliste; **false:** der Artikel steht nicht auf der Spezialitätenliste
+|**slLast** |       |         |
+|**slFrom** |       |         |
+|**slEnds** |       |         |
+|**gtin**| GTIN|packungsspezifische, 13-stellige Identifikationsnummer |
+|**name1** |Packungsname | Name des Artikels (Teil 1)
+|**name2** |Packungsname | Name des Artikels (Teil 2, Bezeichnung der in der Packung enthaltenen Menge)
+|**applw** |Applikationsweg | Auswahl des (häufigsten) Applikationsweges fpr den Artikel |
+|**form** |Darreichungsform | Darreichungsform, standardisiert |
+|**atcCode** |ATC-Code | ATC-Code des Wirkstoffes im Artikel |
+|**atcName** |Name des ATC-Codes | Name des ATC-Codes/Wirkstoffname |
+|**brandName** |Bezeichnung der Marke |Alle Artikel, welche unter derselben Marke geführt werden (z.B. verschiedene Dosisstärken, Packungsgrössen), sind zu Marken-Gruppen zusammengefasst|
+|**brandForms**| Darreichungsformen der Marke | mögliche verschiedene Darreichungsformen, die innerhalb der Marke vorkommen |
+|**unit** & **type** |Zahl & Einheit |Die Einträge in **unit** und **type** gehören jeweils zusammen (unit1 & type1, unit2 & type2...). Es bezeichnet die Menge an Wirkstoff innerhalb einer Packung, ausgedrückt in unterschiedlichen Einheiten bzw. das Volumen des Gesamtproduktes innerhalb einer Packung, ausgedrückt in unterschiedlichen Einheiten oder die Anzahl der Dosiseinheiten (z.B. Stückzahl der Tabletten) in einer Packung |
+|**gebiet**| Anwendungsgebiet | Patientenfreundlicher Informationstext über medizinische Wirkung des Artikels/Indikationsgebiet, in dem der Artikel eingesetzt wird |
+|**Inhaber**| Zulassungsinhaber | Inhaber der Genehmigung zum in Handel bringen des Artikels|
+|**exfPreis** | Ex-Factory-Preis | Ex-Factory-Preis |
+|**pubPreis** | Publikumspreis | Publikumspreis|
