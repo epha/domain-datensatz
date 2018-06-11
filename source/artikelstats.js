@@ -6,60 +6,62 @@ const artikelArray = Object.values(artikel)
 //choose for which props we display a table
 const indicate = (property) => {
 
-  return property.name == "ihStat" ||
-         property.name == "slStat" ||
-         property.name == "applw" ||
-         property.name == "form" ||
-         property.name == "brandName" ||
-         property.name == "type2" ||
-         property.name == "type3" ||
-         property.name == "type4" ||
-         property.name == "type5" ||
-         property.name == "gebiet" ||
-         property.name == "inhaber"
+  return property == "ihStat" ||
+         property == "slStat" ||
+         property == "applw" ||
+         property == "form" ||
+         property == "brandName" ||
+         property == "type2" ||
+         property == "type3" ||
+         property == "type4" ||
+         property == "type5" ||
+         property == "gebiet" ||
+         property == "inhaber"
 }
 
+
+//split, order and count props
 const stats = Object.values(artikelArray.reduce((acc, artikel, idx) => {
 
   const entries = Object.entries(artikel)
 
   entries.forEach((entry) => {
 
-  	//no prop available add to object
-  	if(!acc[entry[0]]) {
-  
-      acc[entry[0]] = {
-      	name: entry[0],
-      	values: [],
-      	amount: 0
-      }
+    if(indicate(entry[0])) {
+      
+      //no prop available add to object
+      if(!acc[entry[0]]) {
     
-    //property available in acc
-  	} else {
+        acc[entry[0]] = {
+          name: entry[0],
+          values: [],
+          amount: 0
+        }
+      
+      //property available in acc
+      } else {
+        const property = acc[entry[0]]
+        const value = entry[1]
 
-  	  const property = acc[entry[0]]
-  	  const value = entry[1]
+        //got value assigned to prop
+        if(!!value || value == false) {
+        
+          property.amount++
 
-  	  //got value assigned to prop
-  	  if(!!value || value == false) {
-
-  	  	//console.log('got value')
-  	  	property.amount++
-
-        if(indicate(property)) {
-          
           //add none seen value to props values
           if(!property.values.some((val) => val[0] == value) || !property.values.length) {
             property.values.push([value, 1])
           } else {
-          	//if already knwon increment counter
+            //if already knwon increment counter
             const v = property.values.find((val) => val[0] == value)
             v[1]++
           }
         }
-  	  }
-  	}
+      }
+
+    }
   })
+
   return acc
 }, {}))
 
@@ -77,36 +79,30 @@ const writeFile = (idx, stats) => {
   if(!stats[idx]) return
   
   const property = stats[idx]
-  
-  if(indicate(property)) {
 
-  	const propertyHeader = `## ${property.name} ${property.amount}`
+  const propertyHeader = `## ${property.name} ${property.amount}`
 
-  	appendFile(propertyHeader).then(() => {
-  	  return appendFile('\n\n')
-  	})
-  	.then(() => {
-  	  //sort values
-      property.values.sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0)
+  appendFile(propertyHeader).then(() => {
+    return appendFile('\n\n')
+  })
+  .then(() => {
+    //sort values alphabetically
+    property.values.sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0)
 
-      //add table header
-      property.values.unshift(['Wert', 'Anzahl'])
-      
-      //construct table
-  	  const statsTable = table(property.values)
-  	  return appendFile(statsTable)
-  	})
-  	.then(() => {
-  	  return appendFile('\n\n')
-  	})
-  	.then(() => {
-  	  console.log(property.name + ' done')
-  	  writeFile(idx + 1, stats)
-  	})
-
-  } else {
-  	writeFile(idx + 1, stats)
-  }
+    //add table header
+    property.values.unshift(['Wert', 'Anzahl'])
+    
+    //construct table
+    const statsTable = table(property.values)
+    return appendFile(statsTable)
+  })
+  .then(() => {
+    return appendFile('\n\n')
+  })
+  .then(() => {
+    console.log(property.name + ' done')
+    writeFile(idx + 1, stats)
+  })
 }
 
 writeFile(0, stats)

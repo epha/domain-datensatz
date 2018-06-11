@@ -12,7 +12,7 @@
 
 ## NPM
 
-```
+```bash
 $ npm i epha/domain-datesatz
 ```
 
