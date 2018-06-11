@@ -1,24 +1,119 @@
-## ihStat 20597
+
+
+# Artikel
+
+Unsere Referenzdaten enthalten neben technischen Kenndaten auch anwendungsbezogene Informationen wie Applikationsweg oder Anwendungsgebiet, welche durch Ärzte und Apotheker manuell hinzugefügt werden.
+
+Die Grundstruktur der Referenzdaten ist in der [Einleitung]() aufgeführt. Im Folgenden sind detailierte Informationen zu den einzelnen Kategorien aufgeführt.
+
+### Beispiel der Datenstruktur
+
+    "7680553510015": {
+
+      //Status im Handel: true/false (siehe Details)
+      "ihStat": true,
+      
+      //Datum der letzten Aktualisierung, bei der Status erfasst wurde
+      "ihLast": "2018-05-07",
+      
+      //Startdatum der Zulassung 
+      "ihFrom": "2000-08-08",
+      
+      //Enddatum der Zulassung
+      "ihEnds": "2020-08-17",
+      
+      //Status "Spezialitätenliste": true/false (siehe Details)
+      "slStat": true,
+      
+      //Datum des letzten Aktualisierung, bei der Status erfasst wurde 
+      "slLast": "2018-05-07",
+      
+      //Startdatum des Artikels (Spezialitätenliste)     
+      "slFrom": "2017-04-01",
+      
+      //Enddatum des Artikels (Spezialitätenliste) 
+      "slEnds": "9999-12-31",
+      
+      //Packungsspezifische, 13-stellige Identifikationsnummer
+      "gtin": "7680553510015",
+      
+      //Bezeichnung Artikel
+      "name1": "Metfin  500, Filmtabletten",
+      "name2": "50 Tablette(n)",
+      
+      //Applikationsweg (siehe Details)
+      "applw": "p.o.",
+      
+      //Darreichungsform (siehe Details)
+      "form": "Tablette",
+      
+      //ATC-Code und Wirkstoffname (see "Wirkstoffe")
+      "atcCode": "A10BA02",
+      "atcName": "Metformin",
+      
+      //Marke und möfliche Darreichungsformen (siehe Details)
+      "brandName": "Metfin",
+      "brandForms": "Tablette",
+      
+      //Charakterisierung des Inhaltes pro Packung (siehe Details)
+      "unit1": "1",
+      "type1": "Pck",
+      "unit2": "50",
+      "type2": "Stk",
+      "unit3": "25000",
+      "type3": "mg",
+      "unit4": "",
+      "type4": "",
+      "unit5": "",
+      "type5": "",
+      
+      //Patientenfreundlicher Informationstext (siehe Details)
+      "gebiet": "senkt den Blutzucker",
+      
+      //Zulassungsinhaber (siehe Details)
+      "inhaber": "Sandoz Pharmaceuticals",
+      
+      //Preise
+      "exfPreis": "2.25",
+      "pubPreis": "6.70"
+    }
+    
+## ihStat
+Unter **ihStat** ist der Status im Handel bzw. ausser Haldel dokumentiert:
+
+-  **true:** der Artikel befindet sich im Handel
+-  **false:** der Artikel ist ausser Handel
+
+Total: 20597
 
 | Wert  | Anzahl |
 | ----- | ------ |
 | false | 3237   |
 | true  | 17360  |
 
-## slStat 20597
+## slStat
+Unter **slStat** ist hinterlegt, ob ein Artikel auf der offiziellen Spezialitätenliste aufgeführt ist:
+
+- **true:** der Artikel befindet sich auf der Spezialitätenliste
+- **false:** der Artikel steht nicht auf der Spezialitätenliste
+
+Total: 20597
 
 | Wert  | Anzahl |
 | ----- | ------ |
 | false | 11174  |
 | true  | 9423   |
 
-## applw 20597
+## applw
+Unter **applw** ist der Applikationsweg für den Artikel beschrieben. Sine mehrere Applikationswege möglich (z.B. subkutane und/oder imtramuskuläre Gabe) so ist der häufigste/gebräuchliste Applikationsweg für den Artikel hinterlegt. Alle im Datensatz enthaltenen Applikationswege sind in der nachfolgenden Tabelle unter "Statistik" aufgeführt.
 
-| Wert              | Anzahl |
-| ----------------- | ------ |
+Total: 20597
+
 | Implantation      | 1      |
+| ----------------- | ------ |
 | Intrathekal       | 10     |
 | Intravesikal      | 2      |
+| Wert              | Anzahl |
 | aural             | 11     |
 | buccal            | 733    |
 | cutan             | 1617   |
@@ -55,11 +150,13 @@
 | zum Spülen        | 3      |
 | zur Zubereitung   | 478    |
 
-## form 20597
+## form
+Unter **form** ist die jeweilige Darreichungsform in standardisierter Form für den Artikel spezifiziert. Alle im Datensatz enthaltenen Darreichungsformen sind in der nachfolgenden Tabelle unter "Statistik" aufgeführt.
 
-| Wert           | Anzahl |
-| -------------- | ------ |
+Total: 20597
+
 | Brausetablette | 177    |
+| -------------- | ------ |
 | Creme          | 252    |
 | Emulsion       | 207    |
 | Fertigspritze  | 683    |
@@ -91,12 +188,17 @@
 | Tablette       | 7280   |
 | Tee            | 115    |
 | Utensilien     | 28     |
+| Wert           | Anzahl |
 
-## brandName 20597
+## brandName & brandForms
+Alle Artikel, welche unter derselben Marke geführt werden (z.B. verschiedene Dosisstärken, Packungsgrössen), sind zu Marken-Gruppen zusammengefasst. **brandName** bezeichnet die jeweilige Gruppe in die der Artikel eingruppiert wurde. Unter **brandForms** sind verschiedene Darreichungsformen, die innerhalb der jeweiligen Marke vorkommen, aufgeführt.
 
-| Wert                                                   | Anzahl |
-| ------------------------------------------------------ | ------ |
+### brandName
+
+Total: 20597
+
 | 1000 Blattgrün                                         | 1      |
+| ------------------------------------------------------ | ------ |
 | 1001 Blattgrün                                         | 3      |
 | 18F-FDG-FR                                             | 2      |
 | 18F-Fluorocholine ZRP                                  | 1      |
@@ -4876,6 +4978,7 @@
 | Weleda Aufbaukalk Pulver                               | 1      |
 | Wellbutrin                                             | 3      |
 | Wellvone                                               | 1      |
+| Wert                                                   | Anzahl |
 | Wiewohl                                                | 2      |
 | Wilate                                                 | 2      |
 | Willfact                                               | 1      |
@@ -5054,11 +5157,19 @@
 | octaplasLG                                             | 8      |
 | swidro Halsschmerz-Lutschtabletten                     | 2      |
 
-## type2 20597
+## unit & type
+Die Einträge in **unit** und **type** gehören jeweils zusammen (unit1 & type1, unit2 & type2...). Es bezeichnet 
 
-| Wert | Anzahl |
-| ---- | ------ |
+- die Menge an Wirkstoff innerhalb einer Packung, ausgedrückt in unterschiedlichen Dosierungeinheiten 
+- das Volumen des Gesamtproduktes innerhalb einer Packung, ausgedrückt in unterschiedlichen Dosierungeinheiten
+- die Anzahl der Dosiseinheiten (z.B. Stückzahl der Tabletten, Anzahl Ampullen) in einer Packung 
+
+### type2
+
+Total: 20597
+
 | Amp  | 1384   |
+| ---- | ------ |
 | Blt  | 2      |
 | Btl  | 378    |
 | Dos  | 5      |
@@ -5067,6 +5178,7 @@
 | Set  | 36     |
 | Stk  | 12593  |
 | U.I. | 107    |
+| Wert | Anzahl |
 | g    | 1118   |
 | l    | 266    |
 | mcg  | 81     |
@@ -5074,11 +5186,12 @@
 | ml   | 3503   |
 | mmol | 52     |
 
-## type3 20597
+### type3
 
-| Wert  | Anzahl |
-| ----- | ------ |
+Total: 20597
+
 |       | 5074   |
+| ----- | ------ |
 | Amp   | 532    |
 | Btl   | 3      |
 | Btl.  | 1      |
@@ -5091,17 +5204,19 @@
 | Stk   | 997    |
 | U.I. | 1      |
 | U.I.  | 288    |
+| Wert  | Anzahl |
 | g     | 120    |
 | mcg   | 375    |
 | mg    | 11243  |
 | ml    | 1855   |
 | mmol  | 71     |
 
-## type4 20597
+### type4
 
-| Wert | Anzahl |
-| ---- | ------ |
+Total: 20597
+
 |      | 17424  |
+| ---- | ------ |
 | 3660 | 1      |
 | 5550 | 1      |
 | 7.5  | 10     |
@@ -5114,6 +5229,7 @@
 | Stk  | 364    |
 | U.I  | 2      |
 | U.I. | 171    |
+| Wert | Anzahl |
 | cm   | 4      |
 | g    | 17     |
 | kBq  | 1      |
@@ -5122,11 +5238,12 @@
 | ml   | 668    |
 | mmol | 30     |
 
-## type5 20597
+### type5
 
-| Wert   | Anzahl |
-| ------ | ------ |
+Total: 20597
+
 |        | 19153  |
+| ------ | ------ |
 | Btl    | 1      |
 | Dos    | 635    |
 | Gtt    | 674    |
@@ -5136,16 +5253,19 @@
 | Stk    | 17     |
 | U.I    | 1      |
 | U.I.   | 1      |
+| Wert   | Anzahl |
 | g      | 13     |
 | mcg    | 4      |
 | mg     | 3      |
 | mmol   | 13     |
 
-## gebiet 20597
+## gebiet
+Ein leicht verständlicher, patientenfreundlicher Informationstext über die medizinische Wirkung des Artikels bzw. zum Indikationsgebiet, in dem der Artikel eingesetzt wird ist unter **gebiet** beschrieben. 
 
-| Wert                                                                                                      | Anzahl |
-| --------------------------------------------------------------------------------------------------------- | ------ |
+Total: 20597
+
 | Antidot bei akuter Paracetamol-Vergiftung                                                                 | 1      |
+| --------------------------------------------------------------------------------------------------------- | ------ |
 | Aufhebung der neuromuskulären Blockade                                                                    | 2      |
 | Augendiagnostik                                                                                           | 3      |
 | BCG-Immunotherapeutikum bei In-situ-Karzinom der Harnblase                                                | 1      |
@@ -5321,6 +5441,7 @@
 | Tumorbehandlung                                                                                           | 297    |
 | Umschläge bei stumpfen Verletzungen                                                                       | 1      |
 | Vorbeugung eines Rezidives einer Clostridium difficile Infektion (CDI)                                    | 1      |
+| Wert                                                                                                      | Anzahl |
 | Zusatztherapie bei Diabetes                                                                               | 1      |
 | Zusatztherapie bei Lebererkrankungen                                                                      | 2      |
 | aktiviert den Blutfluss in den Venen                                                                      | 2      |
@@ -5913,11 +6034,13 @@
 | zur Spülung von Urethral-Kathetern                                                                        | 1      |
 | öffnet den Ductus arteriosus bei Neugeborenen mit Herzfehlern                                             | 1      |
 
-## inhaber 20597
+## Inhaber
+Unter **Inhaber** ist der Inhaber der Genehmigung zum in Verkehr bringen des Artikels (Zulassungsinhaber) aufgeführt.
 
-| Wert                                                                | Anzahl |
-| ------------------------------------------------------------------- | ------ |
+Total: 20597
+
 | 3M                                                                  | 3      |
+| ------------------------------------------------------------------- | ------ |
 | A. Menarini                                                         | 109    |
 | ALK-Abelló                                                          | 63     |
 | APS Arzneimittel                                                    | 15     |
@@ -6240,6 +6363,7 @@
 | WALA Schweiz                                                        | 10     |
 | Weleda                                                              | 65     |
 | Welte Pharma                                                        | 4      |
+| Wert                                                                | Anzahl |
 | Westfalen Gas Schweiz                                               | 40     |
 | Wiewohl Diethelm                                                    | 2      |
 | Zambon Svizzera                                                     | 89     |
@@ -6249,5 +6373,5 @@
 | ebi-pharm                                                           | 318    |
 | medano                                                              | 4      |
 | metapharmaka                                                        | 12     |
-| mmpharm GmbH                                                        | 1      |
+| mmpharm GmbH                                                        | 1      |    
 

@@ -1,12 +1,12 @@
 <div class='animation'></div>
 
-# Epha Datensatz <small>4.0</small>
+# Epha Datensatz <small>18.6.0</small>
 
 
-> Stammdaten für alle.
+> Referenzdaten (Arzneimittel) für die Schweiz
 
 
 [GitHub](https://github.com/epha/domain-datensatz)
-[Starten](#Stammdaten)
+[Starten](#Einleitung)
 
 ![color](#21374b)

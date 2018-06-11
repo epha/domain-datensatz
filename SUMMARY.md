@@ -1,7 +1,7 @@
-* [Stammdaten](README.md)
+* [Einleitung](README.md)
 
-  * [Wirkstoffe](wirkstoffe.md)
+  * [Wirkstoffe](docs/wirkstoffe.md)
 
-  * [Artikel](artikel.md)
+  * [Artikel](docs/artikel.md)
 
-  * [Stats](stats.md)
+  * [Stats](docs/stats.md)

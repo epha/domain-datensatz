@@ -6,10 +6,11 @@
   "scripts": {
     "setup": "npm i -g docsify-cli && npm i docsify",
     "start": "docsify serve -p 9000",
+    "update": "npm update expert-wirkstoffe && npm update expert-packungen && npm run build",
     "build": "npm run clear && npm run build:data && npm run build:stats",
-    "build:data": "node ./source/stammdaten.js",
-    "build:stats": "node ./source/artikelstats.js",
-    "clear": "rimraf stats.md && rimraf data/artikel.json && rimraf data/wirkstoffe.json",
+    "build:data": "node ./assets/src/stammdaten.js",
+    "build:stats": "node ./assets/src/artikelstats.js",
+    "clear": "rimraf docs/artikel.md && rimraf data/artikel.json && rimraf data/wirkstoffe.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -34,6 +35,6 @@
     "lottie-web": "^5.1.16",
     "markdown-table": "^1.1.2",
     "prismjs": "^1.14.0",
-    "rimraf" : "*"
+    "rimraf": "*"
   }
 }

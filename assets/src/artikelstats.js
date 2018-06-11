@@ -1,7 +1,6 @@
-const table = require('markdown-table')
-const fs = require('fs')
-const {artikel} = require('./app.js')
+const {artikel} = require('../../source/app.js')
 const artikelArray = Object.values(artikel)
+const insertToDocs = require('./artikel')
 
 //choose for which props we display a table
 const indicate = (property) => {
@@ -19,9 +18,8 @@ const indicate = (property) => {
          property == "inhaber"
 }
 
-
 //split, order and count props
-const stats = Object.values(artikelArray.reduce((acc, artikel, idx) => {
+const stats = artikelArray.reduce((acc, artikel, idx) => {
 
   const entries = Object.entries(artikel)
 
@@ -34,7 +32,7 @@ const stats = Object.values(artikelArray.reduce((acc, artikel, idx) => {
     
         acc[entry[0]] = {
           name: entry[0],
-          values: [],
+          values: [['Wert', 'Anzahl']],
           amount: 0
         }
       
@@ -56,53 +54,13 @@ const stats = Object.values(artikelArray.reduce((acc, artikel, idx) => {
             const v = property.values.find((val) => val[0] == value)
             v[1]++
           }
+
         }
       }
-
     }
   })
 
   return acc
-}, {}))
+}, {})
 
-const appendFile = (content) => {
-  return new Promise((res, rej) => {
-    fs.appendFile('stats.md', content, (err) => {
-      if (err) throw err;
-      res(content)
-    })
-  })
-}
-
-const writeFile = (idx, stats) => {
-
-  if(!stats[idx]) return
-  
-  const property = stats[idx]
-
-  const propertyHeader = `## ${property.name} ${property.amount}`
-
-  appendFile(propertyHeader).then(() => {
-    return appendFile('\n\n')
-  })
-  .then(() => {
-    //sort values alphabetically
-    property.values.sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0)
-
-    //add table header
-    property.values.unshift(['Wert', 'Anzahl'])
-    
-    //construct table
-    const statsTable = table(property.values)
-    return appendFile(statsTable)
-  })
-  .then(() => {
-    return appendFile('\n\n')
-  })
-  .then(() => {
-    console.log(property.name + ' done')
-    writeFile(idx + 1, stats)
-  })
-}
-
-writeFile(0, stats)
+insertToDocs(stats)
