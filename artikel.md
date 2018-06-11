@@ -46,11 +46,11 @@ Die Stammdaten werden jeden Monat auf den aktuellsten Stand gebracht und von Är
 |**Abkürzung**| **Bedeutung Abkürzung**| **Erläuterung**|
 |--------|---------------|--------------|
 |**ihStat**|im Handel: Status|**true:** der Artikel befindet sich im Handel; **false:** der Artikel ist ausser Handel
-|**ihLast** |       |         |
+|**ihLast** | letzer Status | Datum des letzten Aktualisierung, bei der Status erfasst wurde |
 |**ihFrom** | zugelassen seit | Startdatum Zulassung für die Dosisstärke des Artikels  |
 |**ihEnds** | Ende der Zulassung  | Enddatum der Zulassung |
 |**slStat** |Spezialitätenliste: Status |**true:** der Artikel befindet sich auf der Spezialitätenliste; **false:** der Artikel steht nicht auf der Spezialitätenliste
-|**slLast** |       |         |
+|**slLast** | letzer Status | Datum des letzten Aktualisierung, bei der Status erfasst wurde |
 |**slFrom** | Spezialitätenliste seit | Startdatum des Artikels (Spezialitätenliste)        |
 |**slEnds** | Enddatum Spezialitätenliste | Enddatum des Artikels auf der Spezialitätenliste |
 |**gtin**| GTIN|packungsspezifische, 13-stellige Identifikationsnummer |
