@@ -1,7 +1,7 @@
 * [Einleitung](README.md)
 
-  * [Wirkstoffe](docs/wirkstoffe.md)
+* [Wirkstoffe](docs/wirkstoffe.md)
 
-  * [Artikel](docs/artikel.md)
+* [Artikel](docs/artikel.md)
 
 * [Disclaimer](LICENSE)
