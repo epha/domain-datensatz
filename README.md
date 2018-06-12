@@ -92,7 +92,7 @@ Die Referenzdaten werden jeden Monat auf den aktuellsten Stand gebracht und von 
 
 </section>
 
-## [npm](https://www.npmjs.com/) prerequisites
+## npm prerequisites
 
 Wir empfehlen [node.js](https://nodejs.org/en/) um mit den Referenzdaten zu arbeiten, dafür sind folgende Schritte erforderlich:
 
@@ -112,19 +112,18 @@ $ npm i epha/domain-datesatz
 
 ## Anwendungsbeispiele
 
-
 - [Artikel](docs/artikel.md)
 
 Alle Artikel filtern, welche den Applikationsweg (applw) Aural beinhalten.
 ```javascript
 const { artikel } = require('domain-datensatz')
-const result = Object.values(artikel).filter((a) => a.applw == "aural")
+const result = Object.values(artikel).filter((a) => a.applw == 'aural')
 ```
 
 - [Wirkstoffe](docs/wirkstoffe.md)
 
 
-Alle Wirkstoffe filtern worin Paracetamol vorkommt.
+Alle Wirkstoffe filtern, worin Paracetamol vorkommt.
 
 ```javascript
 const { wirkstoffe } = require('domain-datensatz')

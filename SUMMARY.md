@@ -3,3 +3,5 @@
   * [Wirkstoffe](docs/wirkstoffe.md)
 
   * [Artikel](docs/artikel.md)
+
+* [Disclaimer](LICENSE)
