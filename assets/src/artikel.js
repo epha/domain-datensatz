@@ -1,9 +1,12 @@
 const table = require('markdown-table')
 const fs = require('fs')
 
-//sort values alphabetically
 const sort = (values) => {
-  return values.sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0)
+  //sort values alphabetically
+  values.sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0)
+  //add table header
+  values.unshift(['Wert', 'Anzahl'])
+  return values
 }
 
 module.exports = (stats) => {
@@ -14,79 +17,7 @@ module.exports = (stats) => {
 
 Unsere Referenzdaten enthalten neben technischen Kenndaten auch anwendungsbezogene Informationen wie Applikationsweg oder Anwendungsgebiet, welche durch Ärzte und Apotheker manuell hinzugefügt werden.
 
-Die Grundstruktur der Referenzdaten ist in der [Einleitung]() aufgeführt. Im Folgenden sind detailierte Informationen zu den einzelnen Kategorien aufgeführt.
-
-### Beispiel der Datenstruktur
-
-    "7680553510015": {
-
-      //Status im Handel: true/false (siehe Details)
-      "ihStat": true,
-      
-      //Datum der letzten Aktualisierung, bei der Status erfasst wurde
-      "ihLast": "2018-05-07",
-      
-      //Startdatum der Zulassung 
-      "ihFrom": "2000-08-08",
-      
-      //Enddatum der Zulassung
-      "ihEnds": "2020-08-17",
-      
-      //Status "Spezialitätenliste": true/false (siehe Details)
-      "slStat": true,
-      
-      //Datum des letzten Aktualisierung, bei der Status erfasst wurde 
-      "slLast": "2018-05-07",
-      
-      //Startdatum des Artikels (Spezialitätenliste)     
-      "slFrom": "2017-04-01",
-      
-      //Enddatum des Artikels (Spezialitätenliste) 
-      "slEnds": "9999-12-31",
-      
-      //Packungsspezifische, 13-stellige Identifikationsnummer
-      "gtin": "7680553510015",
-      
-      //Bezeichnung Artikel
-      "name1": "Metfin  500, Filmtabletten",
-      "name2": "50 Tablette(n)",
-      
-      //Applikationsweg (siehe Details)
-      "applw": "p.o.",
-      
-      //Darreichungsform (siehe Details)
-      "form": "Tablette",
-      
-      //ATC-Code und Wirkstoffname (see "Wirkstoffe")
-      "atcCode": "A10BA02",
-      "atcName": "Metformin",
-      
-      //Marke und möfliche Darreichungsformen (siehe Details)
-      "brandName": "Metfin",
-      "brandForms": "Tablette",
-      
-      //Charakterisierung des Inhaltes pro Packung (siehe Details)
-      "unit1": "1",
-      "type1": "Pck",
-      "unit2": "50",
-      "type2": "Stk",
-      "unit3": "25000",
-      "type3": "mg",
-      "unit4": "",
-      "type4": "",
-      "unit5": "",
-      "type5": "",
-      
-      //Patientenfreundlicher Informationstext (siehe Details)
-      "gebiet": "senkt den Blutzucker",
-      
-      //Zulassungsinhaber (siehe Details)
-      "inhaber": "Sandoz Pharmaceuticals",
-      
-      //Preise
-      "exfPreis": "2.25",
-      "pubPreis": "6.70"
-    }
+Die Grundstruktur der Referenzdaten ist in der [Einleitung](/#Einleitung) aufgeführt. Im Folgenden sind detailierte Informationen zu den einzelnen Kategorien aufgeführt.
     
 ## ihStat
 Unter **ihStat** ist der Status im Handel bzw. ausser Haldel dokumentiert:

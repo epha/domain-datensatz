@@ -32,7 +32,7 @@ const stats = artikelArray.reduce((acc, artikel, idx) => {
     
         acc[entry[0]] = {
           name: entry[0],
-          values: [['Wert', 'Anzahl']],
+          values: [],
           amount: 0
         }
       

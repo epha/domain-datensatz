@@ -4,79 +4,7 @@
 
 Unsere Referenzdaten enthalten neben technischen Kenndaten auch anwendungsbezogene Informationen wie Applikationsweg oder Anwendungsgebiet, welche durch Ärzte und Apotheker manuell hinzugefügt werden.
 
-Die Grundstruktur der Referenzdaten ist in der [Einleitung]() aufgeführt. Im Folgenden sind detailierte Informationen zu den einzelnen Kategorien aufgeführt.
-
-### Beispiel der Datenstruktur
-
-    "7680553510015": {
-
-      //Status im Handel: true/false (siehe Details)
-      "ihStat": true,
-      
-      //Datum der letzten Aktualisierung, bei der Status erfasst wurde
-      "ihLast": "2018-05-07",
-      
-      //Startdatum der Zulassung 
-      "ihFrom": "2000-08-08",
-      
-      //Enddatum der Zulassung
-      "ihEnds": "2020-08-17",
-      
-      //Status "Spezialitätenliste": true/false (siehe Details)
-      "slStat": true,
-      
-      //Datum des letzten Aktualisierung, bei der Status erfasst wurde 
-      "slLast": "2018-05-07",
-      
-      //Startdatum des Artikels (Spezialitätenliste)     
-      "slFrom": "2017-04-01",
-      
-      //Enddatum des Artikels (Spezialitätenliste) 
-      "slEnds": "9999-12-31",
-      
-      //Packungsspezifische, 13-stellige Identifikationsnummer
-      "gtin": "7680553510015",
-      
-      //Bezeichnung Artikel
-      "name1": "Metfin  500, Filmtabletten",
-      "name2": "50 Tablette(n)",
-      
-      //Applikationsweg (siehe Details)
-      "applw": "p.o.",
-      
-      //Darreichungsform (siehe Details)
-      "form": "Tablette",
-      
-      //ATC-Code und Wirkstoffname (see "Wirkstoffe")
-      "atcCode": "A10BA02",
-      "atcName": "Metformin",
-      
-      //Marke und möfliche Darreichungsformen (siehe Details)
-      "brandName": "Metfin",
-      "brandForms": "Tablette",
-      
-      //Charakterisierung des Inhaltes pro Packung (siehe Details)
-      "unit1": "1",
-      "type1": "Pck",
-      "unit2": "50",
-      "type2": "Stk",
-      "unit3": "25000",
-      "type3": "mg",
-      "unit4": "",
-      "type4": "",
-      "unit5": "",
-      "type5": "",
-      
-      //Patientenfreundlicher Informationstext (siehe Details)
-      "gebiet": "senkt den Blutzucker",
-      
-      //Zulassungsinhaber (siehe Details)
-      "inhaber": "Sandoz Pharmaceuticals",
-      
-      //Preise
-      "exfPreis": "2.25",
-      "pubPreis": "6.70"
-    }
+Die Grundstruktur der Referenzdaten ist in der [Einleitung](/#Einleitung) aufgeführt. Im Folgenden sind detailierte Informationen zu den einzelnen Kategorien aufgeführt.
     
 ## ihStat
 Unter **ihStat** ist der Status im Handel bzw. ausser Haldel dokumentiert:
@@ -109,11 +37,11 @@ Unter **applw** ist der Applikationsweg für den Artikel beschrieben. Sine mehre
 
 Total: 20597
 
-| Implantation      | 1      |
+| Wert              | Anzahl |
 | ----------------- | ------ |
+| Implantation      | 1      |
 | Intrathekal       | 10     |
 | Intravesikal      | 2      |
-| Wert              | Anzahl |
 | aural             | 11     |
 | buccal            | 733    |
 | cutan             | 1617   |
@@ -155,8 +83,9 @@ Unter **form** ist die jeweilige Darreichungsform in standardisierter Form für 
 
 Total: 20597
 
-| Brausetablette | 177    |
+| Wert           | Anzahl |
 | -------------- | ------ |
+| Brausetablette | 177    |
 | Creme          | 252    |
 | Emulsion       | 207    |
 | Fertigspritze  | 683    |
@@ -188,7 +117,6 @@ Total: 20597
 | Tablette       | 7280   |
 | Tee            | 115    |
 | Utensilien     | 28     |
-| Wert           | Anzahl |
 
 ## brandName & brandForms
 Alle Artikel, welche unter derselben Marke geführt werden (z.B. verschiedene Dosisstärken, Packungsgrössen), sind zu Marken-Gruppen zusammengefasst. **brandName** bezeichnet die jeweilige Gruppe in die der Artikel eingruppiert wurde. Unter **brandForms** sind verschiedene Darreichungsformen, die innerhalb der jeweiligen Marke vorkommen, aufgeführt.
@@ -197,8 +125,9 @@ Alle Artikel, welche unter derselben Marke geführt werden (z.B. verschiedene Do
 
 Total: 20597
 
-| 1000 Blattgrün                                         | 1      |
+| Wert                                                   | Anzahl |
 | ------------------------------------------------------ | ------ |
+| 1000 Blattgrün                                         | 1      |
 | 1001 Blattgrün                                         | 3      |
 | 18F-FDG-FR                                             | 2      |
 | 18F-Fluorocholine ZRP                                  | 1      |
@@ -4978,7 +4907,6 @@ Total: 20597
 | Weleda Aufbaukalk Pulver                               | 1      |
 | Wellbutrin                                             | 3      |
 | Wellvone                                               | 1      |
-| Wert                                                   | Anzahl |
 | Wiewohl                                                | 2      |
 | Wilate                                                 | 2      |
 | Willfact                                               | 1      |
@@ -5168,8 +5096,9 @@ Die Einträge in **unit** und **type** gehören jeweils zusammen (unit1 & type1,
 
 Total: 20597
 
-| Amp  | 1384   |
+| Wert | Anzahl |
 | ---- | ------ |
+| Amp  | 1384   |
 | Blt  | 2      |
 | Btl  | 378    |
 | Dos  | 5      |
@@ -5178,7 +5107,6 @@ Total: 20597
 | Set  | 36     |
 | Stk  | 12593  |
 | U.I. | 107    |
-| Wert | Anzahl |
 | g    | 1118   |
 | l    | 266    |
 | mcg  | 81     |
@@ -5190,8 +5118,9 @@ Total: 20597
 
 Total: 20597
 
-|       | 5074   |
+| Wert  | Anzahl |
 | ----- | ------ |
+|       | 5074   |
 | Amp   | 532    |
 | Btl   | 3      |
 | Btl.  | 1      |
@@ -5204,7 +5133,6 @@ Total: 20597
 | Stk   | 997    |
 | U.I. | 1      |
 | U.I.  | 288    |
-| Wert  | Anzahl |
 | g     | 120    |
 | mcg   | 375    |
 | mg    | 11243  |
@@ -5215,8 +5143,9 @@ Total: 20597
 
 Total: 20597
 
-|      | 17424  |
+| Wert | Anzahl |
 | ---- | ------ |
+|      | 17424  |
 | 3660 | 1      |
 | 5550 | 1      |
 | 7.5  | 10     |
@@ -5229,7 +5158,6 @@ Total: 20597
 | Stk  | 364    |
 | U.I  | 2      |
 | U.I. | 171    |
-| Wert | Anzahl |
 | cm   | 4      |
 | g    | 17     |
 | kBq  | 1      |
@@ -5242,8 +5170,9 @@ Total: 20597
 
 Total: 20597
 
-|        | 19153  |
+| Wert   | Anzahl |
 | ------ | ------ |
+|        | 19153  |
 | Btl    | 1      |
 | Dos    | 635    |
 | Gtt    | 674    |
@@ -5253,7 +5182,6 @@ Total: 20597
 | Stk    | 17     |
 | U.I    | 1      |
 | U.I.   | 1      |
-| Wert   | Anzahl |
 | g      | 13     |
 | mcg    | 4      |
 | mg     | 3      |
@@ -5264,8 +5192,9 @@ Ein leicht verständlicher, patientenfreundlicher Informationstext über die med
 
 Total: 20597
 
-| Antidot bei akuter Paracetamol-Vergiftung                                                                 | 1      |
+| Wert                                                                                                      | Anzahl |
 | --------------------------------------------------------------------------------------------------------- | ------ |
+| Antidot bei akuter Paracetamol-Vergiftung                                                                 | 1      |
 | Aufhebung der neuromuskulären Blockade                                                                    | 2      |
 | Augendiagnostik                                                                                           | 3      |
 | BCG-Immunotherapeutikum bei In-situ-Karzinom der Harnblase                                                | 1      |
@@ -5441,7 +5370,6 @@ Total: 20597
 | Tumorbehandlung                                                                                           | 297    |
 | Umschläge bei stumpfen Verletzungen                                                                       | 1      |
 | Vorbeugung eines Rezidives einer Clostridium difficile Infektion (CDI)                                    | 1      |
-| Wert                                                                                                      | Anzahl |
 | Zusatztherapie bei Diabetes                                                                               | 1      |
 | Zusatztherapie bei Lebererkrankungen                                                                      | 2      |
 | aktiviert den Blutfluss in den Venen                                                                      | 2      |
@@ -6039,8 +5967,9 @@ Unter **Inhaber** ist der Inhaber der Genehmigung zum in Verkehr bringen des Art
 
 Total: 20597
 
-| 3M                                                                  | 3      |
+| Wert                                                                | Anzahl |
 | ------------------------------------------------------------------- | ------ |
+| 3M                                                                  | 3      |
 | A. Menarini                                                         | 109    |
 | ALK-Abelló                                                          | 63     |
 | APS Arzneimittel                                                    | 15     |
@@ -6363,7 +6292,6 @@ Total: 20597
 | WALA Schweiz                                                        | 10     |
 | Weleda                                                              | 65     |
 | Welte Pharma                                                        | 4      |
-| Wert                                                                | Anzahl |
 | Westfalen Gas Schweiz                                               | 40     |
 | Wiewohl Diethelm                                                    | 2      |
 | Zambon Svizzera                                                     | 89     |

@@ -9,7 +9,7 @@
     "update": "npm update expert-wirkstoffe && npm update expert-packungen && npm run build",
     "build": "npm run clear && npm run build:data && npm run build:stats",
     "build:data": "node ./assets/src/stammdaten.js",
-    "build:stats": "node ./assets/src/artikelstats.js",
+    "build:stats": "node ./assets/src/artikelstats.js && node ./assets/src/wirkstoffestats.js",
     "clear": "rimraf docs/artikel.md && rimraf data/artikel.json && rimraf data/wirkstoffe.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
