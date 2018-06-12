@@ -8,13 +8,13 @@ const sort = (values) => {
 
   //add table header
   values.unshift(['Wert', 'Anzahl'])
-  
+
   return values
 }
 
 module.exports = (stats) => {
 
-  const text = `
+  const template = `
 
 # Artikel
 
@@ -112,7 +112,7 @@ ${table(sort(stats.inhaber.values))}
 
 `
 
-  fs.appendFile('docs/artikel.md', text, (err) => {
+  fs.appendFile('docs/artikel.md', template, (err) => {
     if (err) throw err;
     console.log('artikel.md done')
   })

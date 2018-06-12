@@ -1,63 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Epha Datensatz</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script src="assets/src/lottie.js"></script>
-</head>
-<body>
-  <div id="app"></div>
-  <script>
-
-    //docsify init
-    window.$docsify = {
-      alias: {
-        '/.*/SUMMARY.md': 'SUMMARY.md'
-      },
-      loadSidebar: 'SUMMARY.md',
-      maxLevel: 2,
-      subMaxLevel: 2,
-      name: 'Epha Datensatz',
-      repo: 'https://github.com/epha/domain-datensatz',
-      coverpage: true,
-      executeScript: true,
-      themeColor: '#1b77b5'
-    }
-    
-    //cover animation
-    const renderAnimation = (element) => {
-
-      lottie.loadAnimation({
-        container: element,
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: 'assets/animation/data.json'
-      })
-    }
-    
-    //wait for docsify rendering done
-    const interval = setInterval(() => {
-
-      const element = document.querySelector('.animation')
-
-      if(element) {
-        clearInterval(interval)
-        renderAnimation(element)
+  <head>
+    <meta charset="UTF-8">
+    <title>Epha Datensatz</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/src/lottie.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+  
+      //docsify init
+      window.$docsify = {
+        alias: {
+          '/.*/SUMMARY.md': 'SUMMARY.md'
+        },
+        loadSidebar: 'SUMMARY.md',
+        maxLevel: 2,
+        subMaxLevel: 2,
+        name: 'Epha Datensatz',
+        repo: 'https://github.com/epha/domain-datensatz',
+        coverpage: true,
+        executeScript: true,
+        themeColor: '#1b77b5'
       }
-    })
-
-  </script>
-
-  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-  <script src="./node_modules/prismjs/components/prism-markdown.min.js"></script>
-  <script src="./node_modules/prismjs/components/prism-bash.min.js"></script>
-  <script src="./node_modules/prismjs/components/prism-css.min.js"></script>
-  <script src="./node_modules/prismjs/components/prism-javascript.min.js"></script>
-</body>
+      
+      //cover animation
+      const renderAnimation = (element) => {
+  
+        lottie.loadAnimation({
+          container: element,
+          renderer: 'svg',
+          loop: true,
+          autoplay: true,
+          path: 'assets/animation/data.json'
+        })
+      }
+  
+      window.addEventListener("load", () => {
+        const element = document.querySelector('.animation')
+        renderAnimation(element)
+      });
+  
+    </script>
+  
+    <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+    <script src="./node_modules/prismjs/components/prism-markdown.min.js"></script>
+    <script src="./node_modules/prismjs/components/prism-bash.min.js"></script>
+    <script src="./node_modules/prismjs/components/prism-css.min.js"></script>
+    <script src="./node_modules/prismjs/components/prism-javascript.min.js"></script>
+  </body>
 </html>
