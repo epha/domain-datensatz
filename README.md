@@ -92,7 +92,7 @@ Die Referenzdaten werden jeden Monat auf den aktuellsten Stand gebracht und von 
 
 </section>
 
-## npm prerequisite
+## npm prerequisites
 
 - [node.js](https://nodejs.org/en/) installieren
 
@@ -102,6 +102,7 @@ $ npm i epha/domain-datesatz
 ```
 
 ## Use case Beispiel
+
 
 - [Artikel](docs/artikel.md)
 
