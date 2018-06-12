@@ -92,22 +92,30 @@ Die Referenzdaten werden jeden Monat auf den aktuellsten Stand gebracht und von 
 
 </section>
 
-## npm prerequisites
+## [npm](https://www.npmjs.com/) prerequisites
+
+Wir empfehlen [node.js](https://nodejs.org/en/) um mit den Referenzdaten zu arbeiten, dafür sind folgende Schritte erforderlich:
 
 - [node.js](https://nodejs.org/en/) installieren
 
-- Package in Projekt via [npm](https://www.npmjs.com/) installieren.
+- [node.js](https://nodejs.org/en/) Projekt initialisieren
+
+```bash
+$ npm init
+```
+
+- Package in Projekt via [npm](https://www.npmjs.com/) installieren
 
 ```bash
 $ npm i epha/domain-datesatz
 ```
 
-## Use case Beispiel
+## Anwendungsbeispiele
 
 
 - [Artikel](docs/artikel.md)
 
-Alle Artikel filtern, welche den Applikationsweg (applw) Aural haben.
+Alle Artikel filtern, welche den Applikationsweg (applw) Aural beinhalten.
 ```javascript
 const { artikel } = require('domain-datensatz')
 const result = Object.values(artikel).filter((a) => a.applw == "aural")
