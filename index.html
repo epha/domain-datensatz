@@ -43,7 +43,11 @@
   
       window.addEventListener("load", () => {
         const element = document.querySelector('.animation')
-        renderAnimation(element)
+
+        if(element) {
+          renderAnimation(element)
+        }
+        
       })
   
     </script>
