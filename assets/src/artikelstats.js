@@ -24,7 +24,7 @@ const stats = artikelArray.reduce((acc, artikel, idx) => {
   const entries = Object.entries(artikel)
 
   entries.forEach((entry) => {
-
+    //console.log(entry[0])
     if(indicate(entry[0])) {
       
       //no prop available add to object
@@ -42,7 +42,7 @@ const stats = artikelArray.reduce((acc, artikel, idx) => {
         const value = entry[1]
 
         //got value assigned to prop
-        if(!!value || value == false) {
+        if(!!value || value == false && value !== '') {
         
           property.total++
 
