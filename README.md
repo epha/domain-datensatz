@@ -97,6 +97,7 @@ Die Referenzdaten werden jeden Monat auf den aktuellsten Stand gebracht und von 
 - [node.js](https://nodejs.org/en/) installieren
 
 - Package in Projekt via [npm](https://www.npmjs.com/) installieren.
+
 ```bash
 $ npm i epha/domain-datesatz
 ```
@@ -107,7 +108,6 @@ $ npm i epha/domain-datesatz
 - [Artikel](docs/artikel.md)
 
 Alle Artikel filtern, welche den Applikationsweg (applw) Aural haben.
-
 ```javascript
 const { artikel } = require('domain-datensatz')
 const result = Object.values(artikel).filter((a) => a.applw == "aural")
