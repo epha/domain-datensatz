@@ -1,6 +1,6 @@
-MIT License
+## MIT License
 
-Copyright (c) 2018 epha.ch
+Copyright (c) 2018 EPha.ch
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
