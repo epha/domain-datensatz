@@ -18,7 +18,7 @@ const indicate = (property) => {
          property == "inhaber"
 }
 
-//split, order and count props
+//split and count props
 const stats = artikelArray.reduce((acc, artikel, idx) => {
 
   const entries = Object.entries(artikel)
@@ -33,7 +33,7 @@ const stats = artikelArray.reduce((acc, artikel, idx) => {
         acc[entry[0]] = {
           name: entry[0],
           values: [],
-          amount: 0
+          total: 0
         }
       
       //property available in acc
@@ -44,7 +44,7 @@ const stats = artikelArray.reduce((acc, artikel, idx) => {
         //got value assigned to prop
         if(!!value || value == false) {
         
-          property.amount++
+          property.total++
 
           //add none seen value to props values
           if(!property.values.some((val) => val[0] == value) || !property.values.length) {
@@ -54,7 +54,6 @@ const stats = artikelArray.reduce((acc, artikel, idx) => {
             const v = property.values.find((val) => val[0] == value)
             v[1]++
           }
-
         }
       }
     }

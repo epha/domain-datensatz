@@ -1,4 +1,8 @@
+const table = require('markdown-table')
+const fs = require('fs')
 
+module.exports = (stats) => {
+  const text = `
 # Wirkstoffe
 
 **ATC** steht für **Anatomic-Therapeutic Classification**. Im ATC-Klassifikationssystem werden Wirkstoffe hierarchisch gruppiert. Es existieren 5 verschiedene "Level". Das Prinzip wird am Beispiel Metformin, einem oralen Antidiabetikum, dargestellt:
@@ -17,16 +21,14 @@ Unsere Liste der ATC-Codes enthält alle ATC-Codes mit den dazugehörigen Wirkst
 Die Grundlage der gelisteten ATC-Codes sind die von der Swissmedic herausgegebenen Codes. 
 Für den Fall, dass Swissmedic einem Artikel nur einen 4- oder 5-stelligen ATC-Code zuteilt und für den Wirkstoff des Präparates ein offizieller 7-stelliger Code existiert (z.B. publiziert durch die WHO) kann dieser stattdessen übernommen werden. Existiert kein offizieller ATC-Code werden falls nötig für einzelne Wirkstoffe 7-stellige ACT-Codes kreiert.
 
-Total: 2641
+Total: ${stats.total}
 
-| Stellig | Anzahl |
-| ------- | ------ |
-| 1       | 14     |
-| 2       | 0      |
-| 3       | 92     |
-| 4       | 231    |
-| 5       | 595    |
-| 6       | 0      |
-| 7       | 1709   |
+${table(stats.amounts)}
 
-  
+  `
+  fs.appendFile('docs/wirkstoffe.md', text, (err) => {
+    if (err) throw err
+    console.log('wirkstoffe.md done')
+  })
+
+}

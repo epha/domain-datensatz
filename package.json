@@ -1,6 +1,6 @@
 {
   "name": "domain-datensatz",
-  "version": "1.0.0",
+  "version": "18.5.0",
   "description": "",
   "main": "source/app.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "build": "npm run clear && npm run build:data && npm run build:stats",
     "build:data": "node ./assets/src/stammdaten.js",
     "build:stats": "node ./assets/src/artikelstats.js && node ./assets/src/wirkstoffestats.js",
-    "clear": "rimraf docs/artikel.md && rimraf data/artikel.json && rimraf data/wirkstoffe.json",
+    "clear": "rimraf docs/artikel.md && rimraf docs/wirkstoffe.md && rimraf data/artikel.json && rimraf data/wirkstoffe.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
