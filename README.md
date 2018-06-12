@@ -10,10 +10,10 @@ Die Referenzdaten werden jeden Monat auf den aktuellsten Stand gebracht und von 
 
 [Details](docs/artikel)
 
-```JSON
+```javascript
 "7680553510015": {
 
-  //Status im Handel: true/false (siehe Details)
+  // Status im Handel: true/false (siehe Details)
   "ihStat": true,
       
   //Datum der letzten Aktualisierung, bei der Status erfasst wurde
