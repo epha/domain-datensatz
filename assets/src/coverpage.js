@@ -6,9 +6,7 @@ const template =  `
 
 # Epha Datensatz <small>${version}</small>
 
-
 > Referenzdaten (Arzneimittel) für die Schweiz
-
 
 [GitHub](https://github.com/epha/domain-datensatz)
 [Starten](#Einleitung)
@@ -17,6 +15,6 @@ const template =  `
 `
 
 fs.appendFile('_coverpage.md', template, (err) => {
-    if (err) throw err
-    console.log('_coverpage.md done')
-  })
+  if (err) throw err
+  console.log('_coverpage.md done')
+})
