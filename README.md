@@ -109,7 +109,7 @@ console.log(result)
 {
   "7680553510015": {
 
-    // Status im Handel: true/false (siehe Kapitel Artikel)
+    // Status im Handel: true/false
     "ihStat": true,
 
     // Datum der letzten Aktualisierung
@@ -121,7 +121,7 @@ console.log(result)
     // Enddatum der Zulassung
     "ihEnds": "2020-08-17",
 
-    // Status "Spezialitätenliste": true/false (siehe Kapitel Artikel)
+    // Status "Spezialitätenliste": true/false
     "slStat": true,
 
     // Datum des letzten Aktualisierung, bei der Status erfasst wurde
@@ -140,21 +140,21 @@ console.log(result)
     "name1": "Metfin  500, Filmtabletten",
     "name2": "50 Tablette(n)",
 
-    // Applikationsweg (siehe Kapitel Artikel)
+    // Applikationsweg
     "applw": "p.o.",
 
-    // Darreichungsform (siehe Kapitel Artikel)
+    // Darreichungsform
     "form": "Tablette",
 
-    // ATC-Code und Wirkstoffname (see "Wirkstoffe")
+    // ATC-Code und Wirkstoffname (siehe "Wirkstoffe")
     "atcCode": "A10BA02",
     "atcName": "Metformin",
 
-    // Marke und möfliche Darreichungsformen (siehe Kapitel Artikel)
+    // Marke und möfliche Darreichungsformen
     "brandName": "Metfin",
     "brandForms": "Tablette",
 
-    // Charakterisierung des Inhaltes pro Packung (siehe Kapitel Artikel)
+    // Charakterisierung des Inhaltes pro Packung
     "unit1": "1",
     "type1": "Pck",
     "unit2": "50",
@@ -166,10 +166,10 @@ console.log(result)
     "unit5": "",
     "type5": "",
 
-    // Patientenfreundlicher Informationstext (siehe Kapitel Artikel)
+    // Patientenfreundlicher Informationstext
     "gebiet": "senkt den Blutzucker",
 
-    // Zulassungsinhaber (siehe Kapitel Artikel)
+    // Zulassungsinhaber
     "inhaber": "Sandoz Pharmaceuticals",
 
     // Preise

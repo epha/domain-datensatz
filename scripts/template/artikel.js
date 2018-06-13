@@ -1,4 +1,8 @@
+const fs = require('fs')
 
+module.exports = (artikel) => {
+
+const template = `
 
 # Artikel
 
@@ -9,3 +13,8 @@ Die Grundstruktur der Referenzdaten ist in der [Einleitung](/README.md) aufgefü
 
 ## Bubble Chart
 [Bubble Chart](form-bubble.html ':include :type=iframe width=100% height=800px')
+`
+
+return template
+
+}
