@@ -29,7 +29,7 @@ stattdessen übernommen werden. Existiert kein offizieller ATC-Code werden falls
 
 http://mbostock.github.io/d3/talk/20111116/pack-hierarchy.html
 
-[cinwell website](http://mbostock.github.io/d3/talk/20111116/pack-hierarchy.html ':include :type=iframe width=100% height=800px')
+[Wirkstoffe Stats](/pack.html ':include :type=iframe width=100% height=800px')
 `
 
 }
