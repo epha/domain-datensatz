@@ -7,7 +7,7 @@
     "setup": "npm i -g docsify-cli && npm i docsify",
     "start": "docsify serve -p 9000",
     "update": "npm update expert-wirkstoffe && npm update expert-packungen && npm run build",
-    "build": "npm run clear && npm run build:data && npm run build:stats && npm run build:cover",
+    "build": "npm run clear && npm run build:cover && npm run build:data && npm run build:stats",
     "build:cover": "node ./assets/src/coverpage.js",
     "build:data": "node ./assets/src/stammdaten.js",
     "build:stats": "node ./assets/src/artikelstats.js && node ./assets/src/wirkstoffestats.js",
