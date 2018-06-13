@@ -31,7 +31,7 @@ const update = async () => {
   // Copy data Files
   // -----------------------------
   console.time("> Copy Packungen")
-  fs.writeFileSync('./data/packungen.json',JSON.stringify(packungen,null,2))
+  fs.writeFileSync('./data/artikel.json',JSON.stringify(packungen,null,2))
   console.timeEnd("> Copy Packungen")
 
   console.time("> Copy Wirkstoffe")

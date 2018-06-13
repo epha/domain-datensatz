@@ -24,7 +24,7 @@ Wir empfehlen [node.js](https://nodejs.org/en/) um mit den Referenzdaten zu arbe
 $ mkdir projekt
 $ cd projekt
 $ npm init
-$ npm i epha/domain-datensatz --save
+$ npm i --production epha/domain-datensatz --save
 ```
 
 ## Anwendung
