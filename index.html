@@ -12,7 +12,7 @@
   <body>
     <div id="app"></div>
     <script>
-  
+
       //docsify init
       window.$docsify = {
         alias: {
@@ -27,10 +27,10 @@
         executeScript: true,
         themeColor: '#1b77b5'
       }
-      
+
       //cover animation
       const renderAnimation = (element) => {
-  
+
         lottie.loadAnimation({
           container: element,
           renderer: 'svg',
@@ -39,7 +39,7 @@
           path: 'assets/animation/data.json'
         })
       }
-  
+
       window.addEventListener("load", () => {
         const element = document.querySelector('.animation')
 
@@ -48,14 +48,14 @@
         }
 
       })
-  
+
     </script>
-    
+
     <script src="assets/src/lottie.js"></script>
     <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-    <script src="./node_modules/prismjs/components/prism-markdown.min.js"></script>
-    <script src="./node_modules/prismjs/components/prism-bash.min.js"></script>
-    <script src="./node_modules/prismjs/components/prism-css.min.js"></script>
-    <script src="./node_modules/prismjs/components/prism-javascript.min.js"></script>
+    <script src="//unpkg.com/prismjs/components/prism-markdown.min.js"></script>
+    <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
+    <script src="//unpkg.com/prismjs/components/prism-css.min.js"></script>
+    <script src="//unpkg.com/prismjs/components/prism-javascript.min.js"></script>
   </body>
 </html>

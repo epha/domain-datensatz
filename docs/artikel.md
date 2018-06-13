@@ -7,23 +7,24 @@ Applikationsweg oder Anwendungsgebiet, welche durch Ärzte und Apotheker manuell
 Die Grundstruktur der Referenzdaten ist in der [Einleitung](/README.md) aufgeführt.
 
 ## Graph Form
-Der Bubble Chart visualisiert die Beziehung der Felder form -> applw -> units.
+Ein Artikel kann in unterschiedliche Formen (form), wie z.B. Tablette, Lösungen, u.v.m, hergestellt worden sein. Jede Form kann zudem auf unterschiedliche Weise (applw) appliziert werden. Dabei sind die Einheiten (unit,type) abhängig von Form und Applikationsweg. Der folgende Bubble Chart visualisiert diese Beziehung. Wenn man auf eine Bubble klickt, werden die jeweilgen Einheiten angezeigt.
 
 [Bubble Chart](form-bubble.html ':include :type=iframe width=100% height=750px')
 
 ## Graph Inhaber
+In der Schweiz gibt es pharmazeutische Artikel von grossen und kleinen Herstellern. Das Sortiment von Hersteller mit mehr als 40 Brands und mit jeweils mehr als 10 Artikel innerhalb dieses Brands werden in folgendem Graph visualiert.
 
-[Bubble Chart](inhaber-list.html ':include :type=iframe width=100% height=1200px')
+[Bubble Chart](inhaber-list.html ':include :type=iframe width=100% height=830px')
 
 <style>
 
-  @media screen and (min-width: 1100px) {
+  @media screen and (min-width: 1300px) {
 
     main article.markdown-section p iframe {
-      margin-left: calc( ( 1100px - 100vw ) / 2 );
-      margin-right: calc( ( 1100px - 100vw ) / 2 );
-      width: calc( 100vw - 335px );
-      border:2px solid rgb(27, 119, 181);
+      margin-left: -50px;
+      margin-right: -50px;
+      width: calc( 1200px - 335px );
+      border: 1px solid rgb(27, 119, 181);
     }
 
   }
