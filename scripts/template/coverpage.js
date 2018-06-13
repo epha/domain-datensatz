@@ -1,7 +1,7 @@
 module.exports = (params) => `
 <div class='animation'></div>
 
-# Epha Datensatz <small>${params.version}</small>
+# Datensatz <small>${params.version}</small>
 
 > Referenzdaten (Arzneimittel) für die Schweiz
 
