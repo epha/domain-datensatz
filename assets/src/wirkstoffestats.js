@@ -1,4 +1,4 @@
-const insertToDocs = require('./wirkstoffe')
+const template = require('./wirkstoffe')
 const { wirkstoffe } = require('../../source/app.js')
 
 const stats = {
@@ -17,4 +17,4 @@ keys.forEach((key) => {
   stats[key.length]++
 })
 
-insertToDocs(stats)
+template(stats)

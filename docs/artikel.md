@@ -7,7 +7,7 @@ Unsere Referenzdaten enthalten neben technischen Kenndaten auch anwendungsbezoge
 Die Grundstruktur der Referenzdaten ist in der [Einleitung](/#Einleitung) aufgeführt. Im Folgenden sind detailierte Informationen zu den einzelnen Kategorien aufgeführt.
     
 ## ihStat
-Unter **ihStat** ist der Status im Handel bzw. ausser Haldel dokumentiert:
+Unter **ihStat** ist der Status im Handel bzw. ausser Handel dokumentiert:
 
 -  **true:** der Artikel befindet sich im Handel
 -  **false:** der Artikel ist ausser Handel
