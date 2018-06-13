@@ -23,10 +23,6 @@ const update = async () => {
   fs.writeFileSync('./docs/wirkstoffe.md', wirkstoffe(await wirkstoff()) )
   console.timeEnd("> Template Wirkstoffe")
 
-  console.time("> Template Artikel")
-  fs.writeFileSync('./docs/artikel.md', artikel(await wirkstoff()) )
-  console.timeEnd("> Template Artikel")
-
   // -----------------------------
   // Copy data Files
   // -----------------------------
