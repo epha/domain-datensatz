@@ -66,9 +66,6 @@ const { wirkstoffe } = require('domain-datensatz')
 const result = Object.values(wirkstoffe).filter(w => {
   return w.toLowerCase().includes('paracetamol')
 })
-.map(item => {
-  return item.name1
-})
 
 // [
 //   'Paracetamol',
@@ -82,12 +79,31 @@ const result = Object.values(wirkstoffe).filter(w => {
 console.log(result)
 ```
 
-
 ## Datenstruktur
 
-Die Daten sind in zwei Dateien aufgeteilt. Die Datei [Wirkstoffe](data/wirkstoffe.json ":ignore") listet alle Wirkstoffe nach einer überarbeiteten ATC-Klassifikation auf. Die verfügbaren Felder werden im Kapitel [Wirkstoffe](docs/wirkstoffe.md) näher beschrieben. Die Datei [Artikel](data/artikel.json ":ignore") listet alle in der Schweiz zugelassenen Arzneimittel auf. Die Felder sind im Kapitel [Artikel](docs/artikel.md) näher beschrieben sind.
+> Die Datei [Wirkstoffe](data/wirkstoffe.json ":ignore") listet alle Wirkstoffe nach einer überarbeiteten ATC-Klassifikation auf. Die verfügbaren Felder werden im Kapitel [Wirkstoffe](docs/wirkstoffe.md) näher beschrieben. Auszug der vorhandenen Felder in der Datei Wirkstoffe
 
-Folgend ein Auszug der vorhanden Felder in der Datei Artikel.
+```javascript
+{
+  // 1st Level - Anatomical Main Group
+  "A": "Alimentäres System und Stoffwechsel",
+  ...,
+  // 2nd Level - Therapeutic subgroup
+  "A01": "Stomatologika",
+  ...,
+  // 3rd Level - Pharmacological Subgroup
+  "A01A": "Stomatologika",
+  ...,
+  // 4th Level - Chenical Subgroup
+  "A01AA": "Mittel zur Kariesprophylaxe",
+  ...,
+  // 5th Level - Chemical Substance
+  "A01AA01": "Natriumfluorid",
+  ...
+}
+```
+
+> Die Datei [Artikel](data/artikel.json ":ignore") listet alle in der Schweiz zugelassenen Arzneimittel auf. Die Felder sind im Kapitel [Artikel](docs/artikel.md) näher beschrieben sind. Folgend ein Auszug der vorhanden Felder in der Datei Artikel.
 
 ```javascript
 {
