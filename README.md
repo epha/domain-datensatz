@@ -18,96 +18,127 @@ Die Referenzdaten werden jeden Monat auf den aktuellsten Stand gebracht und von 
 
 ## Prerequisites
 
-Wir empfehlen [node.js](https://nodejs.org/en/) um mit den Referenzdaten zu arbeiten, dafür sind folgende Schritte erforderlich:
-
-- node.js installieren
-
-- node.js Projekt initialisieren
+Wir empfehlen [node.js](https://nodejs.org/en/) um mit den Referenzdaten zu arbeiten. Mit folgenden Schritten kann ein eigenes Projekt gestartet werden.
 
 ```bash
+$ mkdir projekt
+$ cd projekt
 $ npm init
+$ npm i epha/domain-datensatz --save
 ```
 
-- Package in Projekt via [npm](https://www.npmjs.com/) installieren
+## Anwendung
+Folgende Code-Snippets zeigen, wie die Daten in einem eigenen Projekt verwendet werden können.
 
-```bash
-$ npm i epha/domain-datesatz
-```
+> Alle Artikel filtern, welche den Applikationsweg (applw) Aural beinhalten.
 
-## Anwendungsbeispiele
-
-[Artikel](docs/artikel.md)
-
-Alle Artikel filtern, welche den Applikationsweg (applw) Aural beinhalten.
 ```javascript
 const { artikel } = require('domain-datensatz')
-const result = Object.values(artikel).filter((a) => a.applw == 'aural')
+
+const result = Object.values(artikel).filter(item => {
+  return item.applw == 'aural'
+})
+.map(item => {
+  return item.name1
+})
+
+// [
+//   'Otalgan, solution',
+//   'Otothricinol, Suspension',
+//   'Cerumenex, Tropfen',
+//   'Panotile, gocce otologiche',
+//   'Otipax, liquido',
+//   'Polydexa, Ohrentropfen',
+//   'Cerumenol, Tropfen',
+//   'Otofa, Ohrentropfen',
+//   'Otidolo, homöopathisch-spagyrische Tropfen',
+//   'Similasan Ohrentropfen, Tropfen',
+//   'Ciproxin HC, Ohrensuspension'
+// ]
+console.log(result)
 ```
 
-[Wirkstoffe](docs/wirkstoffe.md)
-
-
-Alle Wirkstoffe filtern, worin Paracetamol vorkommt.
+> Alle Wirkstoffe filtern, in denen Paracetamol vorkommt.
 
 ```javascript
 const { wirkstoffe } = require('domain-datensatz')
-const result = Object.values(wirkstoffe).filter((w) => w.toLowerCase().includes('paracetamol'))
+
+const result = Object.values(wirkstoffe).filter(w => {
+  return w.toLowerCase().includes('paracetamol')
+})
+.map(item => {
+  return item.name1
+})
+
+// [
+//   'Paracetamol',
+//   'Paracetamol, Kombinationen exkl. Psycholeptika',
+//   'Paracetamol und Codein',
+//   'Paracetamol und Ascorbinsäure',
+//   'Paracetamol und Coffein',
+//   'Paracetamol und Pseudoephedrin',
+//   'Dextromethorphan und Paracetamol, Kombinationen'
+// ]
+console.log(result)
 ```
 
-## Beispiel der Artikel Datenstruktur
 
-[Details](docs/artikel)
+## Datenstruktur
+
+Die Daten sind in zwei Dateien aufgeteilt. Die Datei [Wirkstoffe](data/wirkstoffe.json ":ignore") listet alle Wirkstoffe nach einer überarbeiteten ATC-Klassifikation auf. Die verfügbaren Felder werden im Kapitel [Wirkstoffe](docs/wirkstoffe.md) näher beschrieben. Die Datei [Artikel](data/artikel.json ":ignore") listet alle in der Schweiz zugelassenen Arzneimittel auf. Die Felder sind im Kapitel [Artikel](docs/artikel.md) näher beschrieben sind.
+
+Folgend ein Auszug der vorhanden Felder in der Datei Artikel.
 
 ```javascript
 {
   "7680553510015": {
 
-    // Status im Handel: true/false (siehe Details)
+    // Status im Handel: true/false (siehe Kapitel Artikel)
     "ihStat": true,
-        
-    // Datum der letzten Aktualisierung, bei der Status erfasst wurde
+
+    // Datum der letzten Aktualisierung
     "ihLast": "2018-05-07",
-        
-    // Startdatum der Zulassung 
+
+    // Startdatum der Zulassung
     "ihFrom": "2000-08-08",
-        
+
     // Enddatum der Zulassung
     "ihEnds": "2020-08-17",
-        
-    // Status "Spezialitätenliste": true/false (siehe Details)
+
+    // Status "Spezialitätenliste": true/false (siehe Kapitel Artikel)
     "slStat": true,
-        
-    // Datum des letzten Aktualisierung, bei der Status erfasst wurde 
+
+    // Datum des letzten Aktualisierung, bei der Status erfasst wurde
     "slLast": "2018-05-07",
-        
+
     // Startdatum des Artikels (Spezialitätenliste)     
     "slFrom": "2017-04-01",
-        
-    // Enddatum des Artikels (Spezialitätenliste) 
+
+    // Enddatum des Artikels (Spezialitätenliste)
     "slEnds": "9999-12-31",
-        
+
     // Packungsspezifische, 13-stellige Identifikationsnummer
     "gtin": "7680553510015",
-        
+
     // Bezeichnung Artikel
     "name1": "Metfin  500, Filmtabletten",
     "name2": "50 Tablette(n)",
-        
-    // Applikationsweg (siehe Details)
+
+    // Applikationsweg (siehe Kapitel Artikel)
     "applw": "p.o.",
-        
-    // Darreichungsform (siehe Details)
+
+    // Darreichungsform (siehe Kapitel Artikel)
     "form": "Tablette",
-        
+
     // ATC-Code und Wirkstoffname (see "Wirkstoffe")
     "atcCode": "A10BA02",
     "atcName": "Metformin",
-        
-    // Marke und möfliche Darreichungsformen (siehe Details)
+
+    // Marke und möfliche Darreichungsformen (siehe Kapitel Artikel)
     "brandName": "Metfin",
     "brandForms": "Tablette",
-        
-    // Charakterisierung des Inhaltes pro Packung (siehe Details)
+
+    // Charakterisierung des Inhaltes pro Packung (siehe Kapitel Artikel)
     "unit1": "1",
     "type1": "Pck",
     "unit2": "50",
@@ -118,13 +149,13 @@ const result = Object.values(wirkstoffe).filter((w) => w.toLowerCase().includes(
     "type4": "",
     "unit5": "",
     "type5": "",
-        
-    // Patientenfreundlicher Informationstext (siehe Details)
+
+    // Patientenfreundlicher Informationstext (siehe Kapitel Artikel)
     "gebiet": "senkt den Blutzucker",
-        
-    // Zulassungsinhaber (siehe Details)
+
+    // Zulassungsinhaber (siehe Kapitel Artikel)
     "inhaber": "Sandoz Pharmaceuticals",
-        
+
     // Preise
     "exfPreis": "2.25",
     "pubPreis": "6.70"
