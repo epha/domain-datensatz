@@ -37,6 +37,10 @@
 	    pointer-events: none;
 	  }
 
+	  svg {
+	  	font-size: 50px;
+	  }
+
 	  
 
 	</style>
@@ -44,11 +48,10 @@
 </head>
 <body>
    
-  <svg width="700" height="700"></svg>
+  <svg width="750" height="750"></svg>
   <script src="https://d3js.org/d3.v4.min.js"></script>
 
   <script>
-
 
     const parseRoot = (wirkstoffe) => {
       
@@ -79,7 +82,6 @@
             } catch (err) {
             	console.log(err)
             }
-            
           break
           case 7:
 
@@ -94,7 +96,6 @@
 
         return acc
        
-
       }, {})
 
       const convertToArray = (children) => {
@@ -115,20 +116,8 @@
 
       convertToArray(parsedObject.children)
 
-      console.log(parsedObject)
-
       return parsedObject
-
-
-      return wirkstoffe
     }
-
-
-
-
-
-
-
 
   	var svg = d3.select("svg"),
   	    margin = 20,
@@ -169,9 +158,14 @@
   	    .enter().append("text")
   	      .attr("class", "label")
   	      .attr("text-anchor", "middle")
-  	      //.style("fill-opacity", function(d) { return d.parent === root ? 1 : 0; })
-  	      //.style("display", function(d) { return d.parent === root ? "inline" : "none"; })
-  	      //.text(function(d) { return d.data.name; });
+  	      .style('font-size', '17px')
+  	      .style('font-weight', 'bold')
+  	      .style('font-family', 'Inconsolata, monospace')
+  	      .style("fill-opacity", function(d) { return d.parent === root ? 1 : 0; })
+  	      .style("display", function(d) { 
+  	      	return d.parent === root ? "inline" : "none"; 
+  	      })
+  	      .text(function(d) { return d.data.name; });
 
   	  var node = g.selectAll("circle,text");
 
@@ -181,6 +175,9 @@
   	  zoomTo([root.x, root.y, root.r * 2 + margin]);
 
   	  function zoom(d) {
+
+  	  	if(d.data.name.length == 7) return
+
   	    var focus0 = focus; focus = d;
 
   	    var transition = d3.transition()
@@ -194,16 +191,18 @@
   	      .filter(function(d) { return d.parent === focus || this.style.display === "inline"; })
   	        .style("fill-opacity", function(d) { return d.parent === focus ? 1 : 0; })
   	        .on("start", function(d) { if (d.parent === focus) this.style.display = "inline"; })
-  	        .on("end", function(d) { if (d.parent !== focus) this.style.display = "none"; });
+  	        .on("end", function(d) { if (d.parent !== focus) this.style.display = "none"; })
   	  }
 
   	  function zoomTo(v) {
   	    var k = diameter / v[2]; view = v;
-  	    node.attr("transform", function(d) { return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")"; });
-  	    circle.attr("r", function(d) { return d.r * k; });
+  	    
+  	    node.attr("transform", function(d) { 
+  	    	return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")"; });
+  	        circle.attr("r", function(d) { return d.r * k; 
+  	    });
   	  }
   	});
-
 
   </script>
 
