@@ -11,7 +11,7 @@ Applikationsweg oder Anwendungsgebiet, welche durch Ärzte und Apotheker manuell
 
 Die Grundstruktur der Referenzdaten ist in der [Einleitung](/README.md) aufgeführt.
 
-## Bubble Chart
+## Bubble Chart Form
 [Bubble Chart](form-bubble.html ':include :type=iframe width=100% height=800px')
 `
 
