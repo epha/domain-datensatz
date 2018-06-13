@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+
+	<style type="text/css">
+
+	  text {
+	    font-size: 11px;
+	    pointer-events: none;
+	  }
+
+	  text.parent {
+	    fill: #1f77b4;
+	  }
+
+	  circle {
+	    fill: #ccc;
+	    stroke: #999;
+	    pointer-events: all;
+	    margin: 5px;
+	  }
+
+	  circle.parent {
+	    fill: #1f77b4;
+	    fill-opacity: .1;
+	    stroke: steelblue;
+	  }
+
+	  circle.parent:hover {
+	    stroke: #ff7f0e;
+	    stroke-width: .5px;
+	  }
+
+	  circle.child {
+	    pointer-events: none;
+	  }
+
+	  svg {
+	  	font-size: 50px;
+	  }
+
+	  
+
+	</style>
+
+</head>
+<body>
+   
+  <svg width="750" height="750"></svg>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+
+  <script>
+
+    const parseRoot = (wirkstoffe) => {
+      
+      const parsedObject = {
+      	"name": "ATC"
+      }
+
+      const atcs = Object.keys(wirkstoffe)
+
+      parsedObject.children = atcs.reduce((acc, atc) => {
+
+        switch (atc.length) {
+
+          case 1: 
+            acc[atc] = { "name" : atc, "children" : {} }
+          break
+          case 3:
+            acc[atc.substr(0, 1)].children[atc] = { "name" : atc, "children" : {} }
+          break
+          case 4: 
+
+            acc[atc.substr(0, 1)].children[atc.substr(0, 3)].children[atc] = { "name" : atc, "children" : {} }
+          break
+          case 5:
+
+            try {
+              acc[atc.substr(0, 1)].children[atc.substr(0, 3)].children[atc.substr(0, 4)].children[atc] = { "name" : atc, "children" : {} }
+            } catch (err) {
+            	console.log(err)
+            }
+          break
+          case 7:
+
+            try {
+              acc[atc.substr(0, 1)].children[atc.substr(0, 3)].children[atc.substr(0, 4)].children[atc.substr(0, 5)].children[atc] = { "name" : atc, "children" : {} }
+            } catch (err) {
+            	console.log(err)
+            }
+
+          break
+        }
+
+        return acc
+       
+      }, {})
+
+      const convertToArray = (children) => {
+
+      	Object.values(children).forEach((atc) => {
+
+            if(Object.values(atc.children).length) {
+              convertToArray(atc.children)
+              atc.children = Object.values(atc.children)
+            } else {
+              atc.value = 1
+              delete atc.children
+            }
+      	}) 
+      }
+
+      parsedObject.children = Object.values(parsedObject.children)
+
+      convertToArray(parsedObject.children)
+
+      return parsedObject
+    }
+
+  	var svg = d3.select("svg"),
+  	    margin = 20,
+  	    diameter = +svg.attr("width"),
+  	    g = svg.append("g").attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
+
+  	var color = d3.scaleLinear()
+  	    .domain([-1, 5])
+  	    .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
+  	    .interpolate(d3.interpolateHcl);
+
+  	var pack = d3.pack()
+  	    .size([diameter - margin, diameter - margin])
+  	    .padding(2);
+
+  	d3.json("../data/wirkstoffe.json", function(error, root) {
+  	  if (error) throw error;
+
+  	  root = parseRoot(root)
+
+  	  root = d3.hierarchy(root)
+  	      .sum(function(d) { return d.value; })
+  	      .sort(function(a, b) { return b.value - a.value; });
+
+  	  var focus = root,
+  	      nodes = pack(root).descendants(),
+  	      view;
+
+  	  var circle = g.selectAll("circle")
+  	    .data(nodes)
+  	    .enter().append("circle")
+  	      .attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
+  	      .style("fill", function(d) { return d.children ? color(d.depth) : null; })
+  	      .on("click", function(d) { if (focus !== d) zoom(d), d3.event.stopPropagation(); });
+
+  	  var text = g.selectAll("text")
+  	    .data(nodes)
+  	    .enter().append("text")
+  	      .attr("class", "label")
+  	      .attr("text-anchor", "middle")
+  	      .style('font-size', '17px')
+  	      .style('font-weight', 'bold')
+  	      .style('font-family', 'Inconsolata, monospace')
+  	      .style("fill-opacity", function(d) { return d.parent === root ? 1 : 0; })
+  	      .style("display", function(d) { 
+  	      	return d.parent === root ? "inline" : "none"; 
+  	      })
+  	      .text(function(d) { return d.data.name; });
+
+  	  var node = g.selectAll("circle,text");
+
+  	  svg
+  	     .on("click", function() { zoom(root); });
+
+  	  zoomTo([root.x, root.y, root.r * 2 + margin]);
+
+  	  function zoom(d) {
+
+  	  	if(d.data.name.length == 7) return
+
+  	    var focus0 = focus; focus = d;
+
+  	    var transition = d3.transition()
+  	        .duration(d3.event.altKey ? 7500 : 750)
+  	        .tween("zoom", function(d) {
+  	          var i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2 + margin]);
+  	          return function(t) { zoomTo(i(t)); };
+  	        });
+
+  	    transition.selectAll("text")
+  	      .filter(function(d) { return d.parent === focus || this.style.display === "inline"; })
+  	        .style("fill-opacity", function(d) { return d.parent === focus ? 1 : 0; })
+  	        .on("start", function(d) { if (d.parent === focus) this.style.display = "inline"; })
+  	        .on("end", function(d) { if (d.parent !== focus) this.style.display = "none"; })
+  	  }
+
+  	  function zoomTo(v) {
+  	    var k = diameter / v[2]; view = v;
+  	    
+  	    node.attr("transform", function(d) { 
+  	    	return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")"; });
+  	        circle.attr("r", function(d) { return d.r * k; 
+  	    });
+  	  }
+  	});
+
+  </script>
+
+</body>
+</html>

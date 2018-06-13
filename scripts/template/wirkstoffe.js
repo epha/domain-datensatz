@@ -27,9 +27,8 @@ sind die von der Swissmedic herausgegebenen Codes. Für den Fall, dass Swissmedi
 zuteilt und für den Wirkstoff des Präparates ein offizieller 7-stelliger Code existiert (z.B. publiziert durch die WHO) kann dieser
 stattdessen übernommen werden. Existiert kein offizieller ATC-Code werden falls nötig für einzelne Wirkstoffe 7-stellige ACT-Codes kreiert.
 
-http://mbostock.github.io/d3/talk/20111116/pack-hierarchy.html
+[Wirkstoffe Stats](/pack.html ':include :type=iframe width=100% height=800px')
 
-[cinwell website](http://mbostock.github.io/d3/talk/20111116/pack-hierarchy.html ':include :type=iframe width=100% height=800px')
 `
 
 }
