@@ -1,6 +1,6 @@
 const {artikel} = require('../../source/app.js')
 const artikelArray = Object.values(artikel)
-const insertToDocs = require('./artikel')
+const template = require('./artikel')
 
 //choose for which props we display a table
 const indicate = (property) => {
@@ -62,4 +62,4 @@ const stats = artikelArray.reduce((acc, artikel, idx) => {
   return acc
 }, {})
 
-insertToDocs(stats)
+template(stats)
