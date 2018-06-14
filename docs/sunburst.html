@@ -1,303 +1,339 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title></title>
 
-    <style type="text/css">
+<head>
+  <title></title>
 
-      body {
-        font-family: 'monospace', sans-serif;
-        margin: auto;
-        position: relative;
+  <style type="text/css">
+    body {
+      font-family: 'monospace', sans-serif;
+      margin: auto;
+      position: relative;
+    }
+
+    svg {
+      background: #FFF;
+      box-sizing: border-box;
+    }
+
+    .legendItem {
+      fill: #fff;
+      font-size: 13px;
+    }
+
+    text {
+      text-anchor: middle;
+      fill: #666;
+    }
+
+    path {
+      cursor: pointer;
+    }
+
+    tspan {
+      max-width: 200px;
+      display: block;
+    }
+  </style>
+
+</head>
+
+<body>
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script>
+    const parseRoot = (wirkstoffe) => {
+
+      const parsedObject = {
+        "name": "ATC",
+        'description': 'Klassifikation'
       }
 
-      svg {
-        background: #FFF;
-      }
+      const atcs = Object.keys(wirkstoffe)
 
-      .legendItem {
-        fill: #fff;
-        font-size: 13px;
-      }
+      parsedObject.children = atcs.reduce((acc, atc) => {
 
-      text {
-        text-anchor: middle;
-        fill: #666;
-      }
+        let targetChildren
 
-      tspan {
-        max-width: 200px;
-        display: block;
-      }
-
-    </style>
-
-  </head>
-  <body>
-
-    <script src="http://d3js.org/d3.v3.min.js"></script>
-
-    <script>
-
-      const parseRoot = (wirkstoffe) => {
-
-        const parsedObject = {
-          "name": "ATC",
-          'description': 'Klassifikation'
-        }
-
-        const atcs = Object.keys(wirkstoffe)
-
-        parsedObject.children = atcs.reduce((acc, atc) => {
-
-          let targetChildren
-
-          switch (atc.length) {
-            case 1:
-              targetChildren = acc
+        switch (atc.length) {
+          case 1:
+            targetChildren = acc
             break
-            case 3:
-              targetChildren = acc[atc.substr(0, 1)].children
+          case 3:
+            targetChildren = acc[atc.substr(0, 1)].children
             break
-            case 4:
+          case 4:
 
-              try {
-                targetChildren = acc[atc.substr(0, 1)].children[atc.substr(0, 3)].children
-              } catch (err) {
-                //console.log(err)
-              }
-            break
-            case 5:
-
-              try {
-                targetChildren = acc[atc.substr(0, 1)].children[atc.substr(0, 3)].children[atc.substr(0, 4)].children
-              } catch (err) {
-                //console.log(err)
-              }
-            break
-            case 7:
-
-              try {
-                targetChildren = acc[atc.substr(0, 1)].children[atc.substr(0, 3)].children[atc.substr(0, 4)].children[atc.substr(0, 5)].children
-              } catch (err) {
-                //console.log(err)
-              }
-            break
-          }
-
-          if(targetChildren) {
-            targetChildren[atc] = { "name" : atc, description: wirkstoffe[atc], "children" : {} }
-          }
-
-          return acc
-        }, {})
-
-        const convertToArray = (children) => {
-          Object.values(children).forEach((atc) => {
-            if(Object.values(atc.children).length) {
-              convertToArray(atc.children)
-              atc.children = Object.values(atc.children)
-            } else {
-              delete atc.children
+            try {
+              targetChildren = acc[atc.substr(0, 1)].children[atc.substr(0, 3)].children
+            } catch (err) {
+              //console.log(err)
             }
-          })
-        }
+            break
+          case 5:
 
-        parsedObject.children = Object.values(parsedObject.children)
-        convertToArray(parsedObject.children)
-
-        return parsedObject
-      }
-
-      const width = 700,
-            height = 740,
-            radius = Math.min(width, height) / 2,
-            colors = {
-                       'A': '#b81118',
-                       'B': '#ee1c25',
-                       'C': '#ed3f3d',
-                       'D': '#f58225',
-                       'G': '#f8a51c',
-                       'H': '#fef101',
-                       'J': '#cbbe03',
-                       'L': '#6fbf43',
-                       'M': '#04a45e',
-                       'N': '#00acac',
-                       'P': '#008989',
-                       'R': '#0465b2',
-                       'S': '#22409a',
-                       'V': '#583093'
-                    },
-            colorOpacity = 0.7;
-
-      const svg = d3.select("body").append("svg")
-          .attr("width", '100%')
-          .attr("height", height);
-
-      const vis = svg.append("g")
-        .attr("transform", "translate(" + width / 1.8 + "," + height / 2 + ") scale(1.05)")
-        .append("g");
-
-      const partition = d3.layout.partition()
-        .size([2 * Math.PI, radius * radius])
-        .value((d) => d.size);
-
-      const arc = d3.svg.arc()
-        .startAngle((d) => d.x)
-        .endAngle((d) => d.x + d.dx)
-        .innerRadius((d) => Math.sqrt(d.y))
-        .outerRadius((d) => Math.sqrt(d.y + d.dy))
-
-      const text = vis.append("text")
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("dy", "0.35em")
-
-      const getColor = function(d) {
-        const atcStart = d.name.substr(0, 1)
-        if (d.name === "ATC") {
-          return '#7E7F7E'
-        } else  {
-          return colors[atcStart]
-        }
-      }
-
-      const setSize = (d) => {
-        if (!d.hasOwnProperty("children")) {
-          d.size = 1
-          return 1
-        } else {
-          let sum = 1;
-
-          d.children.forEach((c) => {
-            sum += setSize(c)
-          })
-
-          d.size = sum;
-          return d.size
-        }
-        return d
-      }
-
-      const wrap = (text, width) => {
-
-        text.each(function () {
-          let text = d3.select(this),
-            words = text.text().split(/\s+/).reverse(),
-            word,
-            line = [],
-            lineNumber = 0,
-            lineHeight = 1.1,
-            x = text.attr("x"),
-            y = text.attr("y"),
-            dy = 0,
-            tspan = text.text(null)
-                        .append("tspan")
-
-          while (word = words.pop()) {
-            line.push(word);
-            tspan.text(line.join(" "));
-            if (tspan.node().getComputedTextLength() > width) {
-                ++lineNumber
-                line.pop();
-                tspan.text(line.join(" "));
-                line = [word];
-                tspan = text.append("tspan")
-                            .attr("x", x)
-                            .attr("y", y)
-                            .attr("dy", '1.1em')
-                            .text(word)
+            try {
+              targetChildren = acc[atc.substr(0, 1)].children[atc.substr(0, 3)].children[atc.substr(0, 4)].children
+            } catch (err) {
+              //console.log(err)
             }
+            break
+          case 7:
+
+            try {
+              targetChildren = acc[atc.substr(0, 1)].children[atc.substr(0, 3)].children[atc.substr(0, 4)].children[atc.substr(0, 5)].children
+            } catch (err) {
+              //console.log(err)
+            }
+            break
+        }
+
+        if (targetChildren) {
+          targetChildren[atc] = {
+            "name": atc,
+            description: wirkstoffe[atc],
+            "children": {}
+          }
+        }
+
+        return acc
+      }, {})
+
+
+      const convertToArray = (children) => {
+        Object.values(children).forEach((atc) => {
+          if (Object.values(atc.children).length) {
+            convertToArray(atc.children)
+            atc.children = Object.values(atc.children)
+          } else {
+            delete atc.children
           }
         })
       }
 
+      parsedObject.children = Object.values(parsedObject.children)
+      convertToArray(parsedObject.children)
 
-      d3.json("../data/wirkstoffe.json", function(error, root) {
+      return parsedObject
+    }
 
-        const wirkstoffe = parseRoot(root)
+    // Set the dimensions and margins of the diagram
+    const margin = {
+      top: 20,
+      right: 80,
+      bottom: 20,
+      left: 10
+    }
+    const width = document.body.clientWidth - margin.left - margin.right
+    const height = 800 - margin.top - margin.bottom
+    const radius = Math.min(width, height) / 2
 
-        setSize(wirkstoffe)
+    // append the svg object to the body of the page
+    // appends a 'group' element to 'svg'
+    // moves the 'group' element to the top left margin
 
-        drawLegend();
-        
-        root = {"name": wirkstoffe.name, "size": wirkstoffe.size, "children": [wirkstoffe]}
+    const svg = d3.select("body").append("svg")
+      .attr("width", width + margin.right + margin.left)
+      .attr("height", height + margin.top + margin.bottom)
 
-        let path = vis.datum(root).selectAll("path")
-            .data(partition.nodes)
-          .enter().append("path")
-            .attr("display", (d) => d.depth ? null : "none")
-            .attr("d", arc)
-            .style("stroke", "#fff")
-            .style("fill", (d) => getColor(d))
-            .style("opacity", colorOpacity)
-            .on("mouseover", mouseover)
-            .on("mouseout", mouseout)
+    const colors = {
+      'A': '#b81118',
+      'B': '#ee1c25',
+      'C': '#ed3f3d',
+      'D': '#f58225',
+      'G': '#f8a51c',
+      'H': '#fef101',
+      'J': '#cbbe03',
+      'L': '#6fbf43',
+      'M': '#04a45e',
+      'N': '#00acac',
+      'P': '#008989',
+      'R': '#0465b2',
+      'S': '#22409a',
+      'V': '#583093'
+    }
+    const colorOpacity = 0.7;
 
-        const displaySize = (size) => {
-          if(size > 1) {
-            return `</tspan><tspan  x=0 dy='30' style='font-size: 15px'>${size} Wirkstoffe </tspan>`
+    const vis = svg.append("g")
+      .attr("transform", "translate(" + (width / 2 + margin.left) + "," + (radius + 2 * margin.top) + ")")
+      .append("g");
+
+    const partition = d3.layout.partition().sort((a, b) => {
+        return a.name.localeCompare(b.name)
+      })
+      .size([2 * Math.PI, radius * radius])
+      .value((d) => d.size);
+
+    const arc = d3.svg.arc()
+      .startAngle((d) => d.x)
+      .endAngle((d) => d.x + d.dx)
+      .innerRadius((d) => Math.sqrt(d.y))
+      .outerRadius((d) => Math.sqrt(d.y + d.dy))
+
+    const text = vis.append("text")
+      .attr("x", 0)
+      .attr("y", 0)
+      .attr("dy", "0.35em")
+
+    const getColor = function(d) {
+      const atcStart = d.name.substr(0, 1)
+      if (d.name === "ATC") {
+        return '#7E7F7E'
+      } else {
+        return colors[atcStart]
+      }
+    }
+
+    const setSize = (d) => {
+      if (!d.hasOwnProperty("children")) {
+        d.size = 1
+        return 1
+      } else {
+        let sum = 1;
+
+        d.children.forEach((c) => {
+          sum += setSize(c)
+        })
+
+        d.size = sum;
+        return d.size
+      }
+      return d
+    }
+
+    const wrap = (text, width) => {
+
+      text.each(function() {
+        let text = d3.select(this),
+          words = text.text().split(/\s+/).reverse(),
+          word,
+          line = [],
+          lineNumber = 0,
+          lineHeight = 1.1,
+          x = text.attr("x"),
+          y = text.attr("y"),
+          dy = 0,
+          tspan = text.text(null)
+          .append("tspan")
+
+        while (word = words.pop()) {
+          line.push(word);
+          tspan.text(line.join(" "));
+          if (tspan.node().getComputedTextLength() > width) {
+            ++lineNumber
+            line.pop();
+            tspan.text(line.join(" "));
+            line = [word];
+            tspan = text.append("tspan")
+              .attr("x", x)
+              .attr("y", y)
+              .attr("dy", '1.1em')
+              .text(word)
           }
         }
-
-        function mouseover(d) {
-
-          text.html(`<tspan style='font-size: 30px' x=0 dy='-20'>${d.name}</tspan><tspan style='font-size: 17px' x=0 dy='30'>${d.description + displaySize(d.size)}`)
-
-          d3.selectAll("path")
-            .filter((d1) => d === d1)
-            .style("opacity", 0.5);
-
-          const tspans = d3.selectAll('tspan')
-            .call(wrap, 200)
-        }
-
-        function mouseout(d) {
-          text.html("");
-
-          d3.selectAll("path")
-            .filter((d1) => d === d1)
-            .style("opacity", colorOpacity);
-        }
       })
+    }
 
-      d3.select(self.frameElement).style("height", height + "px")
 
-      function drawLegend() {
-        let li = {
-          w: 85, h: 30, s: 3, r: 3
-        }
+    d3.json("../data/wirkstoffe.json", function(error, root) {
 
-        let legend = svg.append("g")
-            .attr("transform", (d, i) => "translate(" + (width - li.w*-0.8) + "," + (height - li.h*Object.keys(colors).length*1.4) + ")" )
+      const wirkstoffe = parseRoot(root)
 
-        let g = legend.selectAll("g")
-            .data(d3.entries(colors))
-            .enter().append("svg:g")
-            .attr("transform", (d, i) => "translate(0," + (i * (li.h + li.s)) + ")")
+      setSize(wirkstoffe)
 
-        g.append("svg:rect")
-            .attr("rx", li.r)
-            .attr("ry", li.r)
-            .attr("width", li.w)
-            .attr("height", li.h)
-            .style("opacity", colorOpacity)
-            .style("fill", (d) => d.value);
+      drawLegend();
 
-        g.append("svg:text")
-            .attr("x", li.w / 2)
-            .attr("y", li.h / 2)
-            .attr("dy", "0.35em")
-            .attr("text-anchor", "middle")
-            .attr('textLength', '200px')
-            .style('max-width', '200px')
-            .style('display', 'block')
-            .style('overflow', 'hidden')
-            .classed("legendItem", true)
-            .text((d) => d.key)
+      root = {
+        "name": wirkstoffe.name,
+        "size": wirkstoffe.size,
+        "children": [wirkstoffe]
       }
 
-    </script>
+      let path = vis.datum(root).selectAll("path")
+        .data(partition.nodes)
+        .enter().append("path")
+        .attr("display", (d) => d.depth ? null : "none")
+        .attr("d", arc)
+        .style("stroke", "#fff")
+        .style("fill", (d) => getColor(d))
+        .style("opacity", colorOpacity)
+        .on("mouseover", mouseover)
+        .on("mouseout", mouseout)
 
-  </body>
+      const displaySize = (d) => {
+        if (d.size > 1) {
+          return `</tspan><tspan  x=0 dy='30' style='font-size: 15px'>${d.size} Wirkstoffe </tspan>`
+        }
+        return `</tspan><tspan  x=0 dy='30' style='font-size: 15px'></tspan>`
+      }
+
+      function mouseover(d) {
+
+        text.html(`<tspan style='font-size: 30px' x=0 dy='-20'>${d.name}</tspan><tspan style='font-size: 17px' x=0 dy='30'>${d.description + displaySize(d)}`)
+
+        d3.selectAll("path")
+          .filter((d1) => d === d1)
+          .style("opacity", 0.5);
+
+        const tspans = d3.selectAll('tspan')
+          .call(wrap, 200)
+      }
+
+      function mouseout(d) {
+        text.html("");
+
+        d3.selectAll("path")
+          .filter((d1) => d === d1)
+          .style("opacity", colorOpacity);
+      }
+
+    })
+
+    // d3.select(self.frameElement).style("height", height + "px")
+
+    function drawLegend() {
+
+      const categories = Object.keys(colors).length
+
+      let li = {
+        w: 40,
+        h: 30,
+        s: 3,
+        r: 3
+      }
+
+      let legend = svg.append("g")
+        .attr("transform", (d, i) => {
+          //return "translate(" + ( - li.w * -0.8) + "," + ( - height + li.h * Object.keys(colors).length * 1.4) + ")"
+          return "translate(" + (width + 40) + "," + 20 + ")"
+        })
+
+      let g = legend.selectAll("g")
+        .data(d3.entries(colors))
+        .enter().append("svg:g")
+        .attr("transform", (d, i) => "translate(0," + (i * (li.h + li.s)) + ")")
+
+      g.append("svg:rect")
+        .attr("rx", li.r)
+        .attr("ry", li.r)
+        .attr("width", li.w)
+        .attr("height", li.h)
+        .style("opacity", colorOpacity)
+        .style("fill", (d) => d.value);
+
+      g.append("svg:text")
+        .attr("x", li.w / 2)
+        .attr("y", li.h / 2)
+        .attr("dy", "0.35em")
+        .attr("text-anchor", "middle")
+        .attr('textLength', '200px')
+        .style('max-width', '200px')
+        .style('display', 'block')
+        .style('overflow', 'hidden')
+        .classed("legendItem", true)
+        .text((d) => d.key)
+    }
+  </script>
+
+</body>
+
 </html>

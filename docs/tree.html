@@ -76,9 +76,9 @@ d3.json("../data/artikel.json").then(json => {
   })
 
   // Set the dimensions and margins of the diagram
-  var margin = {top: 20, right: 290, bottom: 30, left: 16},
-      width = document.body.clientWidth - margin.left - margin.right,
-      height = 2000 - margin.top - margin.bottom;
+  const margin = {top: 20, right: 290, bottom: 30, left: 16}
+  const width = document.body.clientWidth - margin.left - margin.right
+  const height = 2000 - margin.top - margin.bottom
 
   // append the svg object to the body of the page
   // appends a 'group' element to 'svg'
@@ -87,7 +87,7 @@ d3.json("../data/artikel.json").then(json => {
       .attr("width", width + margin.right + margin.left)
       .attr("height", height + margin.top + margin.bottom)
     .append("g")
-      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
 
   let i = 0
   let duration = 750
@@ -127,7 +127,7 @@ d3.json("../data/artikel.json").then(json => {
     // Move in for name1
     nodes.forEach(d => {
       if(d.depth == 3) {
-        d.y = d.depth * 180 - 200
+        d.y = d.depth * 180 - 140
       }
       else {
         //d.y = d.depth * 180

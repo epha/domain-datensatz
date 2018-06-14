@@ -9,7 +9,7 @@ sind die von der Swissmedic herausgegebenen Codes. Für den Fall, dass Swissmedi
 zuteilt und für den Wirkstoff des Präparates ein offizieller 7-stelliger Code existiert (z.B. publiziert durch die WHO) kann dieser
 stattdessen übernommen werden. Existiert kein offizieller ATC-Code werden falls nötig für einzelne Wirkstoffe 7-stellige ACT-Codes kreiert.
 
-[Sunburst ATC-Codes](/sunburst.html ':include :type=iframe width=100% height=800px')
+[Sunburst ATC-Codes](sunburst.html ':include :type=iframe width=100% height=850px')
 
 <style>
 
@@ -19,7 +19,7 @@ stattdessen übernommen werden. Existiert kein offizieller ATC-Code werden falls
       margin-left: -50px;
       margin-right: -50px;
       width: calc( 1200px - 335px );
-      border: none;
+      border: 1px solid rgb(27, 119, 181);
     }
 
   }
