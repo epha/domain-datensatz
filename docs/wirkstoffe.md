@@ -11,3 +11,19 @@ stattdessen übernommen werden. Existiert kein offizieller ATC-Code werden falls
 
 [Wirkstoffe Stats](/pack.html ':include :type=iframe width=100% height=800px')
 
+<style>
+
+  @media screen and (min-width: 1300px) {
+
+    main article.markdown-section p iframe {
+      margin-left: -50px;
+      margin-right: -50px;
+      width: calc( 1200px - 335px );
+      border: none;
+    }
+
+  }
+
+
+</style>
+
