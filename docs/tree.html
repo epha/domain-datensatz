@@ -127,7 +127,7 @@ d3.json("../data/artikel.json").then(json => {
     // Move in for name1
     nodes.forEach(d => {
       if(d.depth == 3) {
-        d.y = d.depth * 180 - 200
+        d.y = d.depth * width/3 - width*0.2
       }
       else {
         //d.y = d.depth * 180
