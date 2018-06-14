@@ -26,12 +26,12 @@ const update = async () => {
   fs.writeFileSync('./assets/src/docsify.min.js', fs.readFileSync('./node_modules/docsify/lib/docsify.min.js' ) )
   fs.writeFileSync('./assets/css/vue.css', fs.readFileSync('./node_modules/docsify/lib/themes/vue.css' ) )
   fs.writeFileSync('./assets/css/buble.css', fs.readFileSync('./node_modules/docsify/lib/themes/buble.css' ) )
-  fs.writeFileSync( './assets/src/prism-markdown.min.js', fs.readFileSync('./node_modules/prismjs/components/prism-markdown.min.js' ) )
-  fs.writeFileSync( './assets/src/prism-bash.min.js', fs.readFileSync('./node_modules/prismjs/components/prism-markdown.min.js' ) )
-  fs.writeFileSync(  './assets/src/prism-javascript.min.js', fs.readFileSync('./node_modules/prismjs/components/prism-markdown.min.js') )
-  fs.writeFileSync(  './assets/src/d3.min.js', fs.readFileSync('./node_modules/d3/dist/d3.min.js') )
-  fs.writeFileSync(  './assets/src/d3-scale-chromatic.min.js', fs.readFileSync('./node_modules/d3-scale-chromatic/dist/d3-scale-chromatic.min.js') )
-  fs.writeFileSync(  './assets/src/d3-legend.min.js', fs.readFileSync('./node_modules/d3-svg-legend/d3-legend.min.js') )
+  fs.writeFileSync('./assets/src/prism-markdown.min.js', fs.readFileSync('./node_modules/prismjs/components/prism-markdown.min.js' ) )
+  fs.writeFileSync('./assets/src/prism-bash.min.js', fs.readFileSync('./node_modules/prismjs/components/prism-markdown.min.js' ) )
+  fs.writeFileSync('./assets/src/prism-javascript.min.js', fs.readFileSync('./node_modules/prismjs/components/prism-markdown.min.js') )
+  fs.writeFileSync('./assets/src/d3.min.js', fs.readFileSync('./node_modules/d3/dist/d3.min.js') )
+  fs.writeFileSync('./assets/src/d3-scale-chromatic.min.js', fs.readFileSync('./node_modules/d3-scale-chromatic/dist/d3-scale-chromatic.min.js') )
+  fs.writeFileSync('./assets/src/d3-legend.min.js', fs.readFileSync('./node_modules/d3-svg-legend/d3-legend.min.js') )
   console.timeEnd("> Copy required node_modules")
 
   // -----------------------------

@@ -14,7 +14,7 @@ Ein Artikel kann in unterschiedliche Formen (form), wie z.B. Tablette, Lösungen
 ## Graph Inhaber
 In der Schweiz gibt es pharmazeutische Artikel von grossen und kleinen Herstellern. Das Sortiment von Hersteller mit mehr als 40 Brands und mit jeweils mehr als 10 Artikel innerhalb dieses Brands werden in folgendem Graph visualiert.
 
-[Bubble Chart](inhaber-tree.html ':include :type=iframe width=100% height=830px')
+[Tree Inhaber](inhaber-tree.html ':include :type=iframe width=100% height=1460px')
 
 <style>
 
@@ -28,6 +28,5 @@ In der Schweiz gibt es pharmazeutische Artikel von grossen und kleinen Herstelle
     }
 
   }
-
 
 </style>
