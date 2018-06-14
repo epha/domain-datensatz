@@ -1,0 +1,1696 @@
+{
+  "children": [
+    {
+      "name": "PersonFunction",
+      "size": 104894
+    },
+    {
+      "children": [
+        {
+          "name": "Sport",
+          "size": 328
+        },
+        {
+          "name": "Game",
+          "size": 1276
+        }
+      ],
+      "name": "Activity",
+      "size": 1604
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "name": "RecordLabel",
+                  "size": 19273
+                },
+                {
+                  "name": "Airline",
+                  "size": 3134
+                },
+                {
+                  "name": "Publisher",
+                  "size": 940
+                },
+                {
+                  "name": "LawFirm",
+                  "size": 446
+                }
+              ],
+              "name": "Company",
+              "size": 88054
+            },
+            {
+              "name": "PoliticalParty",
+              "size": 7340
+            },
+            {
+              "children": [
+                {
+                  "name": "SoccerLeague",
+                  "size": 1341
+                },
+                {
+                  "name": "SoftballLeague",
+                  "size": 17
+                },
+                {
+                  "name": "AustralianFootballLeague",
+                  "size": 4
+                },
+                {
+                  "name": "AutoRacingLeague",
+                  "size": 9
+                },
+                {
+                  "name": "BaseballLeague",
+                  "size": 196
+                },
+                {
+                  "name": "CanadianFootballLeague",
+                  "size": 7
+                },
+                {
+                  "name": "CricketLeague",
+                  "size": 9
+                },
+                {
+                  "name": "FieldHockeyLeague",
+                  "size": 24
+                },
+                {
+                  "name": "HandballLeague",
+                  "size": 15
+                },
+                {
+                  "name": "SpeedwayLeague",
+                  "size": 6
+                },
+                {
+                  "name": "MotorcycleRacingLeague",
+                  "size": 19
+                },
+                {
+                  "name": "VideogamesLeague",
+                  "size": 5
+                },
+                {
+                  "name": "InlineHockeyLeague",
+                  "size": 23
+                },
+                {
+                  "name": "RugbyLeague",
+                  "size": 133
+                },
+                {
+                  "name": "TennisLeague",
+                  "size": 7
+                },
+                {
+                  "name": "GolfLeague",
+                  "size": 12
+                },
+                {
+                  "name": "PoloLeague",
+                  "size": 16
+                },
+                {
+                  "name": "AmericanFootballLeague",
+                  "size": 78
+                },
+                {
+                  "name": "BasketballLeague",
+                  "size": 306
+                },
+                {
+                  "name": "IceHockeyLeague",
+                  "size": 204
+                },
+                {
+                  "name": "LacrosseLeague",
+                  "size": 20
+                },
+                {
+                  "name": "MixedMartialArtsLeague",
+                  "size": 1
+                },
+                {
+                  "name": "VolleyballLeague",
+                  "size": 58
+                }
+              ],
+              "name": "SportsLeague",
+              "size": 5085
+            },
+            {
+              "name": "TradeUnion",
+              "size": 1489
+            },
+            {
+              "children": [
+                {
+                  "name": "Library",
+                  "size": 708
+                },
+                {
+                  "name": "College",
+                  "size": 81
+                },
+                {
+                  "name": "School",
+                  "size": 29002
+                },
+                {
+                  "name": "University",
+                  "size": 22125
+                }
+              ],
+              "name": "EducationalInstitution",
+              "size": 52242
+            },
+            {
+              "children": [
+                {
+                  "name": "TelevisionStation",
+                  "size": 8199
+                },
+                {
+                  "name": "BroadcastNetwork",
+                  "size": 1280
+                },
+                {
+                  "name": "RadioStation",
+                  "size": 19452
+                }
+              ],
+              "name": "Broadcaster",
+              "size": 29629
+            },
+            {
+              "name": "Legislature",
+              "size": 1081
+            },
+            {
+              "name": "MilitaryUnit",
+              "size": 17813
+            },
+            {
+              "name": "ComedyGroup",
+              "size": 32
+            },
+            {
+              "name": "Band",
+              "size": 47243
+            },
+            {
+              "name": "GovernmentAgency",
+              "size": 3283
+            },
+            {
+              "name": "Non-ProfitOrganisation",
+              "size": 3494
+            },
+            {
+              "children": [
+                {
+                  "name": "BasketballTeam",
+                  "size": 857
+                },
+                {
+                  "name": "CanadianFootballTeam",
+                  "size": 19
+                },
+                {
+                  "name": "SpeedwayTeam",
+                  "size": 78
+                },
+                {
+                  "name": "AmericanFootballTeam",
+                  "size": 3
+                },
+                {
+                  "name": "HockeyTeam",
+                  "size": 988
+                },
+                {
+                  "name": "RugbyClub",
+                  "size": 1848
+                },
+                {
+                  "name": "SoccerClub",
+                  "size": 46951
+                },
+                {
+                  "name": "CyclingTeam",
+                  "size": 222
+                }
+              ],
+              "name": "SportsTeam",
+              "size": 52163
+            }
+          ],
+          "name": "Organisation",
+          "size": 329517
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "name": "ComicsCreator",
+                  "size": 2415
+                },
+                {
+                  "name": "MusicalArtist",
+                  "size": 49509
+                },
+                {
+                  "name": "Comedian",
+                  "size": 1018
+                },
+                {
+                  "name": "FashionDesigner",
+                  "size": 379
+                },
+                {
+                  "name": "Writer",
+                  "size": 15328
+                },
+                {
+                  "children": [
+                    {
+                      "name": "AdultActor",
+                      "size": 1597
+                    }
+                  ],
+                  "name": "Actor",
+                  "size": 2670
+                }
+              ],
+              "name": "Artist",
+              "size": 93532
+            },
+            {
+              "children": [
+                {
+                  "name": "SoapCharacter",
+                  "size": 2408
+                },
+                {
+                  "children": [
+                    {
+                      "name": "AnimangaCharacter",
+                      "size": 342
+                    }
+                  ],
+                  "name": "ComicsCharacter",
+                  "size": 4873
+                }
+              ],
+              "name": "FictionalCharacter",
+              "size": 10916
+            },
+            {
+              "name": "MilitaryPerson",
+              "size": 24370
+            },
+            {
+              "name": "Model",
+              "size": 1354
+            },
+            {
+              "name": "OfficeHolder",
+              "size": 42049
+            },
+            {
+              "name": "Philosopher",
+              "size": 1300
+            },
+            {
+              "name": "PlayboyPlaymate",
+              "size": 294
+            },
+            {
+              "children": [
+                {
+                  "name": "Cardinal",
+                  "size": 507
+                },
+                {
+                  "name": "Saint",
+                  "size": 2797
+                },
+                {
+                  "name": "ChristianBishop",
+                  "size": 4755
+                }
+              ],
+              "name": "Cleric",
+              "size": 8053
+            },
+            {
+              "name": "Noble",
+              "size": 3666
+            },
+            {
+              "children": [
+                {
+                  "name": "SoccerManager",
+                  "size": 16193
+                }
+              ],
+              "name": "SportsManager",
+              "size": 16193
+            },
+            {
+              "name": "Economist",
+              "size": 698
+            },
+            {
+              "name": "Chef",
+              "size": 417
+            },
+            {
+              "name": "VolleyballCoach",
+              "size": 18
+            },
+            {
+              "name": "Engineer",
+              "size": 731
+            },
+            {
+              "name": "Ambassador",
+              "size": 450
+            },
+            {
+              "name": "Architect",
+              "size": 1291
+            },
+            {
+              "name": "CollegeCoach",
+              "size": 7711
+            },
+            {
+              "children": [
+                {
+                  "name": "Medician",
+                  "size": 282
+                }
+              ],
+              "name": "Scientist",
+              "size": 16723
+            },
+            {
+              "children": [
+                {
+                  "name": "BritishRoyalty",
+                  "size": 7338
+                }
+              ],
+              "name": "Royalty",
+              "size": 7338
+            },
+            {
+              "name": "Religious",
+              "size": 708
+            },
+            {
+              "name": "Journalist",
+              "size": 14
+            },
+            {
+              "name": "Astronaut",
+              "size": 676
+            },
+            {
+              "name": "Judge",
+              "size": 1557
+            },
+            {
+              "children": [
+                {
+                  "name": "SportsTeamMember",
+                  "size": 253901
+                }
+              ],
+              "name": "OrganisationMember",
+              "size": 253901
+            },
+            {
+              "children": [
+                {
+                  "name": "Chancellor",
+                  "size": 86
+                },
+                {
+                  "name": "Congressman",
+                  "size": 2810
+                },
+                {
+                  "name": "President",
+                  "size": 2196
+                },
+                {
+                  "name": "PrimeMinister",
+                  "size": 1496
+                },
+                {
+                  "name": "Senator",
+                  "size": 934
+                },
+                {
+                  "name": "Mayor",
+                  "size": 1164
+                },
+                {
+                  "name": "MemberOfParliament",
+                  "size": 5177
+                },
+                {
+                  "name": "Governor",
+                  "size": 2492
+                }
+              ],
+              "name": "Politician",
+              "size": 24753
+            },
+            {
+              "name": "Monarch",
+              "size": 2420
+            },
+            {
+              "children": [
+                {
+                  "name": "BasketballPlayer",
+                  "size": 6487
+                },
+                {
+                  "children": [
+                    {
+                      "name": "AmateurBoxer",
+                      "size": 413
+                    }
+                  ],
+                  "name": "Boxer",
+                  "size": 3111
+                },
+                {
+                  "name": "ChessPlayer",
+                  "size": 1055
+                },
+                {
+                  "name": "Cyclist",
+                  "size": 3855
+                },
+                {
+                  "name": "IceHockeyPlayer",
+                  "size": 11535
+                },
+                {
+                  "name": "NationalCollegiateAthleticAssociationAthlete",
+                  "size": 538
+                },
+                {
+                  "name": "PokerPlayer",
+                  "size": 624
+                },
+                {
+                  "children": [
+                    {
+                      "name": "SumoWrestler",
+                      "size": 441
+                    }
+                  ],
+                  "name": "Wrestler",
+                  "size": 3105
+                },
+                {
+                  "name": "GolfPlayer",
+                  "size": 2610
+                },
+                {
+                  "children": [
+                    {
+                      "name": "AmericanFootballPlayer",
+                      "size": 11884
+                    }
+                  ],
+                  "name": "GridironFootballPlayer",
+                  "size": 18976
+                },
+                {
+                  "children": [
+                    {
+                      "name": "SpeedwayRider",
+                      "size": 639
+                    }
+                  ],
+                  "name": "MotorcycleRider",
+                  "size": 1614
+                },
+                {
+                  "name": "Gymnast",
+                  "size": 1084
+                },
+                {
+                  "name": "Bodybuilder",
+                  "size": 205
+                },
+                {
+                  "name": "Skater",
+                  "size": 222
+                },
+                {
+                  "name": "AustralianRulesFootballPlayer",
+                  "size": 5840
+                },
+                {
+                  "name": "Swimmer",
+                  "size": 2471
+                },
+                {
+                  "name": "TennisPlayer",
+                  "size": 4007
+                },
+                {
+                  "name": "Curler",
+                  "size": 473
+                },
+                {
+                  "name": "DartsPlayer",
+                  "size": 436
+                },
+                {
+                  "name": "TableTennisPlayer",
+                  "size": 445
+                },
+                {
+                  "name": "HandballPlayer",
+                  "size": 770
+                },
+                {
+                  "children": [
+                    {
+                      "name": "FormulaOneRacer",
+                      "size": 1005
+                    },
+                    {
+                      "name": "NascarDriver",
+                      "size": 836
+                    }
+                  ],
+                  "name": "RacingDriver",
+                  "size": 3192
+                },
+                {
+                  "name": "Jockey",
+                  "size": 425
+                },
+                {
+                  "name": "BadmintonPlayer",
+                  "size": 465
+                },
+                {
+                  "name": "BaseballPlayer",
+                  "size": 19807
+                },
+                {
+                  "name": "Cricketer",
+                  "size": 11614
+                },
+                {
+                  "name": "FigureSkater",
+                  "size": 3383
+                },
+                {
+                  "name": "GaelicGamesPlayer",
+                  "size": 3052
+                },
+                {
+                  "name": "MartialArtist",
+                  "size": 2724
+                },
+                {
+                  "name": "RugbyPlayer",
+                  "size": 11098
+                },
+                {
+                  "children": [
+                    {
+                      "name": "SnookerChamp",
+                      "size": 23
+                    }
+                  ],
+                  "name": "SnookerPlayer",
+                  "size": 287
+                },
+                {
+                  "name": "SoccerPlayer",
+                  "size": 162597
+                },
+                {
+                  "children": [
+                    {
+                      "name": "BeachVolleyballPlayer",
+                      "size": 127
+                    }
+                  ],
+                  "name": "VolleyballPlayer",
+                  "size": 868
+                },
+                {
+                  "name": "Skier",
+                  "size": 1261
+                },
+                {
+                  "name": "NetballPlayer",
+                  "size": 243
+                },
+                {
+                  "name": "SquashPlayer",
+                  "size": 267
+                },
+                {
+                  "name": "LacrossePlayer",
+                  "size": 339
+                }
+              ],
+              "name": "Athlete",
+              "size": 313731
+            },
+            {
+              "children": [
+                {
+                  "name": "Murderer",
+                  "size": 553
+                }
+              ],
+              "name": "Criminal",
+              "size": 2063
+            },
+            {
+              "name": "HorseTrainer",
+              "size": 220
+            },
+            {
+              "children": [
+                {
+                  "name": "TelevisionHost",
+                  "size": 36
+                },
+                {
+                  "name": "RadioHost",
+                  "size": 314
+                }
+              ],
+              "name": "Presenter",
+              "size": 443
+            },
+            {
+              "name": "BeautyQueen",
+              "size": 1852
+            }
+          ],
+          "name": "Person",
+          "size": 1124402
+        }
+      ],
+      "name": "Agent",
+      "size": 1472403
+    },
+    {
+      "name": "Award",
+      "size": 2337
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "name": "HumanGene",
+              "size": 4
+            },
+            {
+              "name": "MouseGene",
+              "size": 1
+            }
+          ],
+          "name": "Gene",
+          "size": 5
+        },
+        {
+          "name": "Protein",
+          "size": 13120
+        },
+        {
+          "name": "Enzyme",
+          "size": 4124
+        }
+      ],
+      "name": "Biomolecule",
+      "size": 17249
+    },
+    {
+      "children": [
+        {
+          "name": "Mineral",
+          "size": 1140
+        },
+        {
+          "name": "ChemicalCompound",
+          "size": 8404
+        }
+      ],
+      "name": "ChemicalSubstance",
+      "size": 9544
+    },
+    {
+      "children": [
+        {
+          "name": "Locomotive",
+          "size": 2781
+        },
+        {
+          "name": "Automobile",
+          "size": 8661
+        },
+        {
+          "name": "Ship",
+          "size": 25557
+        },
+        {
+          "name": "SpaceShuttle",
+          "size": 18
+        },
+        {
+          "name": "SpaceStation",
+          "size": 38
+        },
+        {
+          "name": "Train",
+          "size": 1251
+        },
+        {
+          "name": "Spacecraft",
+          "size": 84
+        },
+        {
+          "name": "Aircraft",
+          "size": 9592
+        },
+        {
+          "name": "Rocket",
+          "size": 304
+        }
+      ],
+      "name": "MeanOfTransportation",
+      "size": 48280
+    },
+    {
+      "children": [
+        {
+          "name": "WineRegion",
+          "size": 389
+        },
+        {
+          "name": "HistoricPlace",
+          "size": 9956
+        },
+        {
+          "name": "ProtectedArea",
+          "size": 7705
+        },
+        {
+          "children": [
+            {
+              "name": "Stadium",
+              "size": 8128
+            },
+            {
+              "children": [
+                {
+                  "name": "Racecourse",
+                  "size": 162
+                }
+              ],
+              "name": "RaceTrack",
+              "size": 162
+            }
+          ],
+          "name": "SportFacility",
+          "size": 8290
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "name": "PowerStation",
+                  "size": 2481
+                },
+                {
+                  "children": [
+                    {
+                      "name": "RailwayStation",
+                      "size": 4315
+                    }
+                  ],
+                  "name": "Station",
+                  "size": 23276
+                },
+                {
+                  "name": "LaunchPad",
+                  "size": 85
+                },
+                {
+                  "name": "Airport",
+                  "size": 12688
+                },
+                {
+                  "children": [
+                    {
+                      "name": "PublicTransitSystem",
+                      "size": 1437
+                    },
+                    {
+                      "name": "Road",
+                      "size": 17890
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "RoadTunnel",
+                          "size": 132
+                        },
+                        {
+                          "name": "RailwayTunnel",
+                          "size": 109
+                        },
+                        {
+                          "name": "WaterwayTunnel",
+                          "size": 19
+                        }
+                      ],
+                      "name": "Tunnel",
+                      "size": 298
+                    },
+                    {
+                      "name": "Bridge",
+                      "size": 3259
+                    },
+                    {
+                      "name": "RailwayLine",
+                      "size": 4015
+                    },
+                    {
+                      "name": "RoadJunction",
+                      "size": 120
+                    }
+                  ],
+                  "name": "RouteOfTransportation",
+                  "size": 27027
+                }
+              ],
+              "name": "Infrastructure",
+              "size": 65555
+            },
+            {
+              "name": "Park",
+              "size": 1756
+            },
+            {
+              "children": [
+                {
+                  "name": "Hospital",
+                  "size": 2328
+                },
+                {
+                  "name": "Lighthouse",
+                  "size": 1471
+                },
+                {
+                  "name": "HistoricBuilding",
+                  "size": 5072
+                },
+                {
+                  "name": "ShoppingMall",
+                  "size": 2244
+                },
+                {
+                  "name": "Museum",
+                  "size": 3966
+                },
+                {
+                  "name": "Prison",
+                  "size": 740
+                },
+                {
+                  "children": [
+                    {
+                      "name": "Theatre",
+                      "size": 981
+                    }
+                  ],
+                  "name": "Venue",
+                  "size": 1623
+                },
+                {
+                  "name": "Restaurant",
+                  "size": 623
+                },
+                {
+                  "name": "Skyscraper",
+                  "size": 2
+                },
+                {
+                  "name": "Hotel",
+                  "size": 1045
+                },
+                {
+                  "name": "ReligiousBuilding",
+                  "size": 2609
+                },
+                {
+                  "name": "Castle",
+                  "size": 816
+                },
+                {
+                  "name": "MilitaryStructure",
+                  "size": 3320
+                }
+              ],
+              "name": "Building",
+              "size": 67620
+            }
+          ],
+          "name": "ArchitecturalStructure",
+          "size": 134983
+        },
+        {
+          "name": "Monument",
+          "size": 280
+        },
+        {
+          "children": [
+            {
+              "name": "Country",
+              "size": 7182
+            },
+            {
+              "name": "Continent",
+              "size": 14
+            },
+            {
+              "children": [
+                {
+                  "name": "City",
+                  "size": 20354
+                },
+                {
+                  "name": "Town",
+                  "size": 42242
+                },
+                {
+                  "name": "Village",
+                  "size": 119860
+                }
+              ],
+              "name": "Settlement",
+              "size": 466816
+            },
+            {
+              "name": "Island",
+              "size": 3764
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "Diocese",
+                          "size": 2372
+                        }
+                      ],
+                      "name": "ClericalAdministrativeRegion",
+                      "size": 2372
+                    }
+                  ],
+                  "name": "AdministrativeRegion",
+                  "size": 31118
+                }
+              ],
+              "name": "Region",
+              "size": 31118
+            }
+          ],
+          "name": "PopulatedPlace",
+          "size": 531262
+        },
+        {
+          "name": "SiteOfSpecialScientificInterest",
+          "size": 578
+        },
+        {
+          "name": "SkiArea",
+          "size": 575
+        },
+        {
+          "name": "WorldHeritageSite",
+          "size": 1102
+        },
+        {
+          "children": [
+            {
+              "name": "LunarCrater",
+              "size": 1475
+            },
+            {
+              "name": "MountainRange",
+              "size": 375
+            },
+            {
+              "name": "Valley",
+              "size": 123
+            },
+            {
+              "name": "Mountain",
+              "size": 12715
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "name": "Canal",
+                      "size": 298
+                    },
+                    {
+                      "name": "River",
+                      "size": 29791
+                    }
+                  ],
+                  "name": "Stream",
+                  "size": 30126
+                },
+                {
+                  "name": "Lake",
+                  "size": 9793
+                }
+              ],
+              "name": "BodyOfWater",
+              "size": 39971
+            },
+            {
+              "name": "Cave",
+              "size": 345
+            },
+            {
+              "name": "Volcano",
+              "size": 792
+            }
+          ],
+          "name": "NaturalPlace",
+          "size": 55798
+        }
+      ],
+      "name": "Place",
+      "size": 754450
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "name": "MusicGenre",
+              "size": 9644
+            }
+          ],
+          "name": "Genre",
+          "size": 9644
+        }
+      ],
+      "name": "TopicalConcept",
+      "size": 9644
+    },
+    {
+      "children": [
+        {
+          "name": "Artwork",
+          "size": 3412
+        },
+        {
+          "name": "Website",
+          "size": 2870
+        },
+        {
+          "children": [
+            {
+              "name": "Album",
+              "size": 148243
+            },
+            {
+              "name": "ArtistDiscography",
+              "size": 3118
+            },
+            {
+              "children": [
+                {
+                  "name": "EurovisionSongContestEntry",
+                  "size": 1102
+                }
+              ],
+              "name": "Song",
+              "size": 5268
+            },
+            {
+              "name": "Single",
+              "size": 41763
+            }
+          ],
+          "name": "MusicalWork",
+          "size": 198519
+        },
+        {
+          "name": "Musical",
+          "size": 1198
+        },
+        {
+          "children": [
+            {
+              "name": "ProgrammingLanguage",
+              "size": 691
+            },
+            {
+              "name": "VideoGame",
+              "size": 18460
+            }
+          ],
+          "name": "Software",
+          "size": 29641
+        },
+        {
+          "name": "TelevisionSeason",
+          "size": 2239
+        },
+        {
+          "children": [
+            {
+              "name": "Play",
+              "size": 1361
+            },
+            {
+              "children": [
+                {
+                  "name": "Manga",
+                  "size": 3132
+                }
+              ],
+              "name": "Comics",
+              "size": 5114
+            },
+            {
+              "name": "Book",
+              "size": 28128
+            },
+            {
+              "children": [
+                {
+                  "name": "Newspaper",
+                  "size": 5248
+                },
+                {
+                  "name": "Magazine",
+                  "size": 4090
+                },
+                {
+                  "name": "AcademicJournal",
+                  "size": 5145
+                }
+              ],
+              "name": "PeriodicalLiterature",
+              "size": 14482
+            }
+          ],
+          "name": "WrittenWork",
+          "size": 50261
+        },
+        {
+          "children": [
+            {
+              "name": "Anime",
+              "size": 3797
+            },
+            {
+              "name": "HollywoodCartoon",
+              "size": 1486
+            }
+          ],
+          "name": "Cartoon",
+          "size": 5283
+        },
+        {
+          "name": "Film",
+          "size": 77794
+        },
+        {
+          "name": "TelevisionEpisode",
+          "size": 7675
+        },
+        {
+          "name": "TelevisionShow",
+          "size": 25641
+        },
+        {
+          "name": "RadioProgram",
+          "size": 933
+        }
+      ],
+      "name": "Work",
+      "size": 409599
+    },
+    {
+      "children": [
+        {
+          "name": "AutomobileEngine",
+          "size": 22197
+        },
+        {
+          "name": "Weapon",
+          "size": 4709
+        },
+        {
+          "name": "InformationAppliance",
+          "size": 1467
+        }
+      ],
+      "name": "Device",
+      "size": 29220
+    },
+    {
+      "name": "Disease",
+      "size": 5889
+    },
+    {
+      "name": "SnookerWorldRanking",
+      "size": 34
+    },
+    {
+      "name": "Drug",
+      "size": 5369
+    },
+    {
+      "children": [
+        {
+          "name": "SpaceMission",
+          "size": 485
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "name": "OlympicEvent",
+                  "size": 4033
+                }
+              ],
+              "name": "Olympics",
+              "size": 4089
+            },
+            {
+              "name": "Race",
+              "size": 515
+            },
+            {
+              "name": "TennisTournament",
+              "size": 3864
+            },
+            {
+              "name": "GrandPrix",
+              "size": 1180
+            },
+            {
+              "name": "MixedMartialArtsEvent",
+              "size": 693
+            },
+            {
+              "name": "WrestlingEvent",
+              "size": 878
+            },
+            {
+              "name": "FootballMatch",
+              "size": 2376
+            },
+            {
+              "name": "WomensTennisAssociationTournament",
+              "size": 59
+            }
+          ],
+          "name": "SportsEvent",
+          "size": 14614
+        },
+        {
+          "name": "MilitaryConflict",
+          "size": 15785
+        },
+        {
+          "name": "Election",
+          "size": 5586
+        },
+        {
+          "name": "Convention",
+          "size": 554
+        },
+        {
+          "name": "FilmFestival",
+          "size": 536
+        },
+        {
+          "name": "MusicFestival",
+          "size": 909
+        }
+      ],
+      "name": "Event",
+      "size": 38465
+    },
+    {
+      "children": [
+        {
+          "name": "MouseGeneLocation",
+          "size": 1
+        },
+        {
+          "name": "HumanGeneLocation",
+          "size": 2
+        }
+      ],
+      "name": "GeneLocation",
+      "size": 3
+    },
+    {
+      "name": "Language",
+      "size": 8730
+    },
+    {
+      "children": [
+        {
+          "name": "GivenName",
+          "size": 3179
+        }
+      ],
+      "name": "Name",
+      "size": 3179
+    },
+    {
+      "name": "EthnicGroup",
+      "size": 4270
+    },
+    {
+      "name": "Holiday",
+      "size": 607
+    },
+    {
+      "children": [
+        {
+          "name": "OlympicResult",
+          "size": 750
+        }
+      ],
+      "name": "SportCompetitionResult",
+      "size": 750
+    },
+    {
+      "children": [
+        {
+          "name": "Archaea",
+          "size": 171
+        },
+        {
+          "children": [
+            {
+              "name": "Fungus",
+              "size": 8739
+            },
+            {
+              "children": [
+                {
+                  "name": "Conifer",
+                  "size": 720
+                },
+                {
+                  "name": "Fern",
+                  "size": 833
+                },
+                {
+                  "children": [
+                    {
+                      "name": "Grape",
+                      "size": 349
+                    }
+                  ],
+                  "name": "FloweringPlant",
+                  "size": 2596
+                },
+                {
+                  "name": "Moss",
+                  "size": 384
+                },
+                {
+                  "name": "ClubMoss",
+                  "size": 89
+                },
+                {
+                  "name": "Cycad",
+                  "size": 173
+                },
+                {
+                  "name": "Ginkgo",
+                  "size": 5
+                },
+                {
+                  "name": "GreenAlga",
+                  "size": 356
+                },
+                {
+                  "name": "CultivatedVariety",
+                  "size": 1474
+                },
+                {
+                  "name": "Gnetophytes",
+                  "size": 28
+                }
+              ],
+              "name": "Plant",
+              "size": 47175
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "name": "RaceHorse",
+                      "size": 4453
+                    }
+                  ],
+                  "name": "Mammal",
+                  "size": 13157
+                },
+                {
+                  "name": "Amphibian",
+                  "size": 6894
+                },
+                {
+                  "name": "Crustacean",
+                  "size": 2374
+                },
+                {
+                  "name": "Arachnid",
+                  "size": 3109
+                },
+                {
+                  "name": "Bird",
+                  "size": 12520
+                },
+                {
+                  "name": "Fish",
+                  "size": 16033
+                },
+                {
+                  "name": "Reptile",
+                  "size": 5408
+                },
+                {
+                  "name": "Insect",
+                  "size": 75420
+                },
+                {
+                  "name": "Mollusca",
+                  "size": 27275
+                }
+              ],
+              "name": "Animal",
+              "size": 178289
+            }
+          ],
+          "name": "Eukaryote",
+          "size": 235699
+        },
+        {
+          "name": "Bacteria",
+          "size": 352
+        }
+      ],
+      "name": "Species",
+      "size": 239194
+    },
+    {
+      "children": [
+        {
+          "name": "Galaxy",
+          "size": 578
+        },
+        {
+          "name": "Planet",
+          "size": 11826
+        },
+        {
+          "name": "Star",
+          "size": 2265
+        }
+      ],
+      "name": "CelestialBody",
+      "size": 14669
+    },
+    {
+      "name": "Currency",
+      "size": 625
+    },
+    {
+      "children": [
+        {
+          "name": "BiologicalDatabase",
+          "size": 300
+        }
+      ],
+      "name": "Database",
+      "size": 300
+    },
+    {
+      "children": [
+        {
+          "name": "Beverage",
+          "size": 697
+        }
+      ],
+      "name": "Food",
+      "size": 4188
+    },
+    {
+      "name": "Sales",
+      "size": 5897
+    },
+    {
+      "children": [
+        {
+          "name": "Brain",
+          "size": 537
+        },
+        {
+          "name": "Nerve",
+          "size": 389
+        },
+        {
+          "name": "Embryology",
+          "size": 220
+        },
+        {
+          "name": "Ligament",
+          "size": 195
+        },
+        {
+          "name": "Bone",
+          "size": 430
+        },
+        {
+          "name": "Muscle",
+          "size": 281
+        },
+        {
+          "name": "Artery",
+          "size": 466
+        },
+        {
+          "name": "Lymph",
+          "size": 92
+        },
+        {
+          "name": "Vein",
+          "size": 292
+        }
+      ],
+      "name": "AnatomicalStructure",
+      "size": 4798
+    },
+    {
+      "name": "Colour",
+      "size": 1094
+    },
+    {
+      "name": "CareerStation",
+      "size": 577196
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "name": "ResearchProject",
+              "size": 20
+            }
+          ],
+          "name": "Project",
+          "size": 20
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "name": "SupremeCourtOfTheUnitedStatesCase",
+                  "size": 2479
+                }
+              ],
+              "name": "LegalCase",
+              "size": 2479
+            }
+          ],
+          "name": "Case",
+          "size": 2479
+        }
+      ],
+      "name": "UnitOfWork",
+      "size": 2499
+    },
+    {
+      "children": [
+        {
+          "name": "Year",
+          "size": 2041
+        },
+        {
+          "name": "YearInSpaceflight",
+          "size": 56
+        }
+      ],
+      "name": "TimePeriod",
+      "size": 62897
+    }
+  ],
+  "name": "owl:Thing",
+  "size": 3850396
+}

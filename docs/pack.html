@@ -6,40 +6,37 @@
 
 	<style type="text/css">
 
-	  text {
-	    font-size: 11px;
-	    pointer-events: none;
-	  }
+	  body {
+      font-family: 'Open Sans', sans-serif;
+      margin: auto;
+      position: relative;
 
-	  text.parent {
-	    fill: #1f77b4;
-	  }
+    }
 
-	  circle {
-	    fill: #ccc;
-	    stroke: #999;
-	    pointer-events: all;
-	    margin: 5px;
-	  }
+    svg {
+      background: #FFF;
+    }
 
-	  circle.parent {
-	    fill: #1f77b4;
-	    fill-opacity: .1;
-	    stroke: steelblue;
-	  }
+    form {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
 
-	  circle.parent:hover {
-	    stroke: #ff7f0e;
-	    stroke-width: .5px;
-	  }
+    .legendItem {
+      fill: #fff;
+      font-size: 13px;
+    }
 
-	  circle.child {
-	    pointer-events: none;
-	  }
+    text {
+      text-anchor: middle;
+      fill: #666;
+    }
 
-	  svg {
-	  	font-size: 50px;
-	  }
+    tspan {
+      max-width: 200px;
+      display: block;
+    }
 
 	  
 
@@ -47,16 +44,17 @@
 
 </head>
 <body>
+
    
-  <svg width="750" height="750"></svg>
-  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
 
   <script>
 
     const parseRoot = (wirkstoffe) => {
       
       const parsedObject = {
-      	"name": "ATC"
+      	"name": "ATC",
+        'description': 'Klassifikation'
       }
 
       const atcs = Object.keys(wirkstoffe)
@@ -66,19 +64,24 @@
         switch (atc.length) {
 
           case 1: 
-            acc[atc] = { "name" : atc, "children" : {} }
+            acc[atc] = { "name" : atc, description: wirkstoffe[atc], description: wirkstoffe[atc], "children" : {} }
           break
           case 3:
-            acc[atc.substr(0, 1)].children[atc] = { "name" : atc, "children" : {} }
+            acc[atc.substr(0, 1)].children[atc] = { "name" : atc, description: wirkstoffe[atc], "children" : {} }
           break
           case 4: 
+            
+            try {
+              acc[atc.substr(0, 1)].children[atc.substr(0, 3)].children[atc] = { "name" : atc, description: wirkstoffe[atc], "children" : {} }
+            } catch (err) {
+              console.log(err)
+            }
 
-            acc[atc.substr(0, 1)].children[atc.substr(0, 3)].children[atc] = { "name" : atc, "children" : {} }
           break
           case 5:
 
             try {
-              acc[atc.substr(0, 1)].children[atc.substr(0, 3)].children[atc.substr(0, 4)].children[atc] = { "name" : atc, "children" : {} }
+              acc[atc.substr(0, 1)].children[atc.substr(0, 3)].children[atc.substr(0, 4)].children[atc] = { "name" : atc, description: wirkstoffe[atc], "children" : {} }
             } catch (err) {
             	console.log(err)
             }
@@ -86,7 +89,7 @@
           case 7:
 
             try {
-              acc[atc.substr(0, 1)].children[atc.substr(0, 3)].children[atc.substr(0, 4)].children[atc.substr(0, 5)].children[atc] = { "name" : atc, "children" : {} }
+              acc[atc.substr(0, 1)].children[atc.substr(0, 3)].children[atc.substr(0, 4)].children[atc.substr(0, 5)].children[atc] = { "name" : atc, description: wirkstoffe[atc], "children" : {} }
             } catch (err) {
             	console.log(err)
             }
@@ -106,7 +109,6 @@
               convertToArray(atc.children)
               atc.children = Object.values(atc.children)
             } else {
-              atc.value = 1
               delete atc.children
             }
       	}) 
@@ -119,90 +121,195 @@
       return parsedObject
     }
 
-  	var svg = d3.select("svg"),
-  	    margin = 20,
-  	    diameter = +svg.attr("width"),
-  	    g = svg.append("g").attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
 
-  	var color = d3.scaleLinear()
-  	    .domain([-1, 5])
-  	    .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
-  	    .interpolate(d3.interpolateHcl);
+    var width = 700,
+        height = 740,
+        radius = Math.min(width, height) / 2,
+        colors = {'A': '#583093', 'B': '#22409a', 'C': '#0465b2', 'D': '#00acac', 'G': '#04a45e', 'H': '#6fbf43', 'J': '#fef101', 'L': '#f8a51c', 'M': '#f58225', 'N': '#ed3f3d', 'P': '#ee1c25', 'R': '#b81118', 'S': '#008989', 'V': '#cbbe03'},
+        colorOpacity = 0.7;
 
-  	var pack = d3.pack()
-  	    .size([diameter - margin, diameter - margin])
-  	    .padding(2);
+    var svg = d3.select("body").append("svg")
+        .attr("width", '100%')
+        .attr("height", height);
 
-  	d3.json("../data/wirkstoffe.json", function(error, root) {
-  	  if (error) throw error;
+    var vis = svg.append("g")
+      .attr("transform", "translate(" + width / 1.8 + "," + height / 2 + ") scale(1.05)")
+      .call(d3.behavior.zoom().scaleExtent([1, 12]).on("zoom", zoom))
+      .append("g");
 
-  	  root = parseRoot(root)
+    function zoom() {
+      vis.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+    }
 
-  	  root = d3.hierarchy(root)
-  	      .sum(function(d) { return d.value; })
-  	      .sort(function(a, b) { return b.value - a.value; });
+    var partition = d3.layout.partition()
+      .size([2 * Math.PI, radius * radius])
+      .value(function(d) { return d.size; });
 
-  	  var focus = root,
-  	      nodes = pack(root).descendants(),
-  	      view;
+    var arc = d3.svg.arc()
+      .startAngle(function(d) { return d.x; })
+      .endAngle(function(d) { return d.x + d.dx; })
+      .innerRadius(function(d) { return Math.sqrt(d.y); })
+      .outerRadius(function(d) { return Math.sqrt(d.y + d.dy); });
 
-  	  var circle = g.selectAll("circle")
-  	    .data(nodes)
-  	    .enter().append("circle")
-  	      .attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
-  	      .style("fill", function(d) { return d.children ? color(d.depth) : null; })
-  	      .on("click", function(d) { if (focus !== d) zoom(d), d3.event.stopPropagation(); });
+    var text = vis.append("text")
+      .attr("x", 0)
+      .attr("y", 0)
+      .attr("dy", "0.35em")
 
-  	  var text = g.selectAll("text")
-  	    .data(nodes)
-  	    .enter().append("text")
-  	      .attr("class", "label")
-  	      .attr("text-anchor", "middle")
-  	      .style('font-size', '17px')
-  	      .style('font-weight', 'bold')
-  	      .style('font-family', 'Inconsolata, monospace')
-  	      .style("fill-opacity", function(d) { return d.parent === root ? 1 : 0; })
-  	      .style("display", function(d) { 
-  	      	return d.parent === root ? "inline" : "none"; 
-  	      })
-  	      .text(function(d) { return d.data.name; });
+    var getColor = function(d) {
+      const atcStart = d.name.substr(0, 1)
+      if (d.name === "ATC") {
+        return '#7E7F7E';
+      } else  {
+        return colors[atcStart];
+      } 
+    };
 
-  	  var node = g.selectAll("circle,text");
+    var setSize = function(d) {
+      if (!d.hasOwnProperty("children")) {
+        d.size = 1;
+        return 1;
+      } else {
+        var sum = 1;
 
-  	  svg
-  	     .on("click", function() { zoom(root); });
+        d.children.forEach(function(c) {
+          sum += setSize(c);
+        });
 
-  	  zoomTo([root.x, root.y, root.r * 2 + margin]);
+        d.size = sum;
+        return d.size;
+      }
 
-  	  function zoom(d) {
+      return d;
+    };
 
-  	  	if(d.data.name.length == 7) return
+    function wrap(text, width) {
 
-  	    var focus0 = focus; focus = d;
+      text.each(function () {
+        var text = d3.select(this),
+          words = text.text().split(/\s+/).reverse(),
+          word,
+          line = [],
+          lineNumber = 0,
+          lineHeight = 1.1,
+          x = text.attr("x"),
+          y = text.attr("y"),
+          dy = 0,
+          tspan = text.text(null)
+                      .append("tspan")
+                      
 
-  	    var transition = d3.transition()
-  	        .duration(d3.event.altKey ? 7500 : 750)
-  	        .tween("zoom", function(d) {
-  	          var i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2 + margin]);
-  	          return function(t) { zoomTo(i(t)); };
-  	        });
+        while (word = words.pop()) {
+          line.push(word);
+          tspan.text(line.join(" "));
+          if (tspan.node().getComputedTextLength() > width) {
+              ++lineNumber
+              line.pop();
+              tspan.text(line.join(" "));
+              line = [word];
+              tspan = text.append("tspan")
+                          .attr("x", x)
+                          .attr("y", y)
+                          .attr("dy", '1.1em')
+                          .text(word);
+          }
+        }
+      });
+    }
 
-  	    transition.selectAll("text")
-  	      .filter(function(d) { return d.parent === focus || this.style.display === "inline"; })
-  	        .style("fill-opacity", function(d) { return d.parent === focus ? 1 : 0; })
-  	        .on("start", function(d) { if (d.parent === focus) this.style.display = "inline"; })
-  	        .on("end", function(d) { if (d.parent !== focus) this.style.display = "none"; })
-  	  }
+    drawLegend();
 
-  	  function zoomTo(v) {
-  	    var k = diameter / v[2]; view = v;
-  	    
-  	    node.attr("transform", function(d) { 
-  	    	return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")"; });
-  	        circle.attr("r", function(d) { return d.r * k; 
-  	    });
-  	  }
-  	});
+    d3.json("/data/wirkstoffe.json", function(error, root) {
+
+
+      const wirkstoffe = parseRoot(root)
+      
+      setSize(wirkstoffe);
+
+      root = {"name": wirkstoffe.name, "size": wirkstoffe.size, "children": [wirkstoffe]};
+      
+      var path = vis.datum(root).selectAll("path")
+          .data(partition.nodes)
+        .enter().append("path")
+          .attr("display", function(d) { return d.depth ? null : "none"; }) // hide inner ring
+          .attr("d", arc)
+          .style("stroke", "#fff")
+          .style("fill", function(d) { return getColor(d); })
+          .style("opacity", colorOpacity)
+          .on("mouseover", mouseover)
+          .on("mouseout", mouseout);
+
+      //<tspan style='font-size: 30px' x=0 dy='35'>" + percentage + "%</tspan>
+
+      const displaySize = (size) => {
+        if(size > 1) {
+          return "</tspan><tspan  x=0 dy='30' style='font-size: 15px'>" +  size + " Wirkstoffe </tspan>"
+        }
+      }
+      
+      function mouseover(d) {
+        //var percentage = (100 * d.size / root.size).toPrecision(3);
+        text.html("<tspan style='font-size: 30px' x=0 dy='-20'>" + d.name + "</tspan><tspan style='font-size: 17px' x=0 dy='30'>" + d.description + displaySize(d.size));
+        
+        d3.selectAll("path")
+          .filter(function(d1) { return d === d1; })
+          .style("opacity", 0.5);
+
+        const tspans = d3.selectAll('tspan')
+          .call(wrap, 200)
+
+      }
+      
+      function mouseout(d) {
+        text.html("");
+        
+        d3.selectAll("path")
+          .filter(function(d1) { return d === d1; })
+          .style("opacity", colorOpacity);
+      }
+      
+    });
+
+    d3.select(self.frameElement).style("height", height + "px");
+
+    function drawLegend() {
+      var li = {
+        w: 85, h: 30, s: 3, r: 3
+      };
+
+      var legend = svg.append("g")
+          .attr("transform", function(d, i) {
+            return "translate(" + (width - li.w*-0.8) + "," + (height - li.h*Object.keys(colors).length*1.4) + ")";
+          });
+
+      var g = legend.selectAll("g")
+          .data(d3.entries(colors))
+          .enter().append("svg:g")
+          .attr("transform", function(d, i) {
+                  return "translate(0," + (i * (li.h + li.s)) + ")";
+               });
+
+      g.append("svg:rect")
+          .attr("rx", li.r)
+          .attr("ry", li.r)
+          .attr("width", li.w)
+          .attr("height", li.h)
+          .style("opacity", colorOpacity)  
+          .style("fill", function(d) { return d.value; });
+
+      g.append("svg:text")
+          .attr("x", li.w / 2)
+          .attr("y", li.h / 2)
+          .attr("dy", "0.35em")
+          .attr("text-anchor", "middle")
+          .attr('textLength', '200px')
+          .style('max-width', '200px')
+          .style('display', 'block')
+          .style('overflow', 'hidden')
+          .classed("legendItem", true)
+          .text(function(d) { return d.key; });
+
+    }
 
   </script>
 
