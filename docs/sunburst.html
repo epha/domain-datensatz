@@ -40,7 +40,7 @@
     <script>
 
       const parseRoot = (wirkstoffe) => {
-        
+
         const parsedObject = {
           "name": "ATC",
           'description': 'Klassifikation'
@@ -59,8 +59,8 @@
             case 3:
               targetChildren = acc[atc.substr(0, 1)].children
             break
-            case 4: 
-              
+            case 4:
+
               try {
                 targetChildren = acc[atc.substr(0, 1)].children[atc.substr(0, 3)].children
               } catch (err) {
@@ -84,7 +84,7 @@
               }
             break
           }
-          
+
           if(targetChildren) {
             targetChildren[atc] = { "name" : atc, description: wirkstoffe[atc], "children" : {} }
           }
@@ -113,19 +113,19 @@
             height = 740,
             radius = Math.min(width, height) / 2,
             colors = {
-                       'A': '#b81118', 
-                       'B': '#ee1c25', 
-                       'C': '#ed3f3d', 
-                       'D': '#f58225', 
-                       'G': '#f8a51c', 
-                       'H': '#fef101', 
-                       'J': '#cbbe03', 
-                       'L': '#6fbf43', 
-                       'M': '#04a45e', 
-                       'N': '#00acac', 
-                       'P': '#008989', 
-                       'R': '#0465b2', 
-                       'S': '#22409a', 
+                       'A': '#b81118',
+                       'B': '#ee1c25',
+                       'C': '#ed3f3d',
+                       'D': '#f58225',
+                       'G': '#f8a51c',
+                       'H': '#fef101',
+                       'J': '#cbbe03',
+                       'L': '#6fbf43',
+                       'M': '#04a45e',
+                       'N': '#00acac',
+                       'P': '#008989',
+                       'R': '#0465b2',
+                       'S': '#22409a',
                        'V': '#583093'
                     },
             colorOpacity = 0.7;
@@ -159,7 +159,7 @@
           return '#7E7F7E'
         } else  {
           return colors[atcStart]
-        } 
+        }
       }
 
       const setSize = (d) => {
@@ -193,7 +193,7 @@
             dy = 0,
             tspan = text.text(null)
                         .append("tspan")
-                        
+
           while (word = words.pop()) {
             line.push(word);
             tspan.text(line.join(" "));
@@ -212,16 +212,17 @@
         })
       }
 
-      drawLegend();
 
-      d3.json("/data/wirkstoffe.json", function(error, root) {
+      d3.json("../data/wirkstoffe.json", function(error, root) {
 
         const wirkstoffe = parseRoot(root)
-        
+
         setSize(wirkstoffe)
 
-        root = {"name": wirkstoffe.name, "size": wirkstoffe.size, "children": [wirkstoffe]}
+        drawLegend();
         
+        root = {"name": wirkstoffe.name, "size": wirkstoffe.size, "children": [wirkstoffe]}
+
         let path = vis.datum(root).selectAll("path")
             .data(partition.nodes)
           .enter().append("path")
@@ -238,11 +239,11 @@
             return `</tspan><tspan  x=0 dy='30' style='font-size: 15px'>${size} Wirkstoffe </tspan>`
           }
         }
-        
+
         function mouseover(d) {
 
           text.html(`<tspan style='font-size: 30px' x=0 dy='-20'>${d.name}</tspan><tspan style='font-size: 17px' x=0 dy='30'>${d.description + displaySize(d.size)}`)
-          
+
           d3.selectAll("path")
             .filter((d1) => d === d1)
             .style("opacity", 0.5);
@@ -250,10 +251,10 @@
           const tspans = d3.selectAll('tspan')
             .call(wrap, 200)
         }
-        
+
         function mouseout(d) {
           text.html("");
-          
+
           d3.selectAll("path")
             .filter((d1) => d === d1)
             .style("opacity", colorOpacity);
@@ -280,7 +281,7 @@
             .attr("ry", li.r)
             .attr("width", li.w)
             .attr("height", li.h)
-            .style("opacity", colorOpacity)  
+            .style("opacity", colorOpacity)
             .style("fill", (d) => d.value);
 
         g.append("svg:text")
