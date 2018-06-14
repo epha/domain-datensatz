@@ -9,7 +9,7 @@ Die Grundstruktur der Referenzdaten ist in der [Einleitung](/README.md) aufgefü
 ## Graph Form
 Ein Artikel kann in unterschiedliche Formen (form), wie z.B. Tablette, Lösungen, u.v.m, hergestellt worden sein. Jede Form kann zudem auf unterschiedliche Weise (applw) appliziert werden. Dabei sind die Einheiten (unit,type) abhängig von Form und Applikationsweg. Der folgende Bubble Chart visualisiert diese Beziehung. Wenn man auf eine Bubble klickt, werden die jeweilgen Einheiten angezeigt.
 
-[Bubble Chart](form-bubble.html ':include :type=iframe width=100% height=750px')
+[Bubble Chart](form-bubble.html ':include :type=iframe width=100% height=850px')
 
 ## Graph Inhaber
 In der Schweiz gibt es pharmazeutische Artikel von grossen und kleinen Herstellern. Das Sortiment von Hersteller mit mehr als 40 Brands und mit jeweils mehr als 10 Artikel innerhalb dieses Brands werden in folgendem Graph visualiert.
