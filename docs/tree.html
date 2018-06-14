@@ -30,50 +30,7 @@
 // https://bl.ocks.org/mbostock/4339083
 // --------------------------------------
 
-
-d3.json("../data/artikel.json").then(json => {
-
-  // --------------
-  // Create Data
-  // --------------
-  const data = Object.values(json).reduce((acc,cur) => {
-
-    acc[cur.inhaber] = acc[cur.inhaber] || {}
-    acc[cur.inhaber][cur.brandName] = acc[cur.inhaber][cur.brandName] || []
-    acc[cur.inhaber][cur.brandName].push(cur)
-
-    return acc
-  }, {})
-
-  const treeData = {
-    name: '',
-    children: []
-  }
-
-  Object.keys(data).sort((a,b) => a.localeCompare(b)).forEach(key1 => {
-
-    // Inhaber
-    const inhaber = {
-      name: key1,
-      children: []
-    }
-
-    // BrandName
-    const brandNames = Object.keys(data[key1]).forEach(key2 => {
-
-      // Artikel
-      const artikel = Array.from( new Set( data[key1][key2].map(item => item.name1) ) ).map(name1 => {
-        return { name:`${name1}`}
-      })
-
-      inhaber.children.push({ name: key2, children: Array.from(new Set(artikel)) })
-    })
-
-    if(inhaber.children.length > 20) {
-      treeData.children.push(inhaber)
-    }
-
-  })
+d3.json("tree.json").then(data => {
 
   // Set the dimensions and margins of the diagram
   const margin = {top: 20, right: 290, bottom: 30, left: 16}
@@ -97,7 +54,7 @@ d3.json("../data/artikel.json").then(json => {
   var treemap = d3.tree().size([height, width])
 
   // Assigns parent, children, height, depth
-  root = d3.hierarchy(treeData, function(d) { return d.children; });
+  root = d3.hierarchy(data, function(d) { return d.children; });
   root.x0 = height / 2;
   root.y0 = 0;
 

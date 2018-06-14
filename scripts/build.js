@@ -1,14 +1,23 @@
 const pck = require("../package.json")
 const fs = require("fs")
+
 const packungen = require("expert-packungen")
 const wirkstoff = require("expert-wirkstoffe")
 
+console.log("")
+console.log("> ============")
+console.log(">  Datensatz")
+console.log("> ============")
+
+// ------------------
+// Create Graph Data
+// ------------------
+console.log("> Build Graph Data")
+require("./buildTree")
+require("./buildBubble")
+
 const update = async () => {
 
-  console.log("")
-  console.log("> ============")
-  console.log(">  Datensatz")
-  console.log("> ============")
 
   // -----------------------------
   // Build Markdown from Template
