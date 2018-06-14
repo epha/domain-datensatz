@@ -11,6 +11,7 @@
 
 .node text {
   font: 12px sans-serif;
+  text-overflow: ellipsis;
 }
 
 .link {
@@ -68,7 +69,7 @@ d3.json("../data/artikel.json").then(json => {
       inhaber.children.push({ name: key2, children: Array.from(new Set(artikel)) })
     })
 
-    if(inhaber.children.length > 28) {
+    if(inhaber.children.length > 20) {
       treeData.children.push(inhaber)
     }
 
@@ -77,7 +78,7 @@ d3.json("../data/artikel.json").then(json => {
   // Set the dimensions and margins of the diagram
   var margin = {top: 20, right: 290, bottom: 30, left: 16},
       width = document.body.clientWidth - margin.left - margin.right,
-      height = 1400 - margin.top - margin.bottom;
+      height = 2000 - margin.top - margin.bottom;
 
   // append the svg object to the body of the page
   // appends a 'group' element to 'svg'
@@ -123,8 +124,15 @@ d3.json("../data/artikel.json").then(json => {
     var nodes = treeData.descendants(),
         links = treeData.descendants().slice(1);
 
-    // Normalize for fixed-depth.
-    // nodes.forEach(function(d){ d.y = d.depth * 180});
+    // Move in for name1
+    nodes.forEach(d => {
+      if(d.depth == 3) {
+        d.y = d.depth * 180 - 200
+      }
+      else {
+        //d.y = d.depth * 180
+      }
+    });
 
     // ****************** Nodes section ***************************
 
@@ -154,10 +162,13 @@ d3.json("../data/artikel.json").then(json => {
         .attr("x", function(d) {
             return d.children || d._children ? -20 : 20;
         })
+        .style("opacity", d => {
+            return 0.8
+        })
         .attr("text-anchor", function(d) {
             return d.children || d._children ? "end" : "start";
         })
-        .text(function(d) { return d.data.name; });
+        .text(function(d) { return d.data.name });
 
     // UPDATE
     var nodeUpdate = nodeEnter.merge(node);
@@ -171,9 +182,15 @@ d3.json("../data/artikel.json").then(json => {
 
     // Update the node attributes and style
     nodeUpdate.select('circle.node')
-      .attr('r', 12)
+      .attr('r', 10)
       .style("fill", function(d) {
-          return d._children ? d3.interpolateBlues(d._children.length/20) : "tomato";
+          if(d.depth == 1) {
+            return d._children ? d3.interpolateGreens(d._children.length/d.parent.children.length) : "tomato";
+          }
+          if(d.depth == 2) {
+            return d._children ? d3.interpolateBlues(d._children.length/10) : "tomato";
+          }
+          return "tomato";
       })
       .attr('cursor', 'pointer');
 
