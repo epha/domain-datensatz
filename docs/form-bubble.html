@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Bubble Chart</title>
-  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 	<style>
-
-		html, body {
+		html,
+		body {
 			padding: 0;
 			margin: 0;
 			box-sizing: border-box;
 			font-family: 'Inconsolata', monospace;
 			-webkit-backface-visibility: hidden;
 		}
+
 		* {
 			box-sizing: inherit;
 		}
@@ -21,8 +23,8 @@
 		}
 
 		svg.bubble {
-      margin:auto;
-			display:block;
+			margin: auto;
+			display: block;
 		}
 
 		.circle-overlay {
@@ -33,6 +35,7 @@
 			/*it's buggy with the foreignObject background right now*/
 			/*background-color: rgba(255,255,255,0.5);*/
 		}
+
 		.circle-overlay__inner {
 			text-align: center;
 			width: 100%;
@@ -42,87 +45,86 @@
 		.hidden {
 			display: none;
 		}
+
 		.node-icon--faded {
 			opacity: 0.1;
 		}
+
 		.legend-size circle {
 			fill: rgb(31, 119, 180);
 		}
 	</style>
 </head>
+
 <body>
 	<svg id=bubble width="100%" height="700" font-family="monospace" font-size="10" text-anchor="middle"></svg>
-
-  <script src="https://d3js.org/d3.v4.min.js"></script>
-  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.24.0/d3-legend.js"></script>
-
+	<script src="../assets/src/d3.min.js"></script>
+	<script src="../assets/src/d3-scale-chromatic.min.js"></script>
+	<script src="../assets/src/d3-legend.min.js"></script>
 	<script>
 		// Based loosely from this D3 bubble graph https://bl.ocks.org/mbostock/4063269
 		// And this Forced directed diagram https://bl.ocks.org/mbostock/4062045
-    // Based on https://naustud.io/tech-stack/
-	</script>
-
-	<script>
-
-  d3.json('../data/artikel.json', (artikel) => {
-
-    // -------------------------------
-    // Unique List of Forms and Applw
-    // -------------------------------
-    const group = Object.values(artikel).reduce((acc,cur) => {
-
-      acc[`${cur.form}=${cur.applw}`] = acc[`${cur.form}=${cur.applw}`] || []
-      acc[`${cur.form}=${cur.applw}`].push(cur)
-
-      return acc
-    }, {})
+		// Based on https://naustud.io/tech-stack/
 
 
-    const data = Object.keys(group).map(key => {
+		d3.json('../data/artikel.json').then(artikel => {
+		//d3.json('../data/artikel.json', artikel => {
 
-      const units = group[key].reduce((acc,cur) => {
+			// -------------------------------
+			// Unique List of Forms and Applw
+			// -------------------------------
+			const group = Object.values(artikel).reduce((acc, cur) => {
 
-        if(cur.type1) {
-          acc[cur.type1] = acc[cur.type1] || 0
-           acc[cur.type1]++
-        }
-        if(cur.type2) {
-          acc[cur.type2] = acc[cur.type2] || 0
-           acc[cur.type2]++
-        }
-        if(cur.type3) {
-          acc[cur.type3] = acc[cur.type3] || 0
-           acc[cur.type3]++
-        }
-        if(cur.type4) {
-          acc[cur.type4] = acc[cur.type4] || 0
-           acc[cur.type4]++
-        }
-        if(cur.type5) {
-          acc[cur.type5] = acc[cur.type5] || 0
-           acc[cur.type5]++
-        }
+				acc[`${cur.form}=${cur.applw}`] = acc[`${cur.form}=${cur.applw}`] || []
+				acc[`${cur.form}=${cur.applw}`].push(cur)
 
-        return acc
-      }, {})
-
-      const rows = Object.keys(units).map(key2 => {
-        return `${key2.padStart(6,"\u00A0")} - ${String( (units[key2]/group[key].length*100).toFixed(1)+"% ").padStart(7,"\u00A0")}`
-      })
+				return acc
+			}, {})
 
 
-      return {
-        // Tablette
-        cat: key.split("=")[0],
-        // Applw p.o.
-        name: `${key.split("=")[1]}`,
-        // 30
-        value: 100 + 0.7 * group[key].length,//Math.log(1.2),
-        // p.o.
-        icon: key.split("=")[1],
-        // Description
-        desc: `
+			let data = Object.keys(group).map(key => {
+
+				const units = group[key].reduce((acc, cur) => {
+
+					if (cur.type1) {
+						acc[cur.type1] = acc[cur.type1] || 0
+						acc[cur.type1]++
+					}
+					if (cur.type2) {
+						acc[cur.type2] = acc[cur.type2] || 0
+						acc[cur.type2]++
+					}
+					if (cur.type3) {
+						acc[cur.type3] = acc[cur.type3] || 0
+						acc[cur.type3]++
+					}
+					if (cur.type4) {
+						acc[cur.type4] = acc[cur.type4] || 0
+						acc[cur.type4]++
+					}
+					if (cur.type5) {
+						acc[cur.type5] = acc[cur.type5] || 0
+						acc[cur.type5]++
+					}
+
+					return acc
+				}, {})
+
+				const rows = Object.keys(units).map(key2 => {
+					return `${key2.padStart(6,"\u00A0")} - ${String( (units[key2]/group[key].length*100).toFixed(1)+"% ").padStart(7,"\u00A0")}`
+				})
+
+				return {
+					// Tablette
+					cat: key.split("=")[0],
+					// Applw p.o.
+					name: `${key.split("=")[1]}`,
+					// 30
+					value: 100 + 0.7 * group[key].length, //Math.log(1.2),
+					// p.o.
+					icon: key.split("=")[1],
+					// Description
+					desc: `
           Form ${key.split("=")[0]}<br>
           n = ${group[key].length}<br>
           <br>
@@ -130,134 +132,142 @@
           <br>
           ${rows.join("<br>")}<br>
         `
-      }
-    })
+				}
+			})
 
-  		let svg = d3.select('svg');
-  		let width = document.body.clientWidth; // get width in pixels
-  		let height = +svg.attr('height') - 50;
-  		let centerX = width * 0.5;
-  		let centerY = height * 0.5 + 50;
-  		let strength = 0.05;
-  		let focusedNode;
+			let svg = d3.select('svg');
+			let width = document.body.clientWidth; // get width in pixels
+			let height = +svg.attr('height') - 50;
+			let centerX = width * 0.5;
+			let centerY = height * 0.5 + 50;
+			let strength = 0.05;
+			let focusedNode;
 
-  		let format = d3.format(',d');
+			let format = d3.format(',d');
 
-  		let scaleColor = d3.scaleOrdinal(d3.schemeCategory20);
+			// Number of categories to color
+			let categories = Array.from(new Set(data.map(d => d.cat))).map((item,idx,arr) => {
+				return d3.interpolateRainbow( idx / arr.length)
+			})
 
-  		// use pack to calculate radius of the circle
-  		let pack = d3.pack()
-  			.size([width , height ])
-  			.padding(1.5);
+			let scaleColor = d3.scaleOrdinal(categories);
 
-  		let forceCollide = d3.forceCollide(d => d.r + 1);
+			// use pack to calculate radius of the circle
+			let pack = d3.pack()
+				.size([width, height])
+				.padding(1.5);
 
-  		// use the force
-  		let simulation = d3.forceSimulation()
-  			// .force('link', d3.forceLink().id(d => d.id))
-  			.force('charge', d3.forceManyBody())
-  			.force('collide', forceCollide)
-  			// .force('center', d3.forceCenter(centerX, centerY))
-  			.force('x', d3.forceX(centerX ).strength(strength))
-  			.force('y', d3.forceY(centerY ).strength(strength));
+			let forceCollide = d3.forceCollide(d => d.r + 1);
 
-  		// reduce number of circles on mobile screen due to slow computation
-  		if ('matchMedia' in window && window.matchMedia('(max-device-width: 767px)').matches) {
-  			data = data.filter(el => {
-  				return el.value >= 50;
-  			});
-  		}
+			// use the force
+			let simulation = d3.forceSimulation()
+				// .force('link', d3.forceLink().id(d => d.id))
+				.force('charge', d3.forceManyBody())
+				.force('collide', forceCollide)
+				// .force('center', d3.forceCenter(centerX, centerY))
+				.force('x', d3.forceX(centerX).strength(strength))
+				.force('y', d3.forceY(centerY).strength(strength));
 
-  		let root = d3.hierarchy({ children: data })
-  			.sum(d => d.value);
+			// reduce number of circles on mobile screen due to slow computation
+			// if ('matchMedia' in window && window.matchMedia('(max-width: 767px)').matches) {
+			// Size of Main content
+			if (document.body.clientWidth < 600) {
+				data = data.filter(el => {
+					return el.value > 180;
+				});
+			}
 
-  		// we use pack() to automatically calculate radius conveniently only
-  		// and get only the leaves
-  		let nodes = pack(root).leaves().map(node => {
-  			//console.log('node:', node.x, (node.x - centerX) * 2);
-  			const data = node.data;
-  			return {
-  				x: centerX + (node.x - centerX) * 3, // magnify start position to have transition to center movement
-  				y: centerY + (node.y - centerY) * 3,
-  				r: 0, // for tweening
-  				radius: node.r, //original radius
-  				id: data.cat + '.' + (data.name.replace(/\s/g, '-')),
-  				cat: data.cat,
-  				name: data.name,
-  				value: data.value,
-  				icon: data.icon,
-  				desc: data.desc,
-  			}
-  		});
-  		simulation.nodes(nodes).on('tick', ticked);
+			let root = d3.hierarchy({
+				children: data
+			}).sum(d => d.value);
 
-  		let node = svg.selectAll('.node')
-  			.data(nodes)
-  			.enter().append('g')
-  			.attr('class', 'node')
-  			.call(d3.drag()
-  				.on('start', (d) => {
-  					if (!d3.event.active) simulation.alphaTarget(0.2).restart();
-  					d.fx = d.x;
-  					d.fy = d.y;
-  				})
-  				.on('drag', (d) => {
-  					d.fx = d3.event.x;
-  					d.fy = d3.event.y;
-  				})
-  				.on('end', (d) => {
-  					if (!d3.event.active) simulation.alphaTarget(0);
-  					d.fx = null;
-  					d.fy = null;
-  				}));
+			// we use pack() to automatically calculate radius conveniently only
+			// and get only the leaves
+			let nodes = pack(root).leaves().map(node => {
+				//console.log('node:', node.x, (node.x - centerX) * 2);
+				const data = node.data;
+				return {
+					x: centerX + (node.x - centerX) * 3, // magnify start position to have transition to center movement
+					y: centerY + (node.y - centerY) * 3,
+					r: 0, // for tweening
+					radius: node.r, //original radius
+					id: data.cat + '.' + (data.name.replace(/\s/g, '-')),
+					cat: data.cat,
+					name: data.name,
+					value: data.value,
+					icon: data.icon,
+					desc: data.desc,
+				}
+			});
+			simulation.nodes(nodes).on('tick', ticked);
 
-  		node.append('circle')
-  			.attr('id', d => d.id)
-  			.attr('r', 0)
-  			.style('fill', d => scaleColor(d.cat))
-  			.transition().duration(2000).ease(d3.easeElasticOut)
-  				.tween('circleIn', (d) => {
-  					let i = d3.interpolateNumber(0, d.radius);
-  					return (t) => {
-  						d.r = i(t);
-  						simulation.force('collide', forceCollide);
-  					}
-  				})
+			let node = svg.selectAll('.node')
+				.data(nodes)
+				.enter().append('g')
+				.attr('class', 'node')
+				.call(d3.drag()
+					.on('start', (d) => {
+						if (!d3.event.active) simulation.alphaTarget(0.2).restart();
+						d.fx = d.x;
+						d.fy = d.y;
+					})
+					.on('drag', (d) => {
+						d.fx = d3.event.x;
+						d.fy = d3.event.y;
+					})
+					.on('end', (d) => {
+						if (!d3.event.active) simulation.alphaTarget(0);
+						d.fx = null;
+						d.fy = null;
+					}));
 
-  		node.append('clipPath')
-  			.attr('id', d => `clip-${d.id}`)
-  			.append('use')
-  			.attr('xlink:href', d => `#${d.id}`);
+			node.append('circle')
+				.attr('id', d => d.id)
+				.attr('r', 0)
+				.style('fill', d => scaleColor(d.cat))
+				.transition().duration(2000).ease(d3.easeElasticOut)
+				.tween('circleIn', (d) => {
+					let i = d3.interpolateNumber(0, d.radius);
+					return (t) => {
+						d.r = i(t);
+						simulation.force('collide', forceCollide);
+					}
+				})
 
-  		// display text as circle icon
-  		node.filter(d => !String(d.icon).includes('img/'))
-  			.append('text')
-  			.classed('node-icon', true)
-  			.attr('clip-path', d => `url(#clip-${d.id})`)
-  			.selectAll('tspan')
-  			.data(d => d.icon.split(';'))
-  			.enter()
-  				.append('tspan')
-  				.attr('x', 0)
-  				.attr('y', (d, i, nodes) => (13 + (i - nodes.length / 2 - 0.5) * 10))
-          //.style('font-size', `16px`)
-  				.text(name => name);
+			node.append('clipPath')
+				.attr('id', d => `clip-${d.id}`)
+				.append('use')
+				.attr('xlink:href', d => `#${d.id}`);
 
-  		node.append('title')
-  			.text(d => (d.cat + '::' + d.name + '\n' + format(d.value)));
+			// display text as circle icon
+			node.filter(d => !String(d.icon).includes('img/'))
+				.append('text')
+				.classed('node-icon', true)
+				.attr('clip-path', d => `url(#clip-${d.id})`)
+				.selectAll('tspan')
+				.data(d => d.icon.split(';'))
+				.enter()
+				.append('tspan')
+				.attr('x', 0)
+				.attr('y', (d, i, nodes) => (13 + (i - nodes.length / 2 - 0.5) * 10))
+				//.style('font-size', `16px`)
+				.text(name => name);
 
-  		let legendOrdinal = d3.legendColor()
-  			.scale(scaleColor)
-  			.shape('circle');
+			node.append('title')
+				.text(d => (d.cat + '::' + d.name + '\n' + format(d.value)));
 
-  		let legend = svg.append('g')
-  			.classed('legend-color', true)
-  			.attr('text-anchor', 'start')
-  			.attr('transform','translate(20,30)')
-  			.style('font-size','12px')
-  			.call(legendOrdinal);
+			let legendOrdinal = d3.legendColor()
+				.scale(scaleColor)
+				.shape('circle');
 
-      /*
+			let legend = svg.append('g')
+				.classed('legend-color', true)
+				.attr('text-anchor', 'start')
+				.attr('transform', 'translate(20,30)')
+				.style('font-size', '12px')
+				.call(legendOrdinal);
+
+			/*
         // Do not show legend
 
         let sizeScale = d3.scaleOrdinal()
@@ -279,130 +289,130 @@
         */
 
 
-  		let infoBox = node.append('foreignObject')
-  			.classed('circle-overlay hidden', true)
-  			.attr('x', -350 * 0.5 * 0.8)
-  			.attr('y', -350 * 0.5 * 0.8)
-  			.attr('height', 350 * 0.8)
-  			.attr('width', 350 * 0.8)
-  				.append('xhtml:div')
-  				.classed('circle-overlay__inner', true);
+			let infoBox = node.append('foreignObject')
+				.classed('circle-overlay hidden', true)
+				.attr('x', -350 * 0.5 * 0.8)
+				.attr('y', -350 * 0.5 * 0.8)
+				.attr('height', 350 * 0.8)
+				.attr('width', 350 * 0.8)
+				.append('xhtml:div')
+				.classed('circle-overlay__inner', true);
 
-  		infoBox.append('h2')
-  			.classed('circle-overlay__title', true)
-  			.text(d => d.name);
+			infoBox.append('h2')
+				.classed('circle-overlay__title', true)
+				.text(d => d.name);
 
-  		infoBox.append('p')
-  			.classed('circle-overlay__body', true)
-  			.html(d => d.desc);
+			infoBox.append('p')
+				.classed('circle-overlay__body', true)
+				.html(d => d.desc);
 
 
-  		node.on('click', (currentNode) => {
-  			d3.event.stopPropagation();
-  			// console.log('currentNode', currentNode);
-  			let currentTarget = d3.event.currentTarget; // the <g> el
+			node.on('click', (currentNode) => {
+				d3.event.stopPropagation();
+				// console.log('currentNode', currentNode);
+				let currentTarget = d3.event.currentTarget; // the <g> el
 
-  			if (currentNode === focusedNode) {
-  				// no focusedNode or same focused node is clicked
-  				return;
-  			}
-  			let lastNode = focusedNode;
-  			focusedNode = currentNode;
+				if (currentNode === focusedNode) {
+					// no focusedNode or same focused node is clicked
+					return;
+				}
+				let lastNode = focusedNode;
+				focusedNode = currentNode;
 
-  			simulation.alphaTarget(0.2).restart();
-  			// hide all circle-overlay
-  			d3.selectAll('.circle-overlay').classed('hidden', true);
-  			d3.selectAll('.node-icon').classed('node-icon--faded', false);
+				simulation.alphaTarget(0.2).restart();
+				// hide all circle-overlay
+				d3.selectAll('.circle-overlay').classed('hidden', true);
+				d3.selectAll('.node-icon').classed('node-icon--faded', false);
 
-  			// don't fix last node to center anymore
-  			if (lastNode) {
-  				lastNode.fx = null;
-  				lastNode.fy = null;
-  				node.filter((d, i) => i === lastNode.index)
-  					.transition().duration(2000).ease(d3.easePolyOut)
-  					.tween('circleOut', () => {
-  						let irl = d3.interpolateNumber(lastNode.r, lastNode.radius);
-  						return (t) => {
-  							lastNode.r = irl(t);
-  						}
-  					})
-  					.on('interrupt', () => {
-  						lastNode.r = lastNode.radius;
-  					});
-  			}
+				// don't fix last node to center anymore
+				if (lastNode) {
+					lastNode.fx = null;
+					lastNode.fy = null;
+					node.filter((d, i) => i === lastNode.index)
+						.transition().duration(2000).ease(d3.easePolyOut)
+						.tween('circleOut', () => {
+							let irl = d3.interpolateNumber(lastNode.r, lastNode.radius);
+							return (t) => {
+								lastNode.r = irl(t);
+							}
+						})
+						.on('interrupt', () => {
+							lastNode.r = lastNode.radius;
+						});
+				}
 
-  			d3.transition().duration(2000).ease(d3.easePolyOut)
-  				.tween('moveIn', () => {
-  					console.log('tweenMoveIn', currentNode);
-  					let ix = d3.interpolateNumber(currentNode.x, centerX);
-  					let iy = d3.interpolateNumber(currentNode.y, centerY);
-  					let ir = d3.interpolateNumber(currentNode.r, centerY * 0.5);
-  					return function (t) {
-  						// console.log('i', ix(t), iy(t));
-  						currentNode.fx = ix(t);
-  						currentNode.fy = iy(t);
-  						currentNode.r = ir(t);
-  						simulation.force('collide', forceCollide);
-  					};
-  				})
-  				.on('end', () => {
-  					simulation.alphaTarget(0);
-  					let $currentGroup = d3.select(currentTarget);
-  					$currentGroup.select('.circle-overlay')
-  						.classed('hidden', false);
-  					$currentGroup.select('.node-icon')
-  						.classed('node-icon--faded', true);
+				d3.transition().duration(2000).ease(d3.easePolyOut)
+					.tween('moveIn', () => {
+						console.log('tweenMoveIn', currentNode);
+						let ix = d3.interpolateNumber(currentNode.x, centerX);
+						let iy = d3.interpolateNumber(currentNode.y, centerY);
+						let ir = d3.interpolateNumber(currentNode.r, centerY * 0.5);
+						return function(t) {
+							// console.log('i', ix(t), iy(t));
+							currentNode.fx = ix(t);
+							currentNode.fy = iy(t);
+							currentNode.r = ir(t);
+							simulation.force('collide', forceCollide);
+						};
+					})
+					.on('end', () => {
+						simulation.alphaTarget(0);
+						let $currentGroup = d3.select(currentTarget);
+						$currentGroup.select('.circle-overlay')
+							.classed('hidden', false);
+						$currentGroup.select('.node-icon')
+							.classed('node-icon--faded', true);
 
-  				})
-  				.on('interrupt', () => {
-  					console.log('move interrupt', currentNode);
-  					currentNode.fx = null;
-  					currentNode.fy = null;
-  					simulation.alphaTarget(0);
-  				});
+					})
+					.on('interrupt', () => {
+						console.log('move interrupt', currentNode);
+						currentNode.fx = null;
+						currentNode.fy = null;
+						simulation.alphaTarget(0);
+					});
 
-  		});
+			});
 
-  		// blur
-  		d3.select(document).on('click', () => {
-  			let target = d3.event.target;
-  			// check if click on document but not on the circle overlay
-  			if (!target.closest('#circle-overlay') && focusedNode) {
-  				focusedNode.fx = null;
-  				focusedNode.fy = null;
-  				simulation.alphaTarget(0.2).restart();
-  				d3.transition().duration(2000).ease(d3.easePolyOut)
-  					.tween('moveOut', function () {
-  						console.log('tweenMoveOut', focusedNode);
-  						let ir = d3.interpolateNumber(focusedNode.r, focusedNode.radius);
-  						return function (t) {
-  							focusedNode.r = ir(t);
-  							simulation.force('collide', forceCollide);
-  						};
-  					})
-  					.on('end', () => {
-  						focusedNode = null;
-  						simulation.alphaTarget(0);
-  					})
-  					.on('interrupt', () => {
-  						simulation.alphaTarget(0);
-  					});
+			// blur
+			d3.select(document).on('click', () => {
+				let target = d3.event.target;
+				// check if click on document but not on the circle overlay
+				if (!target.closest('#circle-overlay') && focusedNode) {
+					focusedNode.fx = null;
+					focusedNode.fy = null;
+					simulation.alphaTarget(0.2).restart();
+					d3.transition().duration(2000).ease(d3.easePolyOut)
+						.tween('moveOut', function() {
+							console.log('tweenMoveOut', focusedNode);
+							let ir = d3.interpolateNumber(focusedNode.r, focusedNode.radius);
+							return function(t) {
+								focusedNode.r = ir(t);
+								simulation.force('collide', forceCollide);
+							};
+						})
+						.on('end', () => {
+							focusedNode = null;
+							simulation.alphaTarget(0);
+						})
+						.on('interrupt', () => {
+							simulation.alphaTarget(0);
+						});
 
-  				// hide all circle-overlay
-  				d3.selectAll('.circle-overlay').classed('hidden', true);
-  				d3.selectAll('.node-icon').classed('node-icon--faded', false);
-  			}
-  		});
+					// hide all circle-overlay
+					d3.selectAll('.circle-overlay').classed('hidden', true);
+					d3.selectAll('.node-icon').classed('node-icon--faded', false);
+				}
+			});
 
-  		function ticked() {
-  			node
-  				.attr('transform', d => `translate(${d.x},${d.y})`)
-  				.select('circle')
-  					.attr('r', d => d.r);
-  		}
+			function ticked() {
+				node
+					.attr('transform', d => `translate(${d.x},${d.y})`)
+					.select('circle')
+					.attr('r', d => d.r);
+			}
 
-  })
-
+		})
 	</script>
 </body>
+
 </html>

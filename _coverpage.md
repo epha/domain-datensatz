@@ -1,7 +1,7 @@
 
 <div class='animation'></div>
 
-# Epha Datensatz <small>18.6.0</small>
+# Datensatz <small>18.6.0</small>
 
 > Referenzdaten (Arzneimittel) für die Schweiz
 
