@@ -14,7 +14,7 @@
         color: white !important;
       }
 
-      .animation {
+      div.animation {
         width:100%;
         height: 200px;
       }
@@ -39,11 +39,11 @@
   </head>
   <body>
     <article id="app"></article>
-    <script src="assets/src/lottie_light.min.js"></script>
     <script src="assets/src/docsify.min.js"></script>
     <script src="assets/src/prism-markdown.min.js"></script>
     <script src="assets/src/prism-bash.min.js"></script>
     <script src="assets/src/prism-javascript.min.js"></script>
+    <script src="assets/src/lottie_light.min.js"></script>
     <script>
 
       //docsify init
@@ -58,9 +58,9 @@
         name: 'Datensatz',
         repo: 'https://github.com/epha/domain-datensatz',
         coverpage: true,
-        executeScript: true,
         ga: 'UA-9955206-2',
         auto2Top: true,
+        executeScript:true,
         themeColor: '#1b77b5'
       }
 
@@ -73,17 +73,17 @@
           loop: true,
           autoplay: true,
           path: 'assets/animation/data.json'
-        })
-      }
-
-      window.addEventListener("load", () => {
-        const element = document.querySelector('.animation')
-
-        if(element) {
-          renderAnimation(element)
+          })
         }
 
-      })
+        window.addEventListener("load", () => {
+          const element = document.querySelector('.animation')
+
+          if(element) {
+            renderAnimation(element)
+          }
+
+        })
 
     </script>
     <script src="assets/src/docsify.ga.min.js"></script>
