@@ -30,7 +30,6 @@
     "lottie": "0.0.1",
     "lottie-web": "^5.1.17",
     "markdown-table": "^1.1.2",
-    "prismjs": "^1.14.0",
-    "rimraf": "*"
+    "prismjs": "^1.14.0"
   }
 }
