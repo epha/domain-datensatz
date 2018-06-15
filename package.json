@@ -1,6 +1,6 @@
 {
   "name": "domain-datensatz",
-  "version": "18.6.1",
+  "version": "18.6.2",
   "description": "",
   "main": "source/app.js",
   "scripts": {
