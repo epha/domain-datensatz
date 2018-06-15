@@ -27,9 +27,7 @@
     "expert-packungen": "github:epha/expert-packungen",
     "expert-wirkstoffe": "github:epha/expert-wirkstoffe",
     "isomorphic-fetch": "^2.2.1",
-    "lottie": "0.0.1",
     "lottie-web": "^5.1.17",
-    "markdown-table": "^1.1.2",
     "prismjs": "^1.14.0"
   }
 }
