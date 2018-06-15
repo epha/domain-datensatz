@@ -14,10 +14,18 @@
         color: white !important;
       }
 
-      .animation {
-        width:100%;
-        height: 200px;
+      a.github-corner {
+        z-index:10;
       }
+
+      div.animation {
+        height: calc( 100vh - 300px );
+        margin:0 auto;
+        width: calc( 16 / 9 * 100vw / 80vh - 300px);
+        max-width: 1200px;
+      }
+
+      section.cover .cover-main
 
       .downloads-wrapper {
         display: flex;
@@ -39,13 +47,27 @@
   </head>
   <body>
     <article id="app"></article>
-    <script src="assets/src/lottie_light.min.js"></script>
     <script src="assets/src/docsify.min.js"></script>
     <script src="assets/src/docsify.themeable.min.js"></script>
     <script src="assets/src/prism-markdown.min.js"></script>
     <script src="assets/src/prism-bash.min.js"></script>
     <script src="assets/src/prism-javascript.min.js"></script>
+    <script src="assets/src/lottie_light.min.js"></script>
     <script>
+
+      const animation = (hook,vm) => {
+
+        const element = document.querySelector('.animation')
+
+        lottie.loadAnimation({
+          container: element,
+          renderer: 'svg',
+          loop: true,
+          autoplay: true,
+          path: 'assets/animation/rocket.json'
+        })
+
+      }
 
       //docsify init
       window.$docsify = {
@@ -59,32 +81,16 @@
         name: 'Datensatz',
         repo: 'https://github.com/epha/domain-datensatz',
         coverpage: true,
-        executeScript: true,
         ga: 'UA-9955206-2',
         auto2Top: true,
-        themeColor: '#1b77b5'
+        executeScript:true,
+        themeColor: '#1b77b5',
+        plugins: [
+          (hook,vm) => {
+            hook.ready(animation)
+          }
+        ]
       }
-
-      //cover animation
-      const renderAnimation = (element) => {
-
-        lottie.loadAnimation({
-          container: element,
-          renderer: 'svg',
-          loop: true,
-          autoplay: true,
-          path: 'assets/animation/data.json'
-        })
-      }
-
-      window.addEventListener("load", () => {
-        const element = document.querySelector('.animation')
-
-        if(element) {
-          renderAnimation(element)
-        }
-
-      })
 
     </script>
     <script src="assets/src/docsify.ga.min.js"></script>

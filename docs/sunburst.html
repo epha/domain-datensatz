@@ -34,6 +34,7 @@
       max-width: 200px;
       display: block;
     }
+
   </style>
 
 </head>
@@ -41,7 +42,7 @@
 <body>
   <script src="https://d3js.org/d3.v3.min.js"></script>
   <script>
-    const parseRoot = (wirkstoffe) => {
+    const parseRoot = (wirkstoffe, wiki) => {
 
       const parsedObject = {
         "name": "ATC",
@@ -53,52 +54,53 @@
       parsedObject.children = atcs.reduce((acc, atc) => {
 
         let targetChildren
-
-        switch (atc.length) {
-          case 1:
-            targetChildren = acc
-            break
-          case 3:
-            targetChildren = acc[atc.substr(0, 1)].children
-            break
-          case 4:
-
-            try {
+        
+        //---
+        // Set atc to correct childrens
+        //---
+        try {
+          switch (atc.length) {
+            case 1:
+              targetChildren = acc
+              break
+            case 3:
+              targetChildren = acc[atc.substr(0, 1)].children
+              break
+            case 4:
               targetChildren = acc[atc.substr(0, 1)].children[atc.substr(0, 3)].children
-            } catch (err) {
-              //console.log(err)
-            }
-            break
-          case 5:
-
-            try {
+              break
+            case 5:
               targetChildren = acc[atc.substr(0, 1)].children[atc.substr(0, 3)].children[atc.substr(0, 4)].children
-            } catch (err) {
-              //console.log(err)
-            }
-            break
-          case 7:
-
-            try {
+              break
+            case 7:
               targetChildren = acc[atc.substr(0, 1)].children[atc.substr(0, 3)].children[atc.substr(0, 4)].children[atc.substr(0, 5)].children
-            } catch (err) {
-              //console.log(err)
-            }
-            break
+          }
+        } catch (err) {
+          console.log('ATC parent not available: ', atc)
         }
-
+        
+        //---
+        // Build atc object
+        //---
         if (targetChildren) {
           targetChildren[atc] = {
             "name": atc,
-            description: wirkstoffe[atc],
-            "children": {}
+            'description': wirkstoffe[atc],
+            "children": {},
+            'who': `https://www.whocc.no/atc_ddd_index/?code=${atc}&showdescription=no`,
+            'wiki': wiki[atc]
           }
         }
 
         return acc
       }, {})
 
-
+      //---
+      // Recursive function
+      // Goes through each child Object
+      // Converts the children object property to an Array
+      // An is called again for the child atc-objects childrens prop
+      //---
       const convertToArray = (children) => {
         Object.values(children).forEach((atc) => {
           if (Object.values(atc.children).length) {
@@ -116,7 +118,9 @@
       return parsedObject
     }
 
+    //---
     // Set the dimensions and margins of the diagram
+    //---
     const margin = {
       top: 20,
       right: 80,
@@ -126,10 +130,12 @@
     const width = document.body.clientWidth - margin.left - margin.right
     const height = 800 - margin.top - margin.bottom
     const radius = Math.min(width, height) / 2
-
+    
+    //---
     // append the svg object to the body of the page
     // appends a 'group' element to 'svg'
     // moves the 'group' element to the top left margin
+    //---
 
     const svg = d3.select("body").append("svg")
       .attr("width", width + margin.right + margin.left)
@@ -233,12 +239,37 @@
       })
     }
 
+    const loadWiki = () => {
+      return new Promise((res, rej) => {
+        d3.json("./wikipedia.json", function(error, wikis) {
+          if(error) rej(error)
+          res(wikis)
+        })
+      })
+    }
+    
+    const loadWirkstoffe = (wiki) => {
+      return new Promise((res, rej) => {
+        d3.json("../data/wirkstoffe.json", function(error, root) {
+          if(error) rej(error)
 
-    d3.json("../data/wirkstoffe.json", function(error, root) {
+          const wirkstoffe = parseRoot(root, wiki)
+          setSize(wirkstoffe)
 
-      const wirkstoffe = parseRoot(root)
+          res(wirkstoffe)
+        })
+      })
+    }
 
-      setSize(wirkstoffe)
+    Promise.resolve().then(() => {
+      return loadWiki()
+    }).then((wiki) => {
+      return loadWirkstoffe(wiki)
+    }).then((root) => {
+      visualize(root)
+    })
+
+    const visualize = (wirkstoffe) => {
 
       drawLegend();
 
@@ -258,6 +289,7 @@
         .style("opacity", colorOpacity)
         .on("mouseover", mouseover)
         .on("mouseout", mouseout)
+        .on("click", mouseclick)
 
       const displaySize = (d) => {
         if (d.size > 1) {
@@ -265,10 +297,20 @@
         }
         return `</tspan><tspan  x=0 dy='30' style='font-size: 15px'></tspan>`
       }
+      
+      const displayLink = (d) => {
+        const page = (d.name.length < 7 ) ? 'who' : 'wiki'
+        const name = (page == 'who') ? 'WHO' : 'Wikipedia'
+
+        if(d[page]) {
+          return `<tspan style='font-size: 10px' x=0 dy='20'>Klick für ${name}</tspan>`
+        }
+        return ''
+      }
 
       function mouseover(d) {
 
-        text.html(`<tspan style='font-size: 30px' x=0 dy='-20'>${d.name}</tspan><tspan style='font-size: 17px' x=0 dy='30'>${d.description + displaySize(d)}`)
+        text.html(`<tspan style='font-size: 30px' x=0 dy='-20'>${d.name}</tspan><tspan style='font-size: 17px' x=0 dy='30'>${d.description + displaySize(d) + displayLink(d)}`)
 
         d3.selectAll("path")
           .filter((d1) => d === d1)
@@ -286,9 +328,12 @@
           .style("opacity", colorOpacity);
       }
 
-    })
+      function mouseclick(d) {
+        const url = (d.name.length < 7) ? d.who : d.wiki
+        if(url) window.open(url)
+      }
 
-    // d3.select(self.frameElement).style("height", height + "px")
+    }
 
     function drawLegend() {
 
@@ -303,7 +348,6 @@
 
       let legend = svg.append("g")
         .attr("transform", (d, i) => {
-          //return "translate(" + ( - li.w * -0.8) + "," + ( - height + li.h * Object.keys(colors).length * 1.4) + ")"
           return "translate(" + (width + 40) + "," + 20 + ")"
         })
 
