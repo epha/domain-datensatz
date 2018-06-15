@@ -56,7 +56,7 @@
         let targetChildren
         
         //---
-        //set atc to correct childrens
+        // Set atc to correct childrens
         //---
         try {
           switch (atc.length) {
@@ -76,11 +76,11 @@
               targetChildren = acc[atc.substr(0, 1)].children[atc.substr(0, 3)].children[atc.substr(0, 4)].children[atc.substr(0, 5)].children
           }
         } catch (err) {
-          console.log(JSON.stringify(err, null, 2))
+          console.log('ATC parent not available: ', atc)
         }
         
         //---
-        //build atc object
+        // Build atc object
         //---
         if (targetChildren) {
           targetChildren[atc] = {
@@ -297,10 +297,20 @@
         }
         return `</tspan><tspan  x=0 dy='30' style='font-size: 15px'></tspan>`
       }
+      
+      const displayLink = (d) => {
+        const page = (d.name.length < 7 ) ? 'who' : 'wiki'
+        const name = (page == 'who') ? 'WHO' : 'Wikipedia'
+
+        if(d[page]) {
+          return `<tspan style='font-size: 10px' x=0 dy='20'>Klick für ${name}</tspan>`
+        }
+        return ''
+      }
 
       function mouseover(d) {
 
-        text.html(`<tspan style='font-size: 30px' x=0 dy='-20'>${d.name}</tspan><tspan style='font-size: 17px' x=0 dy='30'>${d.description + displaySize(d)}`)
+        text.html(`<tspan style='font-size: 30px' x=0 dy='-20'>${d.name}</tspan><tspan style='font-size: 17px' x=0 dy='30'>${d.description + displaySize(d) + displayLink(d)}`)
 
         d3.selectAll("path")
           .filter((d1) => d === d1)
@@ -319,7 +329,8 @@
       }
 
       function mouseclick(d) {
-        window.open((d.name.length < 7) ? d.who : d.wiki)
+        const url = (d.name.length < 7) ? d.who : d.wiki
+        if(url) window.open(url)
       }
 
     }
