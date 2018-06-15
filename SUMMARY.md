@@ -1,7 +1,4 @@
-* [Einleitung](README.md)
-
-* [Wirkstoffe](docs/wirkstoffe.md)
-
-* [Artikel](docs/artikel.md)
-
-* [Disclaimer](LICENSE)
+- [Einleitung](/)
+- [Wirkstoffe](docs/wirkstoffe)
+- [Artikel](docs/artikel)
+- [Disclaimer](LICENSE)

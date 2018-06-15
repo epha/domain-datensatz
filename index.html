@@ -10,10 +10,6 @@
     <link rel="stylesheet" href="assets/css/theme-simple.css">
     <style>
 
-      .cover-main  * {
-        color: white !important;
-      }
-
       a.github-corner {
         z-index:10;
       }
@@ -25,23 +21,30 @@
         max-width: 1200px;
       }
 
-      section.cover .cover-main
-
-      .downloads-wrapper {
-        display: flex;
-      }
-
-      .download {
+      a.download {
         display: inline-block;
-        border: 2px solid #1b77b5;
-        text-decoration: none;
+        border: 2px solid #1b77b5 !important;
+        text-decoration: none !important;
         border-radius: 4px;
-        color: #1b77b5;
+        color: #1b77b5 !important;
         padding: 5px;
         width: 130px;
         text-align: center;
         margin-right: 20px;
       }
+
+      :root {
+         --base-font-size: 16px;
+         --cover-background-color: #003755;
+         --cover-background-image: none;
+         --cover-blockquote-color: white;
+         --cover-margin: 0 auto;
+         --cover-max-width: 80%;
+       }
+
+       iframe {
+         border: none;
+       }
 
     </style>
   </head>
@@ -59,13 +62,15 @@
 
         const element = document.querySelector('.animation')
 
-        lottie.loadAnimation({
-          container: element,
-          renderer: 'svg',
-          loop: true,
-          autoplay: true,
-          path: 'assets/animation/rocket.json'
-        })
+        if(element) {
+          lottie.loadAnimation({
+            container: element,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'assets/animation/rocket.json'
+          })
+        }
 
       }
 
@@ -82,12 +87,17 @@
         repo: 'https://github.com/epha/domain-datensatz',
         coverpage: true,
         ga: 'UA-9955206-2',
-        auto2Top: true,
+        auto2top: true,
         executeScript:true,
+        homepage:"README.md",
         themeColor: '#1b77b5',
+        themeable: {
+          readyTransition : true, // default
+          responsiveTables: true  // default
+        },
         plugins: [
           (hook,vm) => {
-            hook.ready(animation)
+            hook.doneEach(animation)
           }
         ]
       }
