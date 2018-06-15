@@ -136,25 +136,48 @@ console.log(result)
     // Packungsspezifische, 13-stellige Identifikationsnummer
     "gtin": "7680553510015",
 
-    // Bezeichnung Artikel
+    // Bezeichnung Artikel gemäss Swissmedic
     "name1": "Metfin  500, Filmtabletten",
     "name2": "50 Tablette(n)",
 
+    // -----------------
     // Applikationsweg
+    // -----------------
+    // Unter applw ist der Applikationsweg für den Artikel beschrieben. Sine mehrere
+    // Applikationswege möglich (z.B. subkutane und/oder imtramuskuläre Gabe) so ist
+    // der häufigste/gebräuchliste Applikationsweg für den Artikel hinterlegt.
     "applw": "p.o.",
 
+    // -----------------
     // Darreichungsform
+    // -----------------
+    // Unter form ist die jeweilige Darreichungsform in standardisierter Form
+    // für den Artikel spezifiziert.
     "form": "Tablette",
 
-    // ATC-Code und Wirkstoffname (siehe "Wirkstoffe")
+    // ---------------------------
+    // ATC-Code und Wirkstoffname
+    // ---------------------------
+    // (siehe "Wirkstoffe")
     "atcCode": "A10BA02",
     "atcName": "Metformin",
 
-    // Marke und möfliche Darreichungsformen
+    // ------------
+    // BrandName
+    // -----------
+    // Alle Artikel, welche unter derselben Marke geführt werden (z.B. verschiedene
+    // Dosisstärken, Packungsgrössen), sind zu Marken-Gruppen zusammengefasst.
+    // BrandName bezeichnet die jeweilige Gruppe in die der Artikel eingruppiert wurde.
     "brandName": "Metfin",
     "brandForms": "Tablette",
 
+    // --------------------------------------------
     // Charakterisierung des Inhaltes pro Packung
+    // --------------------------------------------
+    // Die Einträge in unit und type gehören jeweils zusammen (unit1 & type1, unit2 & type2...). Es bezeichnet
+    // - die Menge an Wirkstoff innerhalb einer Packung, ausgedrückt in unterschiedlichen Dosierungeinheiten
+    // - das Volumen des Gesamtproduktes innerhalb einer Packung, ausgedrückt in unterschiedlichen Dosierungeinheiten
+    // - die Anzahl der Dosiseinheiten (z.B. Stückzahl der Tabletten, Anzahl Ampullen) in einer Packung
     "unit1": "1",
     "type1": "Pck",
     "unit2": "50",
@@ -166,13 +189,23 @@ console.log(result)
     "unit5": "",
     "type5": "",
 
+    // ---------------------------------------
     // Patientenfreundlicher Informationstext
+    // ---------------------------------------
+    // Ein leicht verständlicher, patientenfreundlicher Informationstext über die
+    // medizinische Wirkung des Artikels bzw. zum Indikationsgebiet, in dem der Artikel
+    // eingesetzt wird ist.
     "gebiet": "senkt den Blutzucker",
 
+
+    // ------------------
     // Zulassungsinhaber
+    // ------------------
+    // Unter Inhaber ist der Inhaber der Genehmigung zum in Verkehr bringen
+    // des Artikels (Zulassungsinhaber) aufgeführt.
     "inhaber": "Sandoz Pharmaceuticals",
 
-    // Preise
+    // Preise gemäss SL
     "exfPreis": "2.25",
     "pubPreis": "6.70"
   },

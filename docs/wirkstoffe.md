@@ -10,7 +10,9 @@ Präparates ein offizieller 7-stelliger Code existiert (z.B. publiziert durch di
 kann dieser stattdessen übernommen werden. Existiert kein offizieller ATC-Code werden
 falls nötig für einzelne Wirkstoffe 7-stellige ACT-Codes kreiert.
 
-Folgender Graph hilft eine Übersicht über die Klassifikation zu bekommen.
+Folgender Graph hilft eine Übersicht über die Klassifikation zu bekommen. Durch
+__Klicken__ auf den jeweiligen ATC-Code können, wenn verfügbar, die Seiten der
+__WHO__ und von __Wikipedia__ aufgerufen werden.
 
 [Sunburst ATC-Codes](sunburst.html ':include :type=iframe width=100% height=850px')
 
