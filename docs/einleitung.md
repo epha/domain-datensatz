@@ -5,14 +5,14 @@ Patientensicherheit zu fördern. Die Grundlage eines Erfolges bilden neue, offen
 
 Die Referenzdaten werden jeden Monat auf den aktuellsten Stand gebracht und von Ärzten und Apothekern manuell aufbereitet und ergänzt. Wir publizieren neben den Stammdaten auch weitere [Applikationen](https://epha.ch) wie z.B. die [Visualisierung von Interaktionen](https://epha.ch/matrix) und die [Suche von Fachinformationen](https://epha.ch/kompendium).
 
-## Downloads
+## Download
 
 <p>
   <a class='download' href="data/wirkstoffe.json" download="wirkstoffe.json">wirkstoffe.json</a>
   <a class='download' href="data/artikel.json" download="artikel.json">artikel.json</a>
 </p>
 
-## Anforderungen
+## Repository
 
 Wir empfehlen [node.js](https://nodejs.org/en/) um mit den Referenzdaten zu arbeiten. Mit folgenden Schritten kann ein eigenes Projekt gestartet werden.
 
@@ -23,7 +23,6 @@ $ npm init
 $ npm i --production epha/domain-datensatz --save
 ```
 
-## Anwendung
 Folgende Code-Snippets zeigen, wie die Daten in einem eigenen Projekt verwendet werden können.
 
 > Alle Artikel filtern, welche den Applikationsweg (applw) Aural beinhalten.

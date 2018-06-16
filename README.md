@@ -5,3 +5,5 @@ der Schweiz. Als Grundlage dienen die offiziellen Tabellen zu den zugelassenen P
 die Spezialitätenliste, die vom Bundesamt für Gesundheit (BAG) und der Swissmedic herausgegeben
 werden. Diese Daten werden manuell durch anwendungsbezogene Informationen wie Applikationsweg oder
 Anwendungsgebiet ergänzt.
+
+Die Dateien sind als [Download](docs/einleitung?id=download) oder als installierbares [Repository](docs/einleitung?id=repository) verfügbar.
