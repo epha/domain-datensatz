@@ -15,18 +15,3 @@ __Klicken__ auf den jeweiligen ATC-Code können, wenn verfügbar, die Seiten der
 __WHO__ und __Wikipedia__ aufgerufen werden.
 
 [Sunburst ATC-Codes](sunburst.html ':include :type=iframe width=100% height=850px')
-
-<style>
-
-  @media screen and (min-width: 1300px) {
-
-    main article.markdown-section p iframe {
-      margin-left: -50px;
-      margin-right: -50px;
-      width: calc( 1200px - 335px );
-      border: 1px solid rgb(27, 119, 181);
-    }
-
-  }
-
-</style>

@@ -15,18 +15,3 @@ Ein Artikel kann in unterschiedliche Formen (form), wie z.B. Tablette, Lösungen
 In der Schweiz gibt es über 16'000 Artikel von grossen und kleinen Herstellern. Das Sortiment von Hersteller mit mehr als 20 Produkten wird in folgendem Graph visualiert. Jeder grüner ein Hersteller, desto mehr Produkte hat er am Markt. Je blauer die Produkte, desto mehr unterschiedliche Formulierung können bezogen werden.
 
 [Tree Inhaber](tree.html ':include :type=iframe width=100% height=2060px')
-
-<style>
-
-  @media screen and (min-width: 1300px) {
-
-    main article.markdown-section p iframe {
-      margin-left: -50px;
-      margin-right: -50px;
-      width: calc( 1200px - 335px );
-      border: 1px solid rgb(27, 119, 181);
-    }
-
-  }
-
-</style>
