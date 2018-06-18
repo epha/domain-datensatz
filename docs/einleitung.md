@@ -98,7 +98,7 @@ console.log(result)
 }
 ```
 
-> Die Datei [Artikel](data/artikel.json ":ignore") listet alle in der Schweiz zugelassenen Arzneimittel auf. Die Felder sind im Kapitel [Artikel](docs/artikel.md) näher beschrieben sind. Folgend ein Auszug der vorhanden Felder in der Datei Artikel.
+> Die Datei [Artikel](data/artikel.json ":ignore") listet alle in der Schweiz zugelassenen Arzneimittel auf. Folgend ein Auszug der vorhanden Felder in der Datei Artikel.
 
 ```javascript
 {
