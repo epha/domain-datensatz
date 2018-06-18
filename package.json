@@ -7,7 +7,7 @@
     "build": "node ./scripts/build.js",
     "deploy:staging": "bash ./scripts/deploy.sh staging",
     "deploy:release": "bash ./scripts/deploy.sh release",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape test/*/*.js | tap-spec"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,8 @@
     "expert-wirkstoffe": "github:epha/expert-wirkstoffe",
     "isomorphic-fetch": "^2.2.1",
     "lottie-web": "^5.1.17",
-    "prismjs": "^1.14.0"
+    "prismjs": "^1.14.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
   }
 }
