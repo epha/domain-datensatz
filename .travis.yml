@@ -3,14 +3,11 @@ sudo: false
 branches:
   only:
     - master
-    
+
 language: node_js
 
 node_js:
   - "8"
 
-install: true
-
-script:
-  - npm install tape tap-spec
-  - npm test
+env:
+  - NODE_ENV=production
