@@ -6,7 +6,6 @@ node_js:
   - "8"
 
 install:
-  - rm package.json
   - rm package-lock.json
   - npm i tape tap-spec
 
