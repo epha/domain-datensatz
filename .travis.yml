@@ -7,5 +7,5 @@ node_js:
 
 install:
   - rm package.json
-  - rm package.lock.json
+  - rm package-lock.json
   - npm i tape tap-spec
