@@ -1,13 +1,10 @@
 sudo: false
 
-branches:
-  only:
-    - master
-
 language: node_js
 
 node_js:
   - "8"
 
 install:
-  - npm i -g tape tap-spec
+
+  - npm i --save tape tap-spec
