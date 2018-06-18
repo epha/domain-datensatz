@@ -3,5 +3,5 @@
 
 > Referenzdaten der zugelassenen Arzneimittel in der Schweiz
 
-[GitHub](https://github.com/epha/domain-datensatz)
 [Starten](?id=main)
+[GitHub](https://github.com/epha/domain-datensatz)
