@@ -8,5 +8,5 @@ node_js:
 install:
   - npm install tape tap-spec
 
-  script:
-    - npm test
+script:
+  - npm test
