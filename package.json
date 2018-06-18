@@ -20,8 +20,6 @@
   },
   "homepage": "https://github.com/epha/domain-datensatz#readme",
   "dependencies": {
-    "tap-spec": "^5.0.0",
-    "tape": "^4.9.1"
   },
   "devDependencies": {
     "d3": "^5.4.0",
@@ -32,6 +30,8 @@
     "expert-wirkstoffe": "github:epha/expert-wirkstoffe",
     "isomorphic-fetch": "^2.2.1",
     "lottie-web": "^5.1.17",
-    "prismjs": "^1.14.0"
+    "prismjs": "^1.14.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
   }
 }
