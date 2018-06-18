@@ -1,4 +1,5 @@
 # Einleitung
+[![Build Status](https://travis-ci.com/epha/domain-datensatz.svg?branch=master)](https://travis-ci.com/epha/domain-datensatz)
 
 Die Schweiz digitalisiert mit den elektronsichen Patientendossiers das Gesundheitswesen, um die
 Patientensicherheit zu fördern. Die Grundlage eines Erfolges bilden neue, offene und moderne Services.
