@@ -5,8 +5,8 @@ language: node_js
 node_js:
   - "8"
 
-install:
-  - npm install tape tap-spec
+install: true
 
 script:
+  - npm install tape tap-spec
   - npm test
