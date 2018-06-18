@@ -1,5 +1,4 @@
 # Allgemeines
-[![Build Status](https://travis-ci.com/epha/domain-datensatz.svg?branch=master)](https://travis-ci.com/epha/domain-datensatz)
 
 Unsere Referenzdaten bestehen aus aggregierten Kenndaten zu den zugelassenen Arzneimitteln
 in der Schweiz. Als Grundlage dienen die offiziellen Tabellen zu den zugelassenen
