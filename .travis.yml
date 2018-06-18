@@ -10,4 +10,4 @@ node_js:
   - "8"
 
 install:
-  - npm i tape tap-spec
+  - npm i -g tape tap-spec
