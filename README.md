@@ -13,5 +13,5 @@ Folgender Graph erklärt die Zusammenhänge der Felder Applikationsweg (applw), 
 jeweilgen Einheiten für die Formulierung und den Applikationsweg angezeigt.
 
 <iframe src="https://epha.ch/datensatz/docs/bubble.html" width="100%" height="850px">
-  <img src="https://epha.ch/datensatz/assets/png/bubble.png">
+  ![Bubble](https://epha.ch/datensatz/assets/png/bubble.png)>
 </iframe>
