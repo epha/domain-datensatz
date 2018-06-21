@@ -20,7 +20,7 @@ Wir empfehlen [node.js](https://nodejs.org/en/) um mit den Referenzdaten zu arbe
 $ mkdir projekt
 $ cd projekt
 $ npm init
-$ npm i epha/domain-datensatz --save
+$ npm i domain-datensatz --save
 ```
 
 Folgende Code-Snippets zeigen, wie die Daten in einem eigenen Projekt verwendet werden können.
