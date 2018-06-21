@@ -7,8 +7,8 @@ the available pharmaceutical products in Switzerland.
 - [Swissmedic](https://www.swissmedic.ch)
 
 The files have been parsed and harmonized into json files.
-A [documentation](https://epha.ch/datensatz) is
-available in the german language.
+The [documentation](https://epha.ch/datensatz) is
+available in the German.
 
 ## Get started
 
