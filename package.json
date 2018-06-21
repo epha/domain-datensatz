@@ -1,6 +1,6 @@
 {
   "name": "domain-datensatz",
-  "version": "2018.6.4",
+  "version": "2018.6.5",
   "description": "",
   "main": "source/app.js",
   "scripts": {
@@ -30,8 +30,7 @@
     "url": "https://github.com/epha/domain-datensatz/issues"
   },
   "homepage": "https://github.com/epha/domain-datensatz#readme",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "d3": "^5.4.0",
     "d3-svg-legend": "^2.25.6",
