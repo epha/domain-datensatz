@@ -21,7 +21,7 @@ jeweilgen Einheiten für die Formulierung und den Applikationsweg angezeigt.
 
 <iframe src="docs/bubble.html" width="100%" height="850px">
   <!-- Fallback for npm and github -->
-  <a href="https://epha.ch/datensatz/#/id=main">
+  <a href="https://epha.ch/datensatz/#/?id=main">
     <img src="https://epha.ch/datensatz/assets/png/bubbles.png">
   </a>
 </iframe>
