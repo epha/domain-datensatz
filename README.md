@@ -14,5 +14,5 @@ jeweilgen Einheiten für die Formulierung und den Applikationsweg angezeigt.
 
 
 <iframe src="https://epha.ch/datensatz/docs/bubble.html" width="100%" height="850px">
-  ![Bubble](https://epha.ch/datensatz/assets/png/bubbles.png)
+  <img src="https://epha.ch/datensatz/assets/png/bubbles.png">
 </iframe>
