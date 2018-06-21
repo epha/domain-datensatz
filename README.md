@@ -12,6 +12,7 @@ Folgender Graph erklärt die Zusammenhänge der Felder Applikationsweg (applw), 
 (form) und Inhaltsangaben (unit,type). Durch Klick auf eine der Blasen werden die
 jeweilgen Einheiten für die Formulierung und den Applikationsweg angezeigt.
 
+![Bubble](https://epha.ch/datensatz/assets/png/bubble.png)
+
 <iframe src="https://epha.ch/datensatz/docs/bubble.html" width="100%" height="850px">
-  ![Bubble](https://epha.ch/datensatz/assets/png/bubble.png)>
 </iframe>
