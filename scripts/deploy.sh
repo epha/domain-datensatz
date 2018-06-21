@@ -12,7 +12,6 @@ then
   aws --region eu-central-1 s3 cp index.html s3://epha.io/datensatz/index.html
   aws --region eu-central-1 s3 cp _coverpage.md s3://epha.io/datensatz/_coverpage.md
   aws --region eu-central-1 s3 cp SUMMARY.md s3://epha.io/datensatz/SUMMARY.md
-  aws --region eu-central-1 s3 cp 404.md s3://epha.io/datensatz/404.md
   aws --region eu-central-1 s3 cp README.md s3://epha.io/datensatz/README.md
   aws --region eu-central-1 s3 cp LICENSE.md s3://epha.io/datensatz/LICENSE.md
   aws --region eu-central-1 s3 sync --delete docs/ s3://epha.io/datensatz/docs/
@@ -29,7 +28,6 @@ then
   aws --region eu-central-1 s3 cp index.html s3://epha.ch/datensatz/index.html
   aws --region eu-central-1 s3 cp _coverpage.md s3://epha.ch/datensatz/_coverpage.md
   aws --region eu-central-1 s3 cp SUMMARY.md s3://epha.ch/datensatz/SUMMARY.md
-  aws --region eu-central-1 s3 cp 404.md s3://epha.ch/datensatz/404.md
   aws --region eu-central-1 s3 cp README.md s3://epha.ch/datensatz/README.md
   aws --region eu-central-1 s3 cp LICENSE.md s3://epha.ch/datensatz/LICENSE.md
   aws --region eu-central-1 s3 sync --delete docs/ s3://epha.ch/datensatz/docs/
