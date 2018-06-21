@@ -212,4 +212,4 @@ console.log(result)
 ## Testing
 [![Build Status](https://travis-ci.com/epha/domain-datensatz.svg?branch=master)](https://travis-ci.com/epha/domain-datensatz)
 
-Auf den Build Status klicken, um Details der Tests zu sehen.
+Auf den Build Status klicken, um die Details der Tests zu sehen.
