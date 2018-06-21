@@ -1,6 +1,6 @@
 {
   "name": "domain-datensatz",
-  "version": "18.6.4",
+  "version": "2018.6.4",
   "description": "",
   "main": "source/app.js",
   "scripts": {
@@ -9,11 +9,22 @@
     "deploy:release": "bash ./scripts/deploy.sh release",
     "test": "tape test/*/*.js | tap-spec"
   },
+  "keywords": [
+    "referenzdaten",
+    "arzneimittel",
+    "schweiz",
+    "medikamente",
+    "atc",
+    "ean13"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/epha/domain-datensatz.git"
   },
-  "author": "olivier.krull@epha.ch",
+  "author": {
+    "name": "Marco Egbring",
+    "email": "marco.egbring@epha.ch"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/epha/domain-datensatz/issues"
