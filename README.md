@@ -15,7 +15,7 @@ verfügbar. Die
 [Datenstruktur](https://epha.ch/datensatz/#/docs/einleitung?id=datenstruktur ":ingore")
 ist schnell verständlich.
 
-Folgender Graph erklärt die Zusammenhänge der Felder Applikationsweg (applw), Formulierung
+Der [Graph](https://epha.ch/datensatz/#/?id=main ":ignore") erklärt die Zusammenhänge der Felder Applikationsweg (applw), Formulierung
 (form) und Inhaltsangaben (unit,type). Durch Klick auf eine der Blasen werden die
 jeweilgen Einheiten für die Formulierung und den Applikationsweg angezeigt.
 
