@@ -84,17 +84,18 @@
         subMaxLevel: 3,
         name: 'Datensatz',
         repo: 'https://github.com/epha/domain-datensatz',
-        coverpage: "COVERPAGE.md",
-        ga: 'UA-9955206-2',
-        auto2top: true,
-        executeScript:true,
-        homepage:"README.md",
         themeColor: '#1b77b5',
+        coverpage: "coverpage.md",
+        homepage:"index.md",
+        loadSidebar: 'sidebar.md',
+        notFoundPage: '404.md',
+        auto2top: true,
+        ga: 'UA-9955206-2',
+        executeScript:true,
         themeable: {
           readyTransition : true, // default
           responsiveTables: true  // default
         },
-        notFoundPage: '404.md',
         plugins: [
           (hook,vm) => {
             hook.doneEach(animation)

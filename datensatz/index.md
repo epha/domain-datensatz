@@ -15,7 +15,7 @@ verfügbar. Die
 [Datenstruktur](docs/einleitung?id=datenstruktur ":ingore")
 ist schnell verständlich.
 
-Der Graph erklärt die Zusammenhänge der Felder Applikationsweg (applw), Formulierung
+Der folgende Graph erklärt die Zusammenhänge der Felder Applikationsweg (applw), Formulierung
 (form) und Inhaltsangaben (unit,type). Durch Klick auf eine der Blasen werden die
 jeweilgen Einheiten für die Formulierung und den Applikationsweg angezeigt.
 
