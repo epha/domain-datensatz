@@ -1,7 +1,7 @@
 # Domain Datensatz
+[![issues](https://img.shields.io/github/issues-raw/epha/domain-datensatz.svg)](https://github.com/epha/domain-datensatz/issues)
 [![Build Status](https://travis-ci.com/epha/domain-datensatz.svg?branch=master)](https://travis-ci.com/epha/domain-datensatz)
 [![downloads](https://img.shields.io/npm/dm/domain-datensatz.svg)](https://www.npmjs.org/package/domain-datensatz)
-[![issues](https://img.shields.io/github/issues-raw/epha/domain-datensatz.svg)](https://github.com/epha/domain-datensatz/issues)
 
 The following sources publish information about
 the available pharmaceutical products in Switzerland.
