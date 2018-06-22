@@ -1,4 +1,4 @@
 - [Einleitung](docs/einleitung)
 - [Wirkstoffe](docs/wirkstoffe)
 - [Artikel](docs/artikel)
-- [Disclaimer](docs/mit.md)
+- [Disclaimer](docs/license.md)
