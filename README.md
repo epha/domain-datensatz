@@ -8,7 +8,7 @@ the available pharmaceutical products in Switzerland.
 
 The files have been parsed and harmonized into json files.
 The [documentation](https://epha.ch/datensatz) is
-available in the German.
+available in German.
 
 ## Get started
 
