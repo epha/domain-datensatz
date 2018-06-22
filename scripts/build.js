@@ -23,9 +23,9 @@ console.timeEnd("> Copy Wirkstoffe")
 // -----------------------------
 // Build Markdown from Template
 // -----------------------------
-let cp = fs.readFileSync('./datensatz/COVERPAGE.md')
+let cp = fs.readFileSync('./datensatz/coverpage.md')
 cp = cp.toString().replace(/small\\>.*\\</,`small>${pck.version}<`)
-fs.writeFileSync('./datensatz/COVERPAGE.md', cp)
+fs.writeFileSync('./datensatz/coverpage.md', cp)
 
 
 // ---------------
@@ -71,7 +71,7 @@ Object.keys(group).sort((a,b) => a.localeCompare(b)).forEach(key1 => {
 
 })
 
-fs.writeFileSync('./docs/tree.json', JSON.stringify(data,2,null))
+fs.writeFileSync('./datensatz/docs/tree.json', JSON.stringify(data,2,null))
 
 
 // -------------------------------
@@ -140,5 +140,5 @@ let data = Object.keys(group).map(key => {
   }
 })
 
-fs.writeFileSync('./docs/bubble.json', JSON.stringify(data,null,2))
+fs.writeFileSync('./datensatz/docs/bubble.json', JSON.stringify(data,null,2))
 console.log("")

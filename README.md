@@ -1,24 +1,39 @@
-# Allgemeines
+# Domain Datensatz
 
-Unsere Referenzdaten bestehen aus aggregierten Kenndaten zu den zugelassenen
-Arzneimitteln in der Schweiz. Als Grundlage dienen die offiziellen Tabellen
-zu den zugelassenen Packungen bzw. die Spezialitätenliste, die vom
-[Bundesamt für Gesundheit](https://www.bag.admin.ch)
-(BAG) und der
-[Swissmedic](https://www.swissmedic.ch) herausgegeben werden. Diese Daten
-werden manuell durch anwendungsbezogene Informationen wie Applikationsweg
-oder Anwendungsgebiet ergänzt. Die Dateien sind als
-[Download](https://epha.ch/datensatz/#/docs/einleitung?id=download ":ignore")
-oder als installierbares
-[Repository](https://epha.ch/datensatz/#/docs/einleitung?id=repository ":ignore")
-verfügbar. Die
-[Datenstruktur](https://epha.ch/datensatz/#/docs/einleitung?id=datenstruktur ":ingore")
-ist schnell verständlich.
+The following sources publish information about
+the available pharmaceutical products in Switzerland.
 
-Der [Graph](https://epha.ch/datensatz/#/?id=main ":ignore") erklärt die Zusammenhänge der Felder Applikationsweg (applw), Formulierung
-(form) und Inhaltsangaben (unit,type). Durch Klick auf eine der Blasen werden die
-jeweilgen Einheiten für die Formulierung und den Applikationsweg angezeigt.
+- [Bundesamt für Gesundheit](https://www.bag.admin.ch)
+- [Swissmedic](https://www.swissmedic.ch)
 
-<a href="https://epha.ch/datensatz/#/?id=main">
-  <img src="https://epha.ch/datensatz/assets/png/bubbles.png">
-</a>
+The files have been parsed and harmonized into json files.
+The [documentation](https://epha.ch/datensatz) is
+available in the German.
+
+## Get started
+
+```javascript
+const { artikel } = require('domain-datensatz')
+
+const result = Object.values(artikel).filter(item => {
+  return item.applw == 'aural'
+})
+.map(item => {
+  return item.name1
+})
+
+// [
+//   'Otalgan, solution',
+//   'Otothricinol, Suspension',
+//   'Cerumenex, Tropfen',
+//   'Panotile, gocce otologiche',
+//   'Otipax, liquido',
+//   'Polydexa, Ohrentropfen',
+//   'Cerumenol, Tropfen',
+//   'Otofa, Ohrentropfen',
+//   'Otidolo, homöopathisch-spagyrische Tropfen',
+//   'Similasan Ohrentropfen, Tropfen',
+//   'Ciproxin HC, Ohrensuspension'
+// ]
+console.log(result)
+```
