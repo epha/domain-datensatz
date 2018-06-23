@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "9"
 dist: trusty
-sudo: false
+sudo: true
 addons:
   chrome: stable
 before_install:
@@ -12,6 +12,6 @@ cache:
   directories:
     - node_modules
 install:
-  - yarn install tape tap-spec puppeteer isomorphic-fetch
+  - yarn add tape tap-spec puppeteer isomorphic-fetch
 script:
   - yarn test
