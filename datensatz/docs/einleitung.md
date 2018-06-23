@@ -8,8 +8,8 @@ Die Referenzdaten werden jeden Monat auf den aktuellsten Stand gebracht und von 
 ## Download
 
 <p>
-  <a class='download' href="../data/wirkstoffe.json" download="wirkstoffe.json">wirkstoffe.json</a>
-  <a class='download' href="../data/artikel.json" download="artikel.json">artikel.json</a>
+  <a class='download' href="data/wirkstoffe.json" download="wirkstoffe.json">wirkstoffe.json</a>
+  <a class='download' href="data/artikel.json" download="artikel.json">artikel.json</a>
 </p>
 
 ## Repository
