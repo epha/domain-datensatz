@@ -1,6 +1,6 @@
 {
   "name": "domain-datensatz",
-  "version": "2018.6.10",
+  "version": "2018.6.11",
   "description": "JSON files on pharmaceutical products in switzerland",
   "main": "source/app.js",
   "scripts": {
