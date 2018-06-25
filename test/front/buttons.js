@@ -3,7 +3,6 @@ const puppeteer = require('puppeteer');
 const fetch = require("isomorphic-fetch")
 const express = require("express")
 const os = require("os")
-const path = require("path")
 
 // ============================
 // Provide Server
@@ -13,7 +12,7 @@ const path = require("path")
 
 const app = express()
 
-app.use('/assets', express.static( '../domain-assets/assets') )
+app.use('/assets', express.static( './node_modules/domain-assets/assets') )
 app.use('/datensatz', express.static( './datensatz')  )
 
 const hosting = app.listen(13457)
