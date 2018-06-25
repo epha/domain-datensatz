@@ -19,7 +19,7 @@ before_install:
 
 install:
   - rm package-lock.json
-  - npm i tape tap-spec puppeteer isomorphic-fetch express epha/domain-assets
+  - npm i os tape tap-spec puppeteer isomorphic-fetch express epha/domain-assets
 
 script:
   - npm test

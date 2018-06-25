@@ -10,20 +10,21 @@ const path = require("path")
 // ============================
 // //localhost:13457/assets
 // //localhost:13457/datensatz
+
 const app = express()
 
-app.use('/assets', express.static( path.join(__dirname, '../../../', '/domain-assets/assets') ) )
-app.use('/datensatz', express.static( path.join(__dirname, '../../', '/datensatz') ) )
+app.use('/assets', express.static( '../domain-assets/assets') )
+app.use('/datensatz', express.static( './datensatz')  )
 
 const hosting = app.listen(13457)
 
-tape.only('front buttons', async (t) => {
+tape('front buttons', async (t) => {
 
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
   //await page.goto('https://epha.io/datensatz/#/docs/einleitung', { waitUntil: 'networkidle2'});
-  await page.goto('http://localhost:13457/datensatz/#/docs/einleitung', { waitUntil: 'networkidle2' });
+  await page.goto(`http:///${os.hostname()}:13457/datensatz/#/docs/einleitung`, { waitUntil: 'networkidle2' });
   await page.screenshot({path: './test/front/screenshot.png'});
 
   // Get the "viewport" of the page, as reported by the page.
