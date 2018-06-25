@@ -24,7 +24,7 @@ tape.only('front buttons', async (t) => {
 
   //await page.goto('https://epha.io/datensatz/#/docs/einleitung', { waitUntil: 'networkidle2'});
   await page.goto('http://localhost:13457/datensatz/#/docs/einleitung', { waitUntil: 'networkidle2' });
-  await page.screenshot({path: './test/html/screenshot.png'});
+  await page.screenshot({path: './test/front/screenshot.png'});
 
   // Get the "viewport" of the page, as reported by the page.
   // const dimensions = await page.evaluate(() => {
