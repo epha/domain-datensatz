@@ -17,7 +17,7 @@ app.use('/datensatz', express.static( path.join(__dirname, '../../', '/datensatz
 
 const hosting = app.listen(13457)
 
-tape.only('html button download', async (t) => {
+tape.only('front buttons', async (t) => {
 
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
@@ -41,7 +41,7 @@ tape.only('html button download', async (t) => {
      return fetch(href).then(res=>res.json())
   });
 
-  t.equals(file['V10XX03'],'[223Ra]Radiumdichlorid', "Wirkstoff download and valid file")
+  t.equals(file['V10XX03'],'[223Ra]Radiumdichlorid', "Download valid file")
 
   await browser.close()
   await hosting.close()
