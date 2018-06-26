@@ -1,9 +1,9 @@
 # Einleitung
 
-Die Schweiz digitalisiert mit den elektronsichen Patientendossiers das Gesundheitswesen, um die
+Die Schweiz digitalisiert mit dem elektronischen Patientendossier (EPD) das Gesundheitswesen, um die
 Patientensicherheit zu fördern. Die Grundlage eines Erfolges bilden neue, offene und moderne Services.
 
-Die Referenzdaten werden jeden Monat auf den aktuellsten Stand gebracht und von Ärzten und Apothekern manuell aufbereitet und ergänzt. Wir publizieren neben den Stammdaten auch weitere [Applikationen](https://epha.ch) wie z.B. die [Visualisierung von Interaktionen](https://epha.ch/matrix) und die [Suche von Fachinformationen](https://epha.ch/kompendium).
+Die Referenzdaten werden jeden Monat auf den aktuellsten Stand gebracht und von Ärzten und Apothekern manuell aufbereitet und ergänzt. Wir publizieren neben den Stammdaten auch weitere [Applikationen](https://epha.ch), wie z.B. die [Visualisierung von Interaktionen](https://epha.ch/matrix) und die [Suche von Fachinformationen](https://epha.ch/kompendium).
 
 ## Download
 
@@ -14,7 +14,7 @@ Die Referenzdaten werden jeden Monat auf den aktuellsten Stand gebracht und von 
 
 ## Repository
 
-Wir empfehlen [node.js](https://nodejs.org/en/) um mit den Referenzdaten zu arbeiten. Mit folgenden Schritten kann ein eigenes Projekt gestartet werden.
+Wir empfehlen [node.js](https://nodejs.org/en/), um mit den Referenzdaten zu arbeiten. Mit folgenden Schritten kann ein eigenes Projekt gestartet werden.
 
 ```bash
 $ mkdir projekt
@@ -25,7 +25,7 @@ $ npm i domain-datensatz --save
 
 Folgende Code-Snippets zeigen, wie die Daten in einem eigenen Projekt verwendet werden können.
 
-> Alle Artikel filtern, welche den Applikationsweg (applw) Aural beinhalten.
+> Alle Artikel filtern, welche den Applikationsweg (applw) aural beinhalten.
 
 ```javascript
 const { artikel } = require('domain-datensatz')
@@ -83,13 +83,13 @@ console.log(result)
   // 1st Level - Anatomical Main Group
   "A": "Alimentäres System und Stoffwechsel",
   ...,
-  // 2nd Level - Therapeutic subgroup
+  // 2nd Level - Therapeutic Subgroup
   "A01": "Stomatologika",
   ...,
   // 3rd Level - Pharmacological Subgroup
   "A01A": "Stomatologika",
   ...,
-  // 4th Level - Chenical Subgroup
+  // 4th Level - Chemical Subgroup
   "A01AA": "Mittel zur Kariesprophylaxe",
   ...,
   // 5th Level - Chemical Substance
@@ -98,7 +98,7 @@ console.log(result)
 }
 ```
 
-> Die Datei [Artikel](data/artikel.json ":ignore") listet alle in der Schweiz zugelassenen Arzneimittel auf. Folgend ein Auszug der vorhanden Felder in der Datei Artikel.
+> Die Datei [Artikel](data/artikel.json ":ignore") listet alle in der Schweiz zugelassenen Arzneimittel auf. Folgend ein Auszug der vorhandenen Felder in der Datei Artikel.
 
 ```javascript
 {
@@ -119,7 +119,7 @@ console.log(result)
     // Status "Spezialitätenliste": true/false
     "slStat": true,
 
-    // Datum des letzten Aktualisierung, bei der Status erfasst wurde
+    // Datum der letzten Aktualisierung, bei der Status erfasst wurde
     "slLast": "2018-05-07",
 
     // Startdatum des Artikels (Spezialitätenliste)     
@@ -138,8 +138,8 @@ console.log(result)
     // -----------------
     // Applikationsweg
     // -----------------
-    // Unter applw ist der Applikationsweg für den Artikel beschrieben. Sine mehrere
-    // Applikationswege möglich (z.B. subkutane und/oder imtramuskuläre Gabe) so ist
+    // Unter applw ist der Applikationsweg für den Artikel beschrieben. Sind mehrere
+    // Applikationswege möglich (z.B. subkutane und/oder imtramuskuläre Gabe), so ist
     // der häufigste/gebräuchliste Applikationsweg für den Artikel hinterlegt.
     "applw": "p.o.",
 
@@ -171,7 +171,7 @@ console.log(result)
     // --------------------------------------------
     // Die Einträge in unit und type gehören jeweils zusammen (unit1 & type1, unit2 & type2...). Es bezeichnet
     // - die Menge an Wirkstoff innerhalb einer Packung, ausgedrückt in unterschiedlichen Dosierungeinheiten
-    // - das Volumen des Gesamtproduktes innerhalb einer Packung, ausgedrückt in unterschiedlichen Dosierungeinheiten
+    // - das Volumen des Gesamtproduktes innerhalb einer Packung, ausgedrückt in unterschiedlichen Dosierungseinheiten
     // - die Anzahl der Dosiseinheiten (z.B. Stückzahl der Tabletten, Anzahl Ampullen) in einer Packung
     "unit1": "1",
     "type1": "Pck",
@@ -189,14 +189,14 @@ console.log(result)
     // ---------------------------------------
     // Ein leicht verständlicher, patientenfreundlicher Informationstext über die
     // medizinische Wirkung des Artikels bzw. zum Indikationsgebiet, in dem der Artikel
-    // eingesetzt wird ist.
+    // eingesetzt wird, wird in gebiet angezeigt.
     "gebiet": "senkt den Blutzucker",
 
 
     // ------------------
     // Zulassungsinhaber
     // ------------------
-    // Unter Inhaber ist der Inhaber der Genehmigung zum in Verkehr bringen
+    // Unter Inhaber ist der Inhaber der Genehmigung zum Inverkehrbringen
     // des Artikels (Zulassungsinhaber) aufgeführt.
     "inhaber": "Sandoz Pharmaceuticals",
 
