@@ -1,4 +1,4 @@
 - [Einleitung](docs/einleitung)
 - [Wirkstoffe](docs/wirkstoffe)
 - [Artikel](docs/artikel)
-- [License](docs/license.md)
+- [Lizenz](docs/license.md)
