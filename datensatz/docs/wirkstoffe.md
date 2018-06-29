@@ -3,7 +3,7 @@
 **ATC** steht für **Anatomic-Therapeutic Classification**. Im ATC-Klassifikationssystem
 werden Wirkstoffe hierarchisch gruppiert. Unsere Liste der ATC-Codes enthält alle
 ATC-Codes mit den dazugehörigen Wirkstoffbezeichnungen, welche zur Klassifikation der
-in der Schweiz zugelassenen Artikeln angewendet werden. Die Grundlage der gelisteten
+in der Schweiz zugelassenen Artikel angewendet werden. Die Grundlage der gelisteten
 ATC-Codes sind die von der Swissmedic herausgegebenen Codes. Für den Fall, dass Swissmedic
 einem Artikel nur einen 4- oder 5-stelligen ATC-Code zuteilt und für den Wirkstoff des
 Präparates ein offizieller 7-stelliger Code existiert (z.B. publiziert durch die WHO)
