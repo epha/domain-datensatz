@@ -1,5 +1,5 @@
 <div class='animation'></div>
-# Datensatz <small>18.7.0</small>
+# Datensatz <small>2018.7.0</small>
 
 > Referenzdaten der zugelassenen Arzneimittel in der Schweiz
 
