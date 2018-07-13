@@ -23,7 +23,7 @@ tape('front buttons', async (t) => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
-  //await page.goto('https://epha.io/datensatz/#/docs/einleitung', { waitUntil: 'networkidle2'});
+  //await page.goto('https://epha.ch/', { waitUntil: 'networkidle2'});
   await page.goto(`http:///${os.hostname()}:13457/datensatz/docs/einleitung`, { waitUntil: 'networkidle2' });
   await page.screenshot({path: './test/front/screenshot.png'});
 
