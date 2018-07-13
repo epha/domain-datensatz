@@ -36,8 +36,8 @@
   "dependencies": {},
   "devDependencies": {
     "domain-assets": "github:epha/domain-assets",
-    "expert-packungen": "github:epha/expert-packungen",
-    "expert-wirkstoffe": "github:epha/expert-wirkstoffe",
+    "expert-packungen": "github:epha/expert-packungen#semver:4.x.x",
+    "expert-wirkstoffe": "github:epha/expert-wirkstoffe#semver:x.x.x",
     "express": "^4.16.3",
     "isomorphic-fetch": "^2.2.1",
     "istanbul": "^0.4.5",

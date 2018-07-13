@@ -14,6 +14,7 @@ const app = express()
 
 app.use('/assets', express.static( './node_modules/domain-assets/assets') )
 app.use('/datensatz', express.static( './datensatz')  )
+app.use('/datensatz/docs/einleitung', express.static( './datensatz/index.html')  )
 
 const hosting = app.listen(13457)
 
@@ -23,7 +24,7 @@ tape('front buttons', async (t) => {
   const page = await browser.newPage();
 
   //await page.goto('https://epha.io/datensatz/#/docs/einleitung', { waitUntil: 'networkidle2'});
-  await page.goto(`http:///${os.hostname()}:13457/datensatz/#/docs/einleitung`, { waitUntil: 'networkidle2' });
+  await page.goto(`http:///${os.hostname()}:13457/datensatz/docs/einleitung`, { waitUntil: 'networkidle2' });
   await page.screenshot({path: './test/front/screenshot.png'});
 
   // Get the "viewport" of the page, as reported by the page.
