@@ -1,3 +1,12 @@
+@keywords
+ATC,WIRKSTOFFE,KLASSIFIKATION, KLASSIFIKATIONSSYSTEM,ARZNEIMITTELWIRKSTOFFE
+
+@description
+Liste aller zugelassenen Arzneimittewirkstoffe (ATC-Klassifikation) in der Schweiz. 
+
+@title
+Wirkstoffe
+
 # Wirkstoffe
 
 **ATC** steht für **Anatomic-Therapeutic Classification**. Im ATC-Klassifikationssystem
@@ -14,4 +23,5 @@ Folgender Graph hilft eine Übersicht über die Klassifikation zu erhalten. Durc
 __Klicken__ auf den jeweiligen ATC-Code können, wenn verfügbar, die Seiten der
 __WHO__ und __Wikipedia__ aufgerufen werden.
 
-[Sunburst ATC-Codes](sunburst.html ':include :type=iframe width=100% height=850px')
+
+<iframe src="/datensatz/docs/sunburst.html" frameborder="0" allowfullscreen="true" style='height: 620px;'> </iframe>

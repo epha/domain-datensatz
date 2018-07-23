@@ -1,4 +1,4 @@
-- [Einleitung](datensatz/docs/einleitung)
-- [Wirkstoffe](datensatz/docs/wirkstoffe)
-- [Artikel](datensatz/docs/artikel)
-- [Lizenz](datensatz/docs/license)
+- [Einleitung](/datensatz/docs/einleitung)
+- [Wirkstoffe](/datensatz/docs/wirkstoffe)
+- [Artikel](/datensatz/docs/artikel)
+- [Lizenz](/datensatz/docs/license)

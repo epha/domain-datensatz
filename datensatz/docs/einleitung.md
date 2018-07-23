@@ -1,3 +1,6 @@
+@title
+Einleitung
+
 # Einleitung
 
 Die Schweiz digitalisiert mit dem elektronischen Patientendossier (EPD) das Gesundheitswesen, um die
@@ -25,7 +28,7 @@ $ npm i domain-datensatz --save
 
 Folgende Code-Snippets zeigen, wie die Daten in einem eigenen Projekt verwendet werden können.
 
-> Alle Artikel filtern, welche den Applikationsweg (applw) aural beinhalten.
+?> Alle Artikel filtern, welche den Applikationsweg (applw) aural beinhalten.
 
 ```javascript
 const { artikel } = require('domain-datensatz')
@@ -53,7 +56,7 @@ const result = Object.values(artikel).filter(item => {
 console.log(result)
 ```
 
-> Alle Wirkstoffe filtern, in denen Paracetamol vorkommt.
+?> Alle Wirkstoffe filtern, in denen Paracetamol vorkommt.
 
 ```javascript
 const { wirkstoffe } = require('domain-datensatz')
@@ -76,7 +79,7 @@ console.log(result)
 
 ## Datenstruktur
 
-> Die Datei [Wirkstoffe](data/wirkstoffe.json ":ignore") listet alle Wirkstoffe nach einer überarbeiteten ATC-Klassifikation auf. Die verfügbaren Felder werden im Kapitel [Wirkstoffe](docs/wirkstoffe.md) näher beschrieben. Auszug der vorhandenen Felder in der Datei Wirkstoffe
+?> Die Datei [Wirkstoffe](/datensatz/data/wirkstoffe.json ":ignore") listet alle Wirkstoffe nach einer überarbeiteten ATC-Klassifikation auf. Die verfügbaren Felder werden im Kapitel [Wirkstoffe](/datensatz/docs/wirkstoffe.md) näher beschrieben. Auszug der vorhandenen Felder in der Datei Wirkstoffe
 
 ```javascript
 {
@@ -98,7 +101,7 @@ console.log(result)
 }
 ```
 
-> Die Datei [Artikel](data/artikel.json ":ignore") listet alle in der Schweiz zugelassenen Arzneimittel auf. Folgend ein Auszug der vorhandenen Felder in der Datei Artikel.
+?> Die Datei [Artikel](/datensatz/data/artikel.json ":ignore") listet alle in der Schweiz zugelassenen Arzneimittel auf. Folgend ein Auszug der vorhandenen Felder in der Datei Artikel.
 
 ```javascript
 {
