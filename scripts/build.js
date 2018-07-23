@@ -26,9 +26,10 @@ const update = async () => {
   // -----------------------------
   // Build Markdown from Template
   // -----------------------------
-  let cp = fs.readFileSync('./datensatz/coverpage.md')
+
+  let cp = fs.readFileSync('./datensatz/index.html')
   cp = cp.toString().replace(/small>.*</,`small>${pck.version}<`)
-  fs.writeFileSync('./datensatz/coverpage.md', cp)
+  fs.writeFileSync('./datensatz/index.html', cp)
 
   updateTree()
   updateBubble()
