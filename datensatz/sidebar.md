@@ -1,6 +1,6 @@
 * **Dokumentation**
 * [Allgemeines](/datensatz/docs/allgemeines)
-* [Programmierung](/datensatz/docs/programmierung)
+* [Coding](/datensatz/docs/coding)
 * [Wirkstoffe](/datensatz/docs/wirkstoffe)
 * [Artikel](/datensatz/docs/artikel)
 * [Lizenz](/datensatz/docs/license)
