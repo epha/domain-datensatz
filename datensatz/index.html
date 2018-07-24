@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="de">
+
   <head>
     <meta charset="UTF-8">
-    <title>Datensatz</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Update Meta information -->
+    <title>Datensatz</title>
     <meta name="description" content="Referenzdaten von zugelassenen Arzneimitteln in der Schweiz. Graphische Elemente ermöglichen einen guten Überblick über die Daten.">
     <meta name="keywords" content="Referenzdaten,Artikel,Wirkstoffe,Stammdaten,Schweiz,zugelassene,Arzneimittel,Visualisierung">
-    <link href="/datensatz/assets/prism.css" rel="stylesheet" />
-    <link href="/datensatz/home.css" rel="stylesheet" />
+    <!-- Customize homepage-->
     <link href="/docs.css" rel="stylesheet">
+    <link href="/datensatz/assets/prism.css" type="text/css" rel="stylesheet">
+    <link href="/datensatz/home.css" rel="stylesheet">
     <style>
-
 
       a.download {
         display: inline-block;
@@ -35,28 +37,23 @@
          height: 20px;
          width: 90px;
        }
-
     </style>
   </head>
+
   <body>
 
     <!-- Google Search EPha.ch -->
     <script type="application/ld+json">
-      {}
     </script>
 
     <!-- Homepage -->
     <article class=home hidden="true">
-
-      <section class='animation'></section>
-
+      <article class='animation'></article>
       <section class='title'>
         <span>Datensatz</span>
         <small>2018.7.2</small>
       </section>
-
       <h2 class='slogan'>Referenzdaten der zugelassenen Arzneimittel in der Schweiz</h2>
-
       <section class=buttons>
         <a href="/datensatz/docs/allgemeines">
           <span>Starten</span>
@@ -65,14 +62,12 @@
           <span>Github</span>
         </a>
       </section>
-
     </article>
 
+    <!-- Markdown Pages -->
     <article class=docs hidden="true"></article>
-    
     <script src="/docs.js"></script>
     <script src="/assets/src/lottie_light.min.js"></script>
-    <script src="/datensatz/assets/prism.js"></script>
     <script>
 
       docs({
@@ -87,7 +82,7 @@
       })
 
       lottie.loadAnimation({
-        container:  document.querySelector('section.animation'),
+        container:  document.querySelector('article.animation'),
         renderer: 'svg',
         loop: true,
         autoplay: true,
@@ -95,6 +90,5 @@
       })
 
     </script>
-
   </body>
 </html>

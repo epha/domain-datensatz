@@ -2,8 +2,8 @@ body > article.home {
   background: #003755 !important;
   color: white !important;
   display: flex;
+  height: 100vh;
   flex-direction: column;
-  height: 100%;
   align-items: center;
   justify-content: center;
 }
@@ -13,11 +13,11 @@ body > article.home h2 {
   margin: 0;
 }
 
-body > article.home section.animation {
+body > article.home article.animation {
   display: block;
   margin: 0 auto;
-  width: calc( 80vw );
-  max-width: calc( ( 90vh - 300px ) * 16 / 9 );
+  width: 80%;
+  height: calc( 100% - 300px );
 }
 
 body > article.home section.title {
