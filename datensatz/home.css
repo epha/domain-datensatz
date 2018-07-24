@@ -8,6 +8,7 @@ body > article.home {
   justify-content: center;
   border: 1px solid #bbb;
   padding: 5vh 0;
+  flex-wrap: nowrap;
   width: 100%;
 }
 
