@@ -8,6 +8,8 @@ body > article.home {
   align-items: center;
   justify-content: center;
   border: 1px solid #bbb;
+  padding: 5vh 0;
+  width: 100%;
 }
 
 body > article.home h1,
@@ -16,10 +18,8 @@ body > article.home h2 {
 }
 
 body > article.home article.animation {
-  display: block;
-  margin: 0 auto;
   width: 80%;
-  height: calc( 100% - 300px );
+  flex:1;
 }
 
 body > article.home section.title {
@@ -50,6 +50,7 @@ body > article.home section.buttons {
 
 body > article.home section.buttons a {
   color: inherit; /* blue colors for links too */
+  height: 50px;
   text-decoration: none; /* no underline */
   width: 125px;
   border: 1px solid #1c77b5;
