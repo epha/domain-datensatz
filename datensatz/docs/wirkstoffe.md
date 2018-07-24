@@ -24,4 +24,4 @@ __Klicken__ auf den jeweiligen ATC-Code können, wenn verfügbar, die Seiten der
 __WHO__ und __Wikipedia__ aufgerufen werden.
 
 
-<iframe src="/datensatz/docs/sunburst.html" frameborder="0" allowfullscreen="true" style='height: 620px;'></iframe>
+<iframe src="/datensatz/docs/sunburst.html" frameborder="0" allowfullscreen="true" style='height: 626px;'> </iframe>
