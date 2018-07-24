@@ -2,10 +2,12 @@ body > article.home {
   background: #003755 !important;
   color: white !important;
   display: flex;
-  height: 100vh;
+  /* removes scrollbars on googlebot */
+  height: calc( 100vh );
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border: 1px solid #bbb;
 }
 
 body > article.home h1,
