@@ -9,9 +9,9 @@
     <meta name="keywords" content="Referenzdaten,Artikel,Wirkstoffe,Stammdaten,Schweiz,zugelassene,Arzneimittel,Visualisierung">
     <link href="/datensatz/assets/prism.css" rel="stylesheet" />
     <link href="/datensatz/home.css" rel="stylesheet" />
-
-    <link rel="stylesheet" href="/docs.css">
+    <link href="/docs.css" rel="stylesheet">
     <style>
+
 
       a.download {
         display: inline-block;
@@ -58,11 +58,9 @@
       <h2 class='slogan'>Referenzdaten der zugelassenen Arzneimittel in der Schweiz</h2>
 
       <section class=buttons>
-
         <a href="/datensatz/docs/allgemeines">
           <span>Starten</span>
         </a>
-
         <a href="https://github.com/epha/domain-datensatz" target="_blank">
           <span>Github</span>
         </a>
@@ -71,10 +69,10 @@
     </article>
 
     <article class=docs hidden="true"></article>
+    
     <script src="/docs.js"></script>
     <script src="/assets/src/lottie_light.min.js"></script>
     <script src="/datensatz/assets/prism.js"></script>
-
     <script>
 
       docs({
@@ -88,21 +86,13 @@
         backco: '#fcfcfc'
       })
 
-      const element = document.querySelector('section.animation')
-
-      if(element) {
-
-        // Scroll to cover
-        element.parentNode.parentNode.setAttribute("id","cover")
-
-        lottie.loadAnimation({
-          container: element,
-          renderer: 'svg',
-          loop: true,
-          autoplay: true,
-          path: '/datensatz/assets/rocket.json'
-        })
-      }
+      lottie.loadAnimation({
+        container:  document.querySelector('section.animation'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: '/datensatz/assets/rocket.json'
+      })
 
     </script>
 

@@ -14,9 +14,12 @@ body > article.home h2 {
 }
 
 body > article.home section.animation {
+  display: block;
   margin: 0 auto;
   width: calc( 80vw );
-  max-width: calc( ( 90vh - 300px) * 16 / 9 );
+  max-width: calc( ( 90vh - 300px ) * 16 / 9 );
+  height: calc( 80vw * 9 / 16);
+  max-height: calc( ( 90vh - 300px ) *  9 / 16 );
 }
 
 body > article.home section.title {
