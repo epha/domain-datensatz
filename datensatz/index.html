@@ -66,9 +66,9 @@
 
     <!-- Markdown Pages -->
     <article class=docs hidden="true"></article>
-    <script src="/docs.js"></script>
     <script src="/datensatz/assets/prism.js"></script>
-    <script src="/assets/src/lottie_light.min.js"></script>
+
+    <script src="/docs.js"></script>
     <script>
 
       docs({
@@ -82,13 +82,17 @@
         backco: '#fcfcfc'
       })
 
-      lottie.loadAnimation({
-        container:  document.querySelector('article.animation'),
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: '/datensatz/assets/rocket.json'
-      })
+      </script>
+      <script src="/assets/src/lottie_light.min.js"></script>
+      <script>
+
+        lottie.loadAnimation({
+          container:  document.querySelector('article.animation'),
+          renderer: 'svg',
+          loop: true,
+          autoplay: true,
+          path: '/datensatz/assets/rocket.json'
+        })
 
     </script>
   </body>
