@@ -1,3 +1,9 @@
+@keywords
+swissmedic,bag,applikationsweg,formulierung,spezialitätenliste,anwendungsgebiet
+
+@description
+Grafik mit Applikationsweg, Formulierung und Inhaltsangaben aus Daten der Swissmedic.
+
 @title
 Allgemeines
 
@@ -18,10 +24,9 @@ verfügbar. Die
 [Datenstruktur](/datensatz/docs/einleitung?id=datenstruktur ":ingore")
 ist schnell verständlich.
 
-Der folgende Graph erklärt die Zusammenhänge der Felder Applikationsweg (applw), Formulierung
+Die folgende Grafik erklärt die Zusammenhänge der Felder Applikationsweg (applw), Formulierung
 (form) und Inhaltsangaben (unit,type). Durch Klick auf eine der Blasen werden die
 jeweilgen Einheiten für die Formulierung und den Applikationsweg angezeigt.
 
 
 <iframe src="/datensatz/docs/bubble.html" frameborder="0" allowfullscreen="true" style='height: 800px;'> </iframe>
-

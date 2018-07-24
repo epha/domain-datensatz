@@ -1,8 +1,15 @@
+@keywords
+open,source,mit,licencse,lizenz
+
+@description
+MIT-Lizenz von Referenzdaten zu Arzneimitteln
+
 @title
 Lizenz
 
-# MIT License
+# Open Source
 
+## MIT Lizenz
 Copyright (c) 2018 EPha.ch
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

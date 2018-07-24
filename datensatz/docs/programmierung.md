@@ -1,12 +1,18 @@
-@title
-Einleitung
+@keywords
+repository,datensatz,artikel,nodejs,download,datenstruktur,beispiel,projekt,programmierung
 
-# Einleitung
+@description
+Anleitung zur Programmierung, um die Referenzdaten in eigenen Projekten zu verwenden. Die Daten von Swissmedic und BAG werden von uns ohne Lizenzgebühren bereitgestellt.
+
+@title
+Programmierung
+
+# Programmierung
 
 Die Schweiz digitalisiert mit dem elektronischen Patientendossier (EPD) das Gesundheitswesen, um die
-Patientensicherheit zu fördern. Die Grundlage eines Erfolges bilden neue, offene und moderne Services.
+Patientensicherheit zu fördern. Die Grundlage eines Erfolges bilden neue, offene (ohne Lizenzgebühr) und moderne Services.
 
-Die Referenzdaten werden jeden Monat auf den aktuellsten Stand gebracht und von Ärzten und Apothekern manuell aufbereitet und ergänzt. Wir publizieren neben den Stammdaten auch weitere [Applikationen](https://epha.ch), wie z.B. die [Visualisierung von Interaktionen](https://epha.ch/matrix) und die [Suche von Fachinformationen](https://epha.ch/kompendium).
+Die Referenzdaten werden jeden Monat auf den aktuellsten Stand gebracht und von Ärzten und Apothekern manuell aufbereitet und ergänzt. Wir publizieren neben den Stammdaten auch weitere [Applikationen](https://epha.ch), wie z.B. die [Visualisierung von Interaktionen](https://epha.ch/matrix/) und die [Suche von Fachinformationen](https://epha.ch/kompendium/).
 
 ## Download
 
