@@ -54,7 +54,7 @@
       parsedObject.children = atcs.reduce((acc, atc) => {
 
         let targetChildren
-        
+
         //---
         // Set atc to correct childrens
         //---
@@ -78,7 +78,7 @@
         } catch (err) {
           console.log('ATC parent not available: ', atc)
         }
-        
+
         //---
         // Build atc object
         //---
@@ -130,7 +130,7 @@
     const width = document.body.clientWidth - margin.left - margin.right
     const height = 620 - margin.top - margin.bottom
     const radius = Math.min(width, height) / 2
-    
+
     //---
     // append the svg object to the body of the page
     // appends a 'group' element to 'svg'
@@ -247,7 +247,7 @@
         })
       })
     }
-    
+
     const loadWirkstoffe = (wiki) => {
       return new Promise((res, rej) => {
         d3.json("../data/wirkstoffe.json", function(error, root) {
@@ -284,7 +284,7 @@
         .enter().append("path")
         .attr("display", (d) => d.depth ? null : "none")
         .attr("d", arc)
-        .style("stroke", "#fff")
+        .style("stroke", (d) => d.depth == 6 ? getColor(d) : "#fff")
         .style("fill", (d) => getColor(d))
         .style("opacity", colorOpacity)
         .on("mouseover", mouseover)
@@ -297,7 +297,7 @@
         }
         return `</tspan><tspan  x=0 dy='30' style='font-size: 15px'></tspan>`
       }
-      
+
       const displayLink = (d) => {
         const page = (d.name.length < 7 ) ? 'who' : 'wiki'
         const name = (page == 'who') ? 'WHO' : 'Wikipedia'

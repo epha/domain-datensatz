@@ -4,7 +4,8 @@
   "description": "JSON files on pharmaceutical products in switzerland",
   "main": "source/app.js",
   "scripts": {
-    "build": "node ./scripts/build.js",
+    "build:grafiken": "node ./scripts/grafiken.js",
+    "build:wikipedia": "node ./scripts/wikipedia.js",
     "deploy:staging": "bash ./scripts/deploy.sh staging",
     "deploy:release": "bash ./scripts/deploy.sh release",
     "test": "tape test/*/*.js | tap-spec",
@@ -42,7 +43,7 @@
     "express": "^4.16.3",
     "isomorphic-fetch": "^2.2.1",
     "istanbul": "^0.4.5",
-    "puppeteer": "^1.5.0",
+    "puppeteer": "^1.6.0",
     "tap-spec": "^5.0.0",
     "tape": "^4.9.1"
   }
