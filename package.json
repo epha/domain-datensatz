@@ -32,10 +32,10 @@
   "bugs": {
     "url": "https://github.com/epha/domain-datensatz/issues"
   },
-  "homepage": "https://github.com/epha/domain-datensatz#readme",
+  "homepage": "https://epha.ch/datensatz/",
   "dependencies": {},
   "devDependencies": {
-    "Akte": "github:epha/domain-akte",
+    "domain-akte": "github:epha/domain-akte",
     "domain-assets": "github:epha/domain-assets",
     "expert-packungen": "github:epha/expert-packungen#semver:4.x.x",
     "expert-wirkstoffe": "github:epha/expert-wirkstoffe#semver:x.x.x",

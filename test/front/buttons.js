@@ -12,28 +12,10 @@ const os = require("os")
 
 const app = express()
 
-
-console.log(" /akte")
-
-app.use("/", express.static('./node_modules/Akte'))
-
-//app.use(/^\/akte\/[^.]*$/, (req,res) => res.sendFile("index.html", { root: path.join(__dirname,"..") }))
-
-//app.use(/^\/next\/[^.]*$/, (req,res) => res.sendFile("index.html", { root: path.join(__dirname,"../next") }))
-
-
-
-
-
-
-console.log(" /assets")
-
-//app.use('/', express.static( '../domain-akte/') )
+app.use("/", express.static('./node_modules/domain-akte'))
 app.use('/assets', express.static( './node_modules/domain-assets/assets') )
 app.use('/datensatz', express.static( './datensatz')  )
-
 app.use(/^\/datensatz\/[^.]+$/, express.static('./datensatz/index.html'))
-
 app.use('/datensatz/docs/einleitung', express.static( './datensatz/index.html')  )
 
 const hosting = app.listen(13457)
