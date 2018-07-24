@@ -6,8 +6,7 @@ body > article.home {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid #bbb;
-  padding: 5vh 0;
+  border: 1px solid #ccc;
   flex-wrap: nowrap;
   width: 100%;
 }
@@ -20,6 +19,8 @@ body > article.home h2 {
 body > article.home article.animation {
   width: 80%;
   flex:1;
+  max-height: calc( 100% - 300px );
+  display: block;
 }
 
 body > article.home section.title {
