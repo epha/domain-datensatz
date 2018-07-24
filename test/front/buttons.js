@@ -26,7 +26,7 @@ tape('front buttons', async (t) => {
   const page = await browser.newPage();
 
   //await page.goto('https://epha.ch/', { waitUntil: 'networkidle2'});
-  await page.goto(`http:///${os.hostname()}:13457/datensatz/docs/einleitung`, { waitUntil: 'networkidle2' });
+  await page.goto(`http:///${os.hostname()}:13457/datensatz/docs/programmierung`, { waitUntil: 'networkidle2' });
   await page.screenshot({path: './test/front/screenshot.png'});
 
   // Get the "viewport" of the page, as reported by the page.
@@ -43,7 +43,7 @@ tape('front buttons', async (t) => {
      const href = document.querySelector('a.download').href
      return fetch(href).then(res=>res.json())
   });
-  
+
   t.equals(file['V10XX03'],'[223Ra]Radiumdichlorid', "Download valid file")
 
   await browser.close()
