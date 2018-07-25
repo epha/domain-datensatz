@@ -1,13 +1,13 @@
 @keywords
-repository,datensatz,artikel,nodejs,download,datenstruktur,beispiel,projekt,programmierung
+repository,datensatz,artikel,nodejs,download,datenstruktur,beispiel,projekt,programmierung,code
 
 @description
 Anleitung zur Programmierung, um die Referenzdaten in eigenen Projekten zu verwenden. Die Daten von Swissmedic und BAG werden von uns ohne Lizenzgebühren bereitgestellt.
 
 @title
-Programmierung
+Starten
 
-# Programmierung
+# Starten
 
 Die Schweiz digitalisiert mit dem elektronischen Patientendossier (EPD) das Gesundheitswesen, um die
 Patientensicherheit zu fördern. Die Grundlage eines Erfolges bilden neue, offene (ohne Lizenzgebühr) und moderne Services.
