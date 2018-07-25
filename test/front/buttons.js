@@ -26,7 +26,7 @@ tape('front buttons', async (t) => {
   const page = await browser.newPage();
 
   //await page.goto('https://epha.ch/', { waitUntil: 'networkidle2'});
-  await page.goto(`http:///${os.hostname()}:13457/datensatz/docs/coding`, { waitUntil: 'networkidle2' });
+  await page.goto(`http:///${os.hostname()}:13457/datensatz/docs/starten`, { waitUntil: 'networkidle2' });
   await page.screenshot({path: './test/front/screenshot.png'});
 
   // Get the "viewport" of the page, as reported by the page.
