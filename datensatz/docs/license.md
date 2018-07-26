@@ -9,7 +9,7 @@ Lizenz
 
 # Open Source
 
-## MIT Lizenz
+### MIT Lizenz
 Copyright (c) 2018 EPha.ch
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
