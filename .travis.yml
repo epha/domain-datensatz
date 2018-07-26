@@ -9,7 +9,7 @@ addons:
   chrome: stable
 
 notifications:
-  email: false
+  email: support@epha.ch
 
 # allow headful tests
 before_install:
@@ -19,7 +19,7 @@ before_install:
 
 install:
   - rm package-lock.json
-  - npm i os tape tap-spec puppeteer isomorphic-fetch 
+  - npm i os tape tap-spec puppeteer isomorphic-fetch
 
 script:
   - npm test
