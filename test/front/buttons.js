@@ -24,7 +24,7 @@ tape('front buttons', async (t) => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
-  await page.goto('https://epha.ch/', { waitUntil: 'networkidle2'});
+  await page.goto('https://epha.ch/datensatz/docs/starten', { waitUntil: 'networkidle2'});
   //page.goto(`http:///${os.hostname()}:13457/datensatz/docs/starten`, { waitUntil: 'networkidle2' });
   //page.screenshot({path: './test/front/screenshot.png'});
 
@@ -46,7 +46,7 @@ tape('front buttons', async (t) => {
   t.equals(file['V10XX03'],'[223Ra]Radiumdichlorid', "Download valid file")
 
   await browser.close()
-  await hosting.close()
+  //await hosting.close()
 
   t.end();
 
