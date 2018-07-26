@@ -39,7 +39,7 @@ tape('front buttons', async (t) => {
   // console.log('Dimensions:', dimensions);
 
   const file = await page.evaluate(() => {
-     const href = document.querySelector('a.download').getAttribute("href")
+     const href = document.body.querySelector('a.download[download="wirkstoffe.json"]').getAttribute("href")
      return fetch(href).then(res=>res.json())
   });
 
