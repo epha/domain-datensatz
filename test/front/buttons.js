@@ -39,7 +39,7 @@ tape('front buttons', async (t) => {
   // console.log('Dimensions:', dimensions);
 
   const file = await page.evaluate(() => {
-    console.log(document.body.innerHTML)
+     //console.log(document.body.innerHTML)
      const href = document.querySelector('a.download').href
      return fetch(href).then(res=>res.json())
   });
