@@ -12,7 +12,12 @@ Starten
 Die Schweiz digitalisiert mit dem elektronischen Patientendossier (EPD) das Gesundheitswesen, um die
 Patientensicherheit zu fördern. Die Grundlage eines Erfolges bilden neue, offene (ohne Lizenzgebühr) und moderne Services.
 
-Die Referenzdaten werden jeden Monat auf den aktuellsten Stand gebracht und von Ärzten und Apothekern manuell aufbereitet und ergänzt. Wir publizieren neben den Stammdaten auch weitere [Applikationen](https://epha.ch), wie z.B. die [Visualisierung von Interaktionen](https://epha.ch/matrix/) und die [Suche von Fachinformationen](https://epha.ch/kompendium/).
+Die Referenzdaten werden jeden Monat auf den aktuellsten Stand gebracht und von Ärzten und Apothekern manuell aufbereitet und ergänzt. Wir publizieren neben den Stammdaten auch weitere
+<a href="//epha.ch">Applikationen</a>
+, wie z.B. die
+<a href="//epha.ch/matrix/" target="_blank" rel=noopener>Visualisierung von Interaktionen</a>
+und die
+<a href="//epha.ch/kompendium/" target="_blank" rel=noopener>Suche von Fachinformationen</a>.
 
 ## Download
 
