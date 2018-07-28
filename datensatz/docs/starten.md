@@ -85,7 +85,7 @@ console.log(result)
 
 ## Datenstruktur
 
-?> Die Datei [Wirkstoffe](/datensatz/data/wirkstoffe.json ":ignore") listet alle Wirkstoffe nach einer überarbeiteten ATC-Klassifikation auf. Die verfügbaren Felder werden im Kapitel [Wirkstoffe](/datensatz/docs/wirkstoffe.md) näher beschrieben. Auszug der vorhandenen Felder in der Datei Wirkstoffe
+?> Die Datei [Wirkstoffe](/datensatz/data/wirkstoffe.json ":ignore") listet alle Wirkstoffe nach einer überarbeiteten ATC-Klassifikation auf. Die verfügbaren Felder werden im Kapitel [Wirkstoffe](/datensatz/docs/wirkstoffe/) näher beschrieben. Auszug der vorhandenen Felder in der Datei Wirkstoffe
 
 ```javascript
 {
