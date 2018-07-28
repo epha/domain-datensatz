@@ -17,11 +17,11 @@ zu den zugelassenen Packungen bzw. die Spezialitätenliste, die vom
 [Swissmedic](https://www.swissmedic.ch) herausgegeben werden. Diese Daten
 werden manuell durch anwendungsbezogene Informationen wie Applikationsweg
 oder Anwendungsgebiet ergänzt. Die Dateien sind als
-[Download](/datensatz/docs/starten#download)
+[Download](/datensatz/docs/starten/#/download/)
 oder als installierbares
-[Repository](/datensatz/docs/starten#repository)
+[Repository](/datensatz/docs/starten/#/repository/)
 verfügbar. Die
-[Datenstruktur](/datensatz/docs/starten#datenstruktur)
+[Datenstruktur](/datensatz/docs/starten/#/datenstruktur)
 ist schnell verständlich.
 
 Die folgende Grafik erklärt die Zusammenhänge der Felder Applikationsweg (applw), Formulierung
