@@ -6,8 +6,8 @@
   "scripts": {
     "build:grafiken": "node ./scripts/grafiken.js",
     "build:wikipedia": "node ./scripts/wikipedia.js",
-    "deploy:staging": "bash ./scripts/deploy.sh staging",
-    "deploy:release": "bash ./scripts/deploy.sh release",
+    "staging": "bash ./scripts/deploy.sh staging",
+    "release": "bash ./scripts/deploy.sh release",
     "test": "tape test/*/*.js | tap-spec",
     "cover": "istanbul cover tape test/*/*.js"
   },
