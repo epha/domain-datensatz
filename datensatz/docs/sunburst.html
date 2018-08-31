@@ -157,6 +157,7 @@
       'S': '#22409a',
       'V': '#583093'
     }
+
     const colorOpacity = 0.7;
 
     const vis = svg.append("g")
@@ -289,7 +290,7 @@
         .style("opacity", colorOpacity)
         .on("mouseover", mouseover)
         .on("mouseout", mouseout)
-        .on("click", mouseclick)
+        .on("mouseup", mouseclick)
 
       const displaySize = (d) => {
         if (d.size > 1) {
