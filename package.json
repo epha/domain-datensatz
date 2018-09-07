@@ -34,7 +34,11 @@
     "url": "https://github.com/epha/domain-datensatz/issues"
   },
   "homepage": "https://epha.ch/datensatz/",
-  "dependencies": {},
+  "dependencies": {
+    "excel4node": "^1.5.0",
+    "iconv": "^2.3.0",
+    "iconv-lite": "^0.4.24"
+  },
   "devDependencies": {
     "domain-akte": "github:epha/domain-akte",
     "domain-assets": "github:epha/domain-assets",
@@ -43,7 +47,7 @@
     "express": "^4.16.3",
     "isomorphic-fetch": "^2.2.1",
     "istanbul": "^0.4.5",
-    "puppeteer": "^1.6.2",
+    "puppeteer": "^1.8.0",
     "tap-spec": "^5.0.0",
     "tape": "^4.9.1"
   }
