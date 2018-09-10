@@ -97,7 +97,12 @@ Für dieses Beispiel muss das Modul [iconv-lite](https://www.npmjs.com/package/i
 $ npm i iconv-lite --save
 ```
 
-JS:
+Erstellen Sie eine Datei `artikelWithMG.js` mit dem unten stehenden Code.
+Führen Sie dann folgenden Befehl aus, um die Datei `artikelWithMG.csv` mit den Resultaten zu erstellen.
+
+```bash
+$ node artikelWithMG.js
+```
 
 ```javascript
 //----------------------------------------
