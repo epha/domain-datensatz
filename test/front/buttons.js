@@ -12,8 +12,6 @@ const fetch = require("isomorphic-fetch")
 
 //const app = express()
 
-//app.use("/", express.static('./node_modules/domain-akte'))
-//app.use('/assets', express.static( './node_modules/domain-assets/assets') )
 //app.use('/datensatz', express.static( './datensatz')  )
 //app.use('/datensatz/docs/starten', express.static( './datensatz/index.html')  )
 

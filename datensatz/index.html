@@ -66,10 +66,11 @@
   <!-- Markdown Pages -->
   <article class=docs hidden="true"></article>
   <script src="/assets/src/prism.js"></script>
+  <script src="/assets/run/time.js"></script>
 
-  <script src="/code.js"></script>
   <script>
-    initialize({
+
+    window.params = {
       home: "/datensatz/",
       base: "/datensatz",
       logo: "Datensatz",
@@ -78,9 +79,17 @@
       markco: '#11679f',
       sideco: '#f7f7f7',
       backco: '#fcfcfc'
-    })
+    }
+
+    run( {
+      script: '/code.js',
+      checkUserAgent: false
+    } )
+
   </script>
+
   <script src="/assets/src/lottie_light.min.js"></script>
+
   <script>
     lottie.loadAnimation({
       container: document.querySelector('article.animation'),

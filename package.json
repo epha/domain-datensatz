@@ -6,8 +6,8 @@
   "scripts": {
     "build:grafiken": "node ./scripts/grafiken.js",
     "build:wikipedia": "node ./scripts/wikipedia.js",
-    "deploy:staging": "bash ./scripts/deploy.sh staging",
-    "deploy:release": "bash ./scripts/deploy.sh release",
+    "staging": "bash ./scripts/deploy.sh staging",
+    "release": "bash ./scripts/deploy.sh release",
     "test": "tape test/*/*.js | tap-spec",
     "cover": "istanbul cover tape test/*/*.js"
   },
@@ -40,8 +40,6 @@
     "iconv-lite": "^0.4.24"
   },
   "devDependencies": {
-    "domain-akte": "github:epha/domain-akte",
-    "domain-assets": "github:epha/domain-assets",
     "expert-packungen": "github:epha/expert-packungen#semver:4.x.x",
     "expert-wirkstoffe": "github:epha/expert-wirkstoffe#semver:x.x.x",
     "express": "^4.16.3",
