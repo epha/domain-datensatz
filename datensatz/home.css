@@ -1,4 +1,4 @@
-body > article.home {
+body>article.home {
   background: #003755 !important;
   color: white !important;
   display: flex;
@@ -11,61 +11,64 @@ body > article.home {
   width: 100%;
 }
 
-body > article.home h1,
-body > article.home h2 {
+body>article.home h1, body>article.home h2 {
   margin: 0;
 }
 
-body > article.home article.animation {
+body>article.home article.animation {
   width: 80%;
-  flex:1;
-  max-height: calc( 100% - 300px );
+  flex: 1;
+  max-height: calc( 100% - 320px);
   display: block;
 }
 
-body > article.home section.title {
+body>article.home section.title {
   position: relative;
 }
 
-body > article.home section.title span:first-child  {
+body>article.home section.title span:first-child {
   font-weight: 200;
   font-size: 3rem;
 }
 
-body > article.home section.title small {
+body>article.home section.title small {
   position: absolute;
   right: -64px;
   bottom: 0px;
   font-weight: 300;
 }
 
-body > article.home h2.slogan {
+body>article.home h2.slogan {
   font-weight: 300;
-  margin-bottom:10px;
+  margin: 1rem auto;
+  width: 80%;
   text-align: center;
 }
 
-body > article.home section.buttons {
+body>article.home section.buttons {
   display: flex;
 }
 
-body > article.home section.buttons a {
-  color: inherit; /* blue colors for links too */
+body>article.home section.buttons a {
+  color: inherit;
+  /* blue colors for links too */
   height: 50px;
-  text-decoration: none; /* no underline */
+  text-decoration: none;
+  /* no underline */
   width: 125px;
   border: 1px solid #1c77b5;
   border-radius: 4px;
   padding: 10px;
-  display: block;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-body > article.home section.buttons a:first-child {
+body>article.home section.buttons a:first-child {
   margin-right: 5px;
   background-color: #1c77b5;
 }
 
-body > article.home section.buttons a:last-child {
+body>article.home section.buttons a:last-child {
   margin-left: 5px;
 }

@@ -16,9 +16,9 @@
   {
     "cat": "Suspension",
     "name": "i.m.",
-    "value": 139.9,
+    "value": 144.1,
     "icon": "i.m.",
-    "desc": "\n      Form Suspension<br>\n      n = 57<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>   Stk -  14.0% <br>    ml -  93.0% <br>   mcg -  21.1% <br>   Amp -  86.0% <br>   Dos -  19.3% <br>    mg -  43.9% <br>\n    "
+    "desc": "\n      Form Suspension<br>\n      n = 63<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>   Stk -  22.2% <br>    ml -  93.7% <br>   mcg -  19.0% <br>   Amp -  77.8% <br>   Dos -  17.5% <br>    mg -  39.7% <br>\n    "
   },
   {
     "cat": "Pulver",
@@ -37,16 +37,16 @@
   {
     "cat": "Lösung",
     "name": "i.v.",
-    "value": 1187.1,
+    "value": 1196.1999999999998,
     "icon": "i.v.",
-    "desc": "\n      Form Lösung<br>\n      n = 1553<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>  U.I. -   1.1% <br>   Stk -  41.3% <br>    ml -  97.1% <br>   Amp -  48.2% <br>    mg -  68.1% <br>  mmol -   4.6% <br>   KIE -   0.1% <br>   mcg -   1.7% <br>   MBq -   2.1% <br>   Mbq -   0.5% <br>   kBq -   0.1% <br>\n    "
+    "desc": "\n      Form Lösung<br>\n      n = 1566<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>  U.I. -   1.4% <br>   Stk -  41.4% <br>    ml -  97.1% <br>   Amp -  47.8% <br>    mg -  67.6% <br>  mmol -   4.5% <br>   KIE -   0.1% <br>   mcg -   1.7% <br>   MBq -   2.0% <br>   Mbq -   0.5% <br>   kBq -   0.1% <br>\n    "
   },
   {
     "cat": "Pulver",
     "name": "i.v.",
-    "value": 558.5,
+    "value": 559.9,
     "icon": "i.v.",
-    "desc": "\n      Form Pulver<br>\n      n = 655<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>   Amp -  94.7% <br>    mg -  63.7% <br>  U.I. -  23.8% <br>   Stk -   3.4% <br>   mcg -   0.3% <br>   Set -   1.2% <br>    ml -   2.4% <br>\n    "
+    "desc": "\n      Form Pulver<br>\n      n = 657<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>   Amp -  94.7% <br>    mg -  63.5% <br>  U.I. -  23.7% <br>   Stk -   3.3% <br>   mcg -   0.3% <br>   Set -   1.2% <br>    ml -   2.4% <br>\n    "
   },
   {
     "cat": "Lösung",
@@ -72,9 +72,9 @@
   {
     "cat": "Tablette",
     "name": "p.o.",
-    "value": 5171.5,
+    "value": 5188.299999999999,
     "icon": "p.o.",
-    "desc": "\n      Form Tablette<br>\n      n = 7245<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>   Stk - 100.0% <br>    mg -  75.5% <br>     g -   0.1% <br>  U.I. -   0.1% <br>   mcg -   0.6% <br>  mmol -   0.1% <br>\n    "
+    "desc": "\n      Form Tablette<br>\n      n = 7269<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>   Stk - 100.0% <br>    mg -  75.6% <br>     g -   0.1% <br>  U.I. -   0.1% <br>   mcg -   0.6% <br>  mmol -   0.1% <br>\n    "
   },
   {
     "cat": "Set",
@@ -93,9 +93,9 @@
   {
     "cat": "Pulver",
     "name": "p.o.",
-    "value": 248.39999999999998,
+    "value": 249.1,
     "icon": "p.o.",
-    "desc": "\n      Form Pulver<br>\n      n = 212<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n        3660 -   0.5% <br>  5550 -   0.5% <br>   Pck - 100.0% <br>   Btl -  49.1% <br>   Stk -  46.7% <br>     g -  23.6% <br>   Dos -  24.1% <br>    mg -  31.1% <br>  mmol -   0.9% <br>   Amp -   3.8% <br>  U.I. -   0.5% <br>    ml -   1.9% <br>\n    "
+    "desc": "\n      Form Pulver<br>\n      n = 213<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n        3660 -   0.5% <br>  5550 -   0.5% <br>   Pck - 100.0% <br>   Btl -  48.8% <br>   Stk -  46.9% <br>     g -  23.5% <br>   Dos -  23.9% <br>    mg -  31.5% <br>  mmol -   0.9% <br>   Amp -   3.8% <br>  U.I. -   0.5% <br>    ml -   2.3% <br>\n    "
   },
   {
     "cat": "Pflaster",
@@ -107,9 +107,9 @@
   {
     "cat": "Suspension",
     "name": "p.o.",
-    "value": 199.39999999999998,
+    "value": 198.7,
     "icon": "p.o.",
-    "desc": "\n      Form Suspension<br>\n      n = 142<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>    ml -  90.1% <br>   Gtt -  27.5% <br>   Stk -  12.0% <br>    mg -  35.2% <br>   Dos -  28.2% <br>     g -   4.9% <br>  U.I. -   0.7% <br>   Amp -   2.8% <br>   Btl -   5.6% <br>  Btl. -   0.7% <br>\n    "
+    "desc": "\n      Form Suspension<br>\n      n = 141<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>    ml -  90.1% <br>   Gtt -  27.0% <br>   Stk -  12.1% <br>    mg -  34.8% <br>   Dos -  28.4% <br>     g -   5.0% <br>  U.I. -   0.7% <br>   Amp -   2.8% <br>   Btl -   5.7% <br>  Btl. -   0.7% <br>\n    "
   },
   {
     "cat": "Pulver",
@@ -121,9 +121,9 @@
   {
     "cat": "Lösung",
     "name": "s.c.",
-    "value": 485.7,
+    "value": 487.09999999999997,
     "icon": "s.c.",
-    "desc": "\n      Form Lösung<br>\n      n = 551<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>    ml -  45.4% <br>   Amp -  97.8% <br>    mg -  30.1% <br>  U.I. -   6.7% <br>   mcg -   0.7% <br>   Stk -   2.2% <br>\n    "
+    "desc": "\n      Form Lösung<br>\n      n = 553<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>    ml -  45.6% <br>   Amp -  97.5% <br>    mg -  29.8% <br>  U.I. -   7.1% <br>   mcg -   0.7% <br>   Stk -   2.0% <br>\n    "
   },
   {
     "cat": "Suspension",
@@ -135,9 +135,9 @@
   {
     "cat": "Lutschtablette",
     "name": "buccal",
-    "value": 430.4,
+    "value": 431.79999999999995,
     "icon": "buccal",
-    "desc": "\n      Form Lutschtablette<br>\n      n = 472<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>   Stk -  80.9% <br>     g -  19.1% <br>    mg -  57.6% <br>  mmol -   0.2% <br>   mcg -   2.1% <br>\n    "
+    "desc": "\n      Form Lutschtablette<br>\n      n = 474<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>   Stk -  80.6% <br>     g -  19.4% <br>    mg -  57.4% <br>  mmol -   0.2% <br>   mcg -   2.1% <br>\n    "
   },
   {
     "cat": "Salbe",
@@ -177,9 +177,9 @@
   {
     "cat": "Lösung",
     "name": "p.o.",
-    "value": 528.4,
+    "value": 529.0999999999999,
     "icon": "p.o.",
-    "desc": "\n      Form Lösung<br>\n      n = 612<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>  U.I. -   2.3% <br>    ml -  96.9% <br>   Gtt -  74.0% <br>   Dos -   3.3% <br>   Stk -   7.4% <br>    mg -  31.4% <br>     g -   2.1% <br>   Amp -   5.1% <br>   Hub -   1.6% <br>  mmol -   0.3% <br>   mcg -   0.5% <br>\n    "
+    "desc": "\n      Form Lösung<br>\n      n = 613<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>  U.I. -   2.3% <br>    ml -  96.9% <br>   Gtt -  74.1% <br>   Dos -   3.3% <br>   Stk -   7.3% <br>    mg -  31.5% <br>     g -   2.1% <br>   Amp -   5.1% <br>   Hub -   1.6% <br>  mmol -   0.3% <br>   mcg -   0.5% <br>\n    "
   },
   {
     "cat": "Sirup",
@@ -254,9 +254,9 @@
   {
     "cat": "Creme",
     "name": "cutan",
-    "value": 268.7,
+    "value": 269.4,
     "icon": "cutan",
-    "desc": "\n      Form Creme<br>\n      n = 241<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>    ml -   7.5% <br>     g -  92.5% <br>    mg -  55.6% <br>  U.I. -   1.7% <br>   Dos -   1.7% <br>   mcg -   0.8% <br>\n    "
+    "desc": "\n      Form Creme<br>\n      n = 242<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>    ml -   7.4% <br>     g -  92.6% <br>    mg -  55.4% <br>  U.I. -   1.7% <br>   Dos -   1.7% <br>   mcg -   0.8% <br>\n    "
   },
   {
     "cat": "Paste",
@@ -408,9 +408,9 @@
   {
     "cat": "Retardtablette",
     "name": "p.o.",
-    "value": 731.4,
+    "value": 732.8,
     "icon": "p.o.",
-    "desc": "\n      Form Retardtablette<br>\n      n = 902<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>   Stk - 100.0% <br>    mg -  85.4% <br>  mmol -   1.2% <br>   mcg -   1.7% <br>\n    "
+    "desc": "\n      Form Retardtablette<br>\n      n = 904<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>   Stk - 100.0% <br>    mg -  85.4% <br>  mmol -   1.2% <br>   mcg -   1.7% <br>\n    "
   },
   {
     "cat": "Spray",
@@ -562,9 +562,9 @@
   {
     "cat": "Konzentrat",
     "name": "i.v.",
-    "value": 134.3,
+    "value": 138.5,
     "icon": "i.v.",
-    "desc": "\n      Form Konzentrat<br>\n      n = 49<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>   Amp -  98.0% <br>    ml -  95.9% <br>    mg -  98.0% <br>\n    "
+    "desc": "\n      Form Konzentrat<br>\n      n = 55<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>   Amp -  98.2% <br>    ml -  96.4% <br>    mg -  98.2% <br>\n    "
   },
   {
     "cat": "Lösung",
@@ -576,9 +576,9 @@
   {
     "cat": "Fertigspritze",
     "name": "s.c.",
-    "value": 366.7,
+    "value": 373.7,
     "icon": "s.c.",
-    "desc": "\n      Form Fertigspritze<br>\n      n = 381<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>   Stk - 100.0% <br>    ml -  95.3% <br>  U.I. -  24.1% <br>   mcg -  10.5% <br>   Dos -   1.0% <br>    mg -  63.0% <br>\n    "
+    "desc": "\n      Form Fertigspritze<br>\n      n = 391<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>   Stk - 100.0% <br>    ml -  95.4% <br>  U.I. -  23.5% <br>   mcg -  10.2% <br>   Dos -   1.0% <br>    mg -  63.9% <br>\n    "
   },
   {
     "cat": "Lösung",
@@ -828,9 +828,9 @@
   {
     "cat": "Pen",
     "name": "s.c.",
-    "value": 158.8,
+    "value": 159.5,
     "icon": "s.c.",
-    "desc": "\n      Form Pen<br>\n      n = 84<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>  U.I. -  32.1% <br>    ml -  89.3% <br>   Stk - 100.0% <br>   mcg -   9.5% <br>   Dos -   2.4% <br>    mg -  64.3% <br>\n    "
+    "desc": "\n      Form Pen<br>\n      n = 85<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>  U.I. -  32.9% <br>    ml -  89.4% <br>   Stk - 100.0% <br>   mcg -   9.4% <br>   Dos -   2.4% <br>    mg -  64.7% <br>\n    "
   },
   {
     "cat": "Lösung",
@@ -1027,6 +1027,13 @@
     "value": 100.7,
     "icon": "intravitreal",
     "desc": "\n      Form Konzentrat<br>\n      n = 1<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>    ml - 100.0% <br>    mg - 100.0% <br>   Amp - 100.0% <br>\n    "
+  },
+  {
+    "cat": "Kapseln",
+    "name": "inhalativ",
+    "value": 100.7,
+    "icon": "inhalativ",
+    "desc": "\n      Form Kapseln<br>\n      n = 1<br>\n      <br>\n      Verfügbare Einheiten<br>\n      <br>\n         Pck - 100.0% <br>   Stk - 100.0% <br>\n    "
   },
   {
     "cat": "Fertigspritze",

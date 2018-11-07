@@ -37,7 +37,7 @@ $ npm init
 $ npm i domain-datensatz --save
 ```
 
-Folgende Code-Snippets zeigen, wie die Daten in einem eigenen Projekt verwendet werden können.
+Folgende Code-Snippets zeigen, wie die Daten in einem eigenen Projekt verwendet werden könnten.
 
 ?> Alle Artikel filtern, welche den Applikationsweg (applw) aural beinhalten.
 
@@ -86,6 +86,74 @@ const result = Object.values(wirkstoffe).filter(w => {
 //   'Dextromethorphan und Paracetamol, Kombinationen'
 // ]
 console.log(result)
+```
+
+?> Eine CSV Datei erstellen, welche alle Artikel mit der Einheit "mg" auflistet.
+
+
+Für dieses Beispiel muss das Modul [iconv-lite](https://www.npmjs.com/package/iconv-lite) im Projekt Ordner installiert sein.
+
+```bash
+$ npm i iconv-lite --save
+```
+
+Erstellen Sie eine Datei `artikelWithMG.js` mit dem unten stehenden Code.
+Führen Sie dann folgenden Befehl aus, um die Datei `artikelWithMG.csv` mit den Resultaten zu erstellen.
+
+```bash
+$ node artikelWithMG.js
+```
+
+```javascript
+//----------------------------------------
+// Import iconv-lite module for correct file encoding
+// Import file system module which allows
+// to read and write files from disk and
+// Import the latest artikels
+//----------------------------------------
+const iconv = require( 'iconv-lite' )
+const { writeFileSync } = require( 'fs' )
+const { artikel } = require( 'domain-datensatz' )
+
+//----------------------------------------
+// Get all artikels. Filter first for mg
+// and then remap the values to array
+//----------------------------------------
+const artikelWithMg = Object.values( artikel ).filter( ( item ) => {
+
+  // 1. Containing 'mg' in any type
+  return Object.values( item ).filter( val => val == 'mg' )
+
+} ).map( ( item, idx ) => {
+
+  // 2. Prepare item
+  const { gtin, atcCode, name1, unit2, type2, unit3, type3, unit4, type4 } = item
+
+  // Remove commas in order to ommit
+  // unwanted delimitation in file
+  const name = name1.replace( ',', '' )
+  const unit = ( type2 == "mg" ) ? unit2 : ( type3 == "mg" ) ? unit3 : ( type4 == "mg" ) ? unit4 : "NA"
+  const type = "mg"
+
+  return [ idx + 1, "EAN" + gtin, atcCode, name, unit, type ]
+
+} )
+
+//----------------------------------------
+// Prepare file lines
+//----------------------------------------
+const lines = artikelWithMg.reduce( ( acc, item ) => {
+
+  // Create a row for each artikel
+  return acc.concat( item.join( "," ) )
+
+}, [ 'LINE, GTIN, ATC, NAME, UNIT, TYPE' ] )
+
+// Define correct file encoding depending on OS (windows, macOS)
+const encoding = ( process.platform == 'win32' ) ? 'WINDOWS-1252' : 'macintosh'
+
+// Write file to disc with correct encoding
+writeFileSync( 'artikelWithMG.csv', iconv.encode( lines.join( "\r\n" ), encoding ) )
 ```
 
 ## Datenstruktur
