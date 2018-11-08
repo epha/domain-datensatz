@@ -1,25 +1,25 @@
-const tape = require("tape")
+const tape = require( "tape" )
 
-const { wirkstoffe } = require('../..')
+const { wirkstoffe } = require( '../..' )
 
-tape("Unit Wirkstoff", async (t) => {
+tape( "Unit Wirkstoff", async ( t ) => {
 
-  const result = Object.values(wirkstoffe).filter(w => {
-    return w.toLowerCase().includes('paracetamol')
-  })
+  const result = Object.values( wirkstoffe ).filter( w => {
+    return w.toLowerCase().includes( 'paracetamol' )
+  } )
 
-  t.deepEquals(result,
+  t.deepEquals( result,
     [
-    'Paracetamol',
-    'Paracetamol, Kombinationen exkl. Psycholeptika',
-    'Paracetamol und Codein',
-    'Paracetamol und Ascorbinsäure',
-    'Paracetamol und Coffein',
-    'Paracetamol und Pseudoephedrin',
-    'Dextromethorphan und Paracetamol, Kombinationen'
-  ]
-  , "Einleitung.md Beispiel")
+      'Tramadol und Paracetamol',
+      'Paracetamol',
+      'Paracetamol, Kombinationen exkl. Psycholeptika',
+      'Paracetamol und Codein',
+      'Paracetamol und Ascorbinsäure',
+      'Paracetamol und Coffein',
+      'Paracetamol und Pseudoephedrin',
+      'Dextromethorphan und Paracetamol, Kombinationen'
+    ], "Wirkstoffe Paracetamol" )
 
   t.end()
 
-})
+} )
