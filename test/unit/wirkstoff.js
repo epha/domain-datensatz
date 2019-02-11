@@ -17,7 +17,8 @@ tape( "Unit Wirkstoff", async ( t ) => {
       'Paracetamol und Ascorbinsäure',
       'Paracetamol und Coffein',
       'Paracetamol und Pseudoephedrin',
-      'Dextromethorphan und Paracetamol, Kombinationen'
+      'Dextromethorphan und Paracetamol, Kombinationen',
+      'Dextromethorphan, Paracetamol und Doxylamin, Kombinationen'
     ], "Wirkstoffe Paracetamol" )
 
   t.end()
