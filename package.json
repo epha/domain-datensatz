@@ -34,11 +34,7 @@
     "url": "https://github.com/epha/domain-datensatz/issues"
   },
   "homepage": "https://epha.ch/datensatz/",
-  "dependencies": {
-    "excel4node": "^1.5.0",
-    "iconv": "^2.3.2",
-    "iconv-lite": "^0.4.24"
-  },
+  "dependencies": {},
   "devDependencies": {
     "expert-packungen": "github:epha/expert-packungen#semver:4.x.x",
     "expert-wirkstoffe": "github:epha/expert-wirkstoffe#semver:x.x.x",
