@@ -1,7 +1,7 @@
 {
   "name": "domain-datensatz",
   "version": "2019.2.0",
-  "description": "JSON files on pharmaceutical products in switzerland",
+  "description": "JSON files with pharmaceutical products in switzerland",
   "main": "source/app.js",
   "scripts": {
     "build:grafiken": "node ./scripts/grafiken.js",
