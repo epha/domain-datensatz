@@ -38,11 +38,11 @@
   "devDependencies": {
     "expert-packungen": "github:epha/expert-packungen#semver:4.x.x",
     "expert-wirkstoffe": "github:epha/expert-wirkstoffe#semver:x.x.x",
-    "express": "^4.16.4",
+    "express": "^4.17.1",
     "isomorphic-fetch": "^2.2.1",
     "istanbul": "^0.4.5",
-    "puppeteer": "^1.12.2",
+    "puppeteer": "^1.17.0",
     "tap-spec": "^5.0.0",
-    "tape": "^4.10.0"
+    "tape": "^4.10.2"
   }
 }
