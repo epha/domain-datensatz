@@ -8,7 +8,7 @@ const askWikipedia = async ( wirks, file ) => {
 
   console.time( "> Done asking wikipedia" )
 
-  const wikipedia = {}
+  const wikipedia = JSON.parse( files.readFileSync( './datensatz/docs/wikipedia.json' ), null, 2 )
 
   const items = Object.keys( wirks ).map( key => {
     return { code: key, name: wirks[ key ] }
@@ -20,9 +20,20 @@ const askWikipedia = async ( wirks, file ) => {
     error: 0
   }
 
+  console.log( "> ========================================= " )
+  console.log( "> Check if some more substances " )
+  console.log( "> are available. We only query  " )
+  console.log( "> stuff we haven't found yet    " )
+  console.log( "> ========================================= " )
+
   for ( const item of items ) {
 
-    const url = `https://de.wikipedia.org/w/api.php?action=query&titles=${item.name}&format=json`
+    const url = `https://de.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(item.name)}&format=json`
+
+    // Skip the unlikely names
+    if ( wikipedia[ item.code ] || /[(),.+-:]+| und | andere |Kombination|Verschiede/i.test( item.name ) ) {
+      continue
+    }
 
     await fetch( url ).then( raw => raw.json() ).then( ( json ) => {
 

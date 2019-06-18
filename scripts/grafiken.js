@@ -5,9 +5,10 @@ const artikel = require( "expert-packungen" )
 const wirkstoff = require( "expert-wirkstoffe" )
 
 console.log( "" )
-console.log( "> ============" )
-console.log( ">  Datensatz" )
-console.log( "> ============" )
+console.log( "> ============================" )
+console.log( "> Copy data from modules into" )
+console.log( "> release folder " )
+console.log( "> ============================" )
 
 const update = async () => {
 
