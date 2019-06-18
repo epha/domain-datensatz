@@ -4,6 +4,7 @@
   "description": "JSON files with pharmaceutical products in switzerland",
   "main": "source/app.js",
   "scripts": {
+    "build": "npm run build:grafiken && npm run build:wikipedia",
     "build:grafiken": "node ./scripts/grafiken.js",
     "build:wikipedia": "node ./scripts/wikipedia.js",
     "staging": "bash ./scripts/deploy.sh staging",
@@ -37,7 +38,7 @@
   "dependencies": {},
   "devDependencies": {
     "expert-packungen": "github:epha/expert-packungen#semver:4.x.x",
-    "expert-wirkstoffe": "github:epha/expert-wirkstoffe#semver:x.x.x",
+    "expert-wirkstoffe": "github:epha/expert-wirkstoffe#semver:4.x.x",
     "express": "^4.17.1",
     "isomorphic-fetch": "^2.2.1",
     "istanbul": "^0.4.5",

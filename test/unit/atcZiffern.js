@@ -50,7 +50,8 @@ tape.only( "Unit atc ziffern", async ( t ) => {
 
   if ( missing.length > 0 ) {
     console.log( "---" )
-    console.log( "These codes in artikel (packungen) are not provided in wirkstoffe" )
+    console.log( "These codes (also checks for completness of hierarchy)" )
+    console.log( " in artikel (packungen) are not provided in wirkstoffe" )
     console.log( "---" )
     missing.forEach( ( code, idx ) => console.log( `${String(idx).padStart(3)} ${code}` ) )
   } else {
